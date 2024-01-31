@@ -1,6 +1,7 @@
 // import Hero from "@/components/screen/Home/Hero";
 
 import Category from "@/components/screen/Home/Category";
+import FlashDeals from "@/components/screen/Home/FlashDeals";
 import Hero from "@/components/screen/Home/Hero";
 
 export const metadata = {
@@ -13,6 +14,7 @@ export default function Home() {
     <>
       <Hero />
       <Category />
+      <FlashDeals />
     </>
   );
 }

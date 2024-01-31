@@ -8,6 +8,7 @@ const Category = () => {
       <div className='container_fluid'>
           {/* title */}
           <SectionTitle heading={"Category"} />
+           {/* all category */}
           <div className='mt-8 grid lg:grid-cols-4 2xl:grid-cols-5 gap-[13px]'>
            {categoryData.map((category, index)=>(
              <CategoryItems key={index} category={category} />
