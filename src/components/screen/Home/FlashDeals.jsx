@@ -1,4 +1,5 @@
 import SectionTitle from "@/components/shared/SectionTitle/SectionTitle";
+import { flashProducts } from "@/data/flashProducts";
 import FlashProduct from "./FlashProduct";
 
 const FlashDeals = () => {
@@ -12,7 +13,10 @@ const FlashDeals = () => {
         
          {/* flash Products */}
           <div className="mt-5 grid grid-cols-4 gap-6">
-             <FlashProduct />
+            {flashProducts.map((products, index)=>(
+             <FlashProduct key={index} products={products} />
+            ))}
+             
           </div>
       </div>
     </section>
