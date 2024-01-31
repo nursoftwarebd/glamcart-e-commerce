@@ -5,7 +5,11 @@ const Footer = () => {
    
        <footer className="bg-white">
           <FooterTop />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium tempore excepturi voluptatum suscipit distinctio? Voluptatibus sunt sequi eum? Placeat laboriosam fugiat eius repellat repudiandae, esse id praesentium omnis adipisci animi?
+           <div className="container_fluid">
+             <div className="pt-[59px] pb-[62px] grid grid-cols-6 gap-8">
+                    
+             </div>
+           </div>
        </footer>
     
   );
