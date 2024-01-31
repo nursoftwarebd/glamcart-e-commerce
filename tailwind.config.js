@@ -38,14 +38,18 @@ module.exports = {
      backgroundPage: "#FAFAFA",
      backgroundNav: "#FBFBFB",
      bgSearch: "#F6F6F6",
+     blackPrimary: "#333333",
      border: "#F1F1F1",
      lightText: "#29292E",
      fadeRed: "#FF5D5D",
      grayPlace: "#9B9B9B",
      grayPara: "#646464",
      grayText: "#394146",
+     grayView: "#757575",
+     grayBorder: "#E9E9E9",
      blackSec: "#383838",
-     grayMenu:"#333333d9"
+     grayMenu:"#333333d9",
+     imageBack: "#F2F2F2"
 
 
       },
@@ -66,7 +70,8 @@ module.exports = {
       },
       fontSize: {
         heading1: "45px",
-        heading2: "26px"
+        heading2: "26px",
+        heading3: "22px"
       },
     },
   },

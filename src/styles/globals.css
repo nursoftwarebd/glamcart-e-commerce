@@ -24,10 +24,10 @@ body {
   @apply font-montserrat text-xl lg:text-heading1 font-bold leading-[135%];
 }
 .h2 {
-  @apply font-poppins text-base lg:text-heading2 font-medium leading-[125%] lg:leading-none;
+  @apply font-poppins text-base lg:text-heading2 font-medium leading-[125%] lg:leading-[246%];
 }
 .h4 {
-  @apply font-montserrat text-xl font-semibold;
+  @apply font-poppins text-heading3 leading-normal font-medium;
 }
 .h5 {
   @apply font-poppins text-sm lg:text-lg font-normal leading-[130%] lg:leading-[120%];
