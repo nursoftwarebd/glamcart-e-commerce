@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+.h1 {
+  @apply font-montserrat text-xl lg:text-heading1 font-bold leading-[135%];
+}
+.h2 {
+  @apply font-poppins text-base lg:text-heading2 font-medium leading-[125%] lg:leading-none;
+}
+.h4 {
+  @apply font-montserrat text-xl font-semibold;
+}
+.h5 {
+  @apply font-poppins text-sm lg:text-lg font-normal leading-[130%] lg:leading-[120%];
+}
+
+/* container style */
+.container_fluid {
+  @apply max-w-full 2xl:max-w-[1440px] px-3 lg:px-12 2xl:mx-auto;
+}
+
+/* menu list */
+.menu_list {
+  @apply font-poppins text-grayMenu text-base uppercase font-medium;
+}
+
+/* slider css */
+
+.slick-slide > div {
+  margin: 0 10px;
+}
+/* .slick-slide > div:nth-child(1) {
+  margin-left: 0 !important;
+} */
+/* .slick-disabled {
+  display: none;
+} */

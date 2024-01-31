@@ -1,0 +1,91 @@
+import Image from "next/image";
+import bucket from "../../../assets/icons/bucket.svg";
+import search from "../../../assets/icons/bx_bx-search.svg";
+import heart from "../../../assets/icons/heart.svg";
+import user from "../../../assets/icons/user.svg";
+import logo from "../../../assets/logo.svg";
+import DragMenu from "./DragMenu";
+
+const Navbar = () => {
+  return (
+    <header className="h-[147px] bg-backgroundNav border border-red-700">
+      <div className="container_fluid">
+        <div className="flex items-center justify-between mt-3">
+        {/* logo */}
+        <div className=" w-[141px] h-[80px] border border-red-700">
+          <Image
+            src={logo}
+            alt="logo"
+            className="w-full h-full object-center object-fill"
+          />
+        </div>
+        <div className="xl:w-[665px] 2xl:w-[778px] h-[50px] border-[1px] border-border rounded-[5px]  flex items-center">
+          <input
+            placeholder="I'm looking for..."
+            type="text"
+            className="xl:w-[600px] 2xl:w-[713px] h-[50px] py-[13px] pl-5 bg-bgSearch outline-none placeholder:text-grayPlace"
+          />
+          <button className="w-[65px] h-[50px] bg-secondary rounded-tr-[5px] rounded-br-[5px] flex items-center justify-center">
+            <Image src={search} alt="search" className="w-7 h-7 object-fill" />
+          </button>
+        </div>
+        <div className="flex items-center">
+          <div className="flex items-center gap-10">
+            <a
+              href="#"
+              className="flex items-center gap-[6px] text-lightText
+              "
+            >
+              <span className="w-6 h-6 px-[4.81px] py-[2.81px]">
+                <Image
+                  src={user}
+                  alt="user"
+                  className="w-[14.18px] h-[18px] object-fill object-center"
+                />
+              </span>
+              <span className=" leading-[120%] tracking-[0.08px]">Login</span>
+            </a>
+            <a
+              href="#"
+              className="flex items-center gap-[6px] text-lightText
+              "
+            >
+              <span className="w-6 h-6 px-[4.81px] py-[2.81px]">
+                <Image
+                  src={heart}
+                  alt="user"
+                  className="w-[19px] h-[18px] object-fill object-center"
+                />
+              </span>
+              <span className=" leading-[120%] tracking-[0.08px]">
+                Wishlist
+              </span>
+            </a>
+            <a
+              href="#"
+              className="flex items-center gap-[6px] text-lightText
+              "
+            >
+              <span className="w-[23px] h-5">
+                <Image
+                  src={bucket}
+                  alt="cart"
+                  className="w-full h-full object-fill object-center"
+                />
+              </span>
+              <span className=" leading-[120%] tracking-[0.08px]">My cart</span>
+            </a>
+          </div>
+          <div className="ml-2 w-5 h-5 rounded-full flex items-center justify-center bg-fadeRed">
+            <span className="text-white font-medium text-xs">1</span>
+          </div>
+        </div>
+        </div>
+        {/* menu part */}
+          <DragMenu />
+      </div>
+    </header>
+  );
+};
+
+export default Navbar;
