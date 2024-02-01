@@ -5,7 +5,7 @@ const FooterTop = () => {
   return (
     <div className="border-b-[1px] border-[#E5E5E5] pt-[53px] pb-13">
        <div className="container_fluid">
-         <div className="px-[74px] grid grid-cols-4 gap-8 2xl:gap-[99px]">
+         <div className="px-8 lg:px-[74px] grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 2xl:gap-[99px]">
                {footerTop.map((items,index)=>{
                 return (
                   <div key={index} className="flex items-center gap-6">

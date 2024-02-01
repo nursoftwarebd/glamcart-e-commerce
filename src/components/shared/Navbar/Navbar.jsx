@@ -8,28 +8,28 @@ import DragMenu from "./DragMenu";
 
 const Navbar = () => {
   return (
-    <header className="h-[147px] bg-backgroundNav border border-red-700">
+    <header className="h-[147px] bg-backgroundNav border-b-[1.5px] border-navBorder">
       <div className="container_fluid">
         <div className="flex items-center justify-between mt-3">
         {/* logo */}
-        <div className=" w-[141px] h-[80px] border border-red-700">
+        <div className="hidden lg:flex w-[141px] h-[80px]">
           <Image
             src={logo}
             alt="logo"
             className="w-full h-full object-center object-fill"
           />
         </div>
-        <div className="xl:w-[665px] 2xl:w-[778px] h-[50px] border-[1px] border-border rounded-[5px]  flex items-center">
+        <div className="w-full lg:w-[365px] xl:w-[665px] 2xl:w-[778px] h-[50px] border-[1px] border-border rounded-[5px]  flex items-center">
           <input
             placeholder="I'm looking for..."
             type="text"
-            className="xl:w-[600px] 2xl:w-[713px] h-[50px] py-[13px] pl-5 bg-bgSearch outline-none placeholder:text-grayPlace"
+            className="w-full lg:w-[300px] xl:w-[600px] 2xl:w-[713px] h-[50px] py-[13px] pl-5 bg-bgSearch outline-none placeholder:text-grayPlace"
           />
           <button className="w-[65px] h-[50px] bg-secondary rounded-tr-[5px] rounded-br-[5px] flex items-center justify-center">
             <Image src={search} alt="search" className="w-7 h-7 object-fill" />
           </button>
         </div>
-        <div className="flex items-center">
+        <div className="hidden lg:flex items-center">
           <div className="flex items-center gap-10">
             <a
               href="#"

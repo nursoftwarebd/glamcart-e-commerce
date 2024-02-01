@@ -10,7 +10,7 @@ const Featured = () => {
         <SectionTitle heading={"Featured Product"} href={"/featured-product"} />
 
         {/* featured products */}
-        <div className="mt-5 grid grid-cols-4 gap-6">
+        <div className="mt-5  grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
           {featuredProducts.map((feproducts, index) => (
             <FeaturedProduct key={index} feproducts={feproducts} />
             ))}

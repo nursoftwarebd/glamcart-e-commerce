@@ -12,7 +12,7 @@ const FlashDeals = () => {
          
         
          {/* flash Products */}
-          <div className="mt-5 grid grid-cols-4 gap-6">
+          <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
             {flashProducts.map((products, index)=>(
              <FlashProduct key={index} products={products} />
             ))}

@@ -12,8 +12,8 @@ const Footer = () => {
       <FooterTop />
       <div className="border-b-[1px] border-[#E5E5E5]">
         <div className="container_fluid">
-          <div className="pb-[62px] grid grid-cols-6 gap-8">
-            <div className="col-span-2 ">
+          <div className="pb-[62px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8">
+            <div className="col-span-1 sm:col-span-2">
               <div className="w-[176px] h-[176px]">
                 <Image
                   src={flogo}
@@ -75,7 +75,7 @@ const Footer = () => {
                 </div>
               ))}
             </div>
-            <div className="pt-[59px] col-span-2 space-y-9">
+            <div className="pt-[59px] col-span-1 sm:col-span-2 space-y-9">
               <h4 className="text-xl leading-8 font-medium text-blackPrimary uppercase">
                 CONTACT
               </h4>
@@ -106,7 +106,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="container_fluid">
-        <div className="flex items-center justify-between py-4">
+        <div className="flex flex-col xl:flex-row items-center justify-between py-4">
              <p className="leading-6">Projectnirvoya -   © 2021 All Rights Reserved</p>
              <div className="flex items-center">
               <p className="leading-7 text-lg font-medium text-secondary/80">Pay With</p>

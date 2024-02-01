@@ -21,7 +21,7 @@ body {
 }
 
 .h1 {
-  @apply font-montserrat text-xl lg:text-heading1 font-bold leading-[135%];
+  @apply font-montserrat text-xl lg:text-heading2 xl:text-heading1 font-bold leading-[135%];
 }
 .h2 {
   @apply font-poppins text-base lg:text-heading2 font-medium leading-[125%] lg:leading-[246%];
@@ -36,6 +36,10 @@ body {
 /* container style */
 .container_fluid {
   @apply max-w-full 2xl:max-w-[1440px] px-3 lg:px-12 2xl:mx-auto;
+}
+
+.hero-banner {
+  @apply font-montserrat text-base xl:text-xl leading-6 font-medium xl:font-semibold;
 }
 
 /* menu list */

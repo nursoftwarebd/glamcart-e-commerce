@@ -40,6 +40,7 @@ module.exports = {
      bgSearch: "#F6F6F6",
      blackPrimary: "#333333",
      border: "#F1F1F1",
+     navBorder:"#EFEEEE",
      lightText: "#29292E",
      fadeRed: "#FF5D5D",
      grayPlace: "#9B9B9B",
