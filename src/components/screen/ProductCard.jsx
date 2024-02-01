@@ -1,13 +1,13 @@
 "use client"
 import Image from 'next/image';
-import basket from "../../../assets/icons/basket.svg";
-import love from "../../../assets/icons/love.svg";
-import starcolor from "../../../assets/icons/star-color.svg";
-import star from "../../../assets/icons/star.svg";
+import basket from "../../assets/icons/basket.svg";
+import love from "../../assets/icons/love.svg";
+import starcolor from "../../assets/icons/star-color.svg";
+import star from "../../assets/icons/star.svg";
 
-const FeaturedProduct = ({feproducts}) => {
+const ProductCard = ({product}) => {
 
-   const {title,image,amount} = feproducts
+   const {title,image,amount} = product
   return (
     <div className="bg-white border-[1px] w-full h-auto border-grayBorder px-[9px] pt-2 pb-[15px] rounded-[10px]">
         <div className="w-full h-[313px] flex items-end bg-imageBack rounded-[10px] relative">
@@ -43,4 +43,4 @@ const FeaturedProduct = ({feproducts}) => {
   );
 };
 
-export default FeaturedProduct;
+export default ProductCard;

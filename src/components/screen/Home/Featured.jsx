@@ -1,6 +1,7 @@
 import SectionTitle from "@/components/shared/SectionTitle/SectionTitle";
 import { featuredProducts } from "@/data/featuredProducts";
-import FeaturedProduct from "./FeaturedProduct";
+import ProductCard from "../ProductCard";
+
 
 const Featured = () => {
   return (
@@ -11,8 +12,8 @@ const Featured = () => {
 
         {/* featured products */}
         <div className="mt-5  grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
-          {featuredProducts.map((feproducts, index) => (
-            <FeaturedProduct key={index} feproducts={feproducts} />
+          {featuredProducts.map((product, index) => (
+            <ProductCard key={index} product={product} />
             ))}
         </div>
       </div>
