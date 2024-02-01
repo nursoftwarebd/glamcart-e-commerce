@@ -12,20 +12,20 @@ const Footer = () => {
       <FooterTop />
       <div className="border-b-[1px] border-[#E5E5E5]">
         <div className="container_fluid">
-          <div className="pb-[62px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8">
-            <div className="col-span-1 sm:col-span-2">
-              <div className="w-[176px] h-[176px]">
+          <div className="pb-[62px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-5 sm:gap-8">
+            <div className="col-span-1 sm:col-span-2 ">
+              <div className="w-[176px] h-[120px] sm:h-[176px]">
                 <Image
                   src={flogo}
                   alt="footer-logo"
-                  className="w-full h-full object-fill"
+                  className="w-full h-full object-fill "
                 />
               </div>
               <p className="max-w-[390px] text-lg leading-7 text-blackPrimary/80">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
-              <div className="flex items-center gap-5 pt-6">
+              <div className="flex items-center gap-5 pt-2 sm:pt-6">
                 {socialLinks.map((socialLink, index) => (
                   <Link key={index} href={socialLink.href}>
                     <Image src={socialLink.icon} alt="" />
@@ -33,9 +33,9 @@ const Footer = () => {
                 ))}
               </div>
             </div>
-            <div className="pt-[59px] col-span-1">
+            <div className="pt-0 sm:pt-[59px] col-span-1 ">
               {quickLink.map((quickLink, index) => (
-                <div key={index} className="space-y-9">
+                <div key={index} className="space-y-3 sm:space-y-9">
                   <h4 className="text-xl leading-8 font-medium text-blackPrimary uppercase">
                     {quickLink.title}
                   </h4>
@@ -44,7 +44,7 @@ const Footer = () => {
                       <li key={index}>
                         <Link
                           href={link.href}
-                          className="text-lg leading-[44px] text-blackPrimary/80 capitalize"
+                          className="text-lg leading-7 sm:leading-[44px] text-blackPrimary/80 capitalize"
                         >
                           {link.label}
                         </Link>
@@ -54,9 +54,9 @@ const Footer = () => {
                 </div>
               ))}
             </div>
-            <div className="pt-[59px] col-span-1">
+            <div className="pt-0 sm:pt-[59px] col-span-1 ">
               {customerArea.map((customerArea, index) => (
-                <div key={index} className="space-y-9">
+                <div key={index} className="space-y-3 sm:space-y-9">
                   <h4 className="text-xl leading-8 font-medium text-blackPrimary uppercase">
                     {customerArea.title}
                   </h4>
@@ -65,7 +65,7 @@ const Footer = () => {
                       <li key={index}>
                         <Link
                           href={link.href}
-                          className="text-lg leading-[44px] text-blackPrimary/80 capitalize"
+                          className="text-lg leading-7 sm:leading-[44px] text-blackPrimary/80 capitalize"
                         >
                           {link.label}
                         </Link>
@@ -75,7 +75,7 @@ const Footer = () => {
                 </div>
               ))}
             </div>
-            <div className="pt-[59px] col-span-1 sm:col-span-2 space-y-9">
+            <div className="pt-0 sm:pt-[59px] col-span-1 sm:col-span-2 space-y-3 sm:space-y-9 ">
               <h4 className="text-xl leading-8 font-medium text-blackPrimary uppercase">
                 CONTACT
               </h4>

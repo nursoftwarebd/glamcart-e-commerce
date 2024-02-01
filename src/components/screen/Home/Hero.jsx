@@ -16,14 +16,13 @@ const Hero = () => {
     <section className="pt-3 bg-backgroundPage">
       <div className="container_fluid">
         <div className="grid lg:grid-cols-3 gap-7">
-          <div className="col-span-2">
+          <div className="w-full lg:col-span-2">
             <Swiper
               pagination={true}
               modules={[Pagination]}
               spaceBetween={0}
               slidesPerView={1}
-              onSlideChange={() => console.log("slide change")}
-              onSwiper={(swiper) => console.log(swiper)}
+              
             >
               <SwiperSlide>
                 <HeroBanner />
@@ -40,7 +39,7 @@ const Hero = () => {
             </Swiper>
           </div>
           {/* for large screen */}
-          <div className="hidden lg:grid col-span-1 gap-y-7">
+          <div className="hidden lg:grid lg:col-span-1 gap-y-7">
             <div className="relative">
               <div className="w-full h-[226px] xl:h-[267.5px]">
                 <Image

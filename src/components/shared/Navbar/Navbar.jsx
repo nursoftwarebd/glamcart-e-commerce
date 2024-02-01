@@ -8,9 +8,9 @@ import DragMenu from "./DragMenu";
 
 const Navbar = () => {
   return (
-    <header className="h-[147px] bg-backgroundNav border-b-[1.5px] border-navBorder">
+    <header className="h-[130px] lg:h-[147px] bg-backgroundNav border-b-[1.5px] border-navBorder">
       <div className="container_fluid">
-        <div className="flex items-center justify-between mt-3">
+        <div className="flex items-center justify-between pt-3">
         {/* logo */}
         <div className="hidden lg:flex w-[141px] h-[80px]">
           <Image
