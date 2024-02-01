@@ -38,6 +38,10 @@ export const quickLink = [
       { label: "sign up", href: "#" },
     ],
   },
+  
+];
+
+export const customerArea = [
   {
     title: "CUSTOMER AREA",
     links: [
@@ -47,4 +51,4 @@ export const quickLink = [
       { label: "shipping information", href: "#" },
     ],
   }
-];
+]
