@@ -53,6 +53,8 @@ module.exports = {
         blackSec: "#383838",
         grayMenu: "#333333d9",
         imageBack: "#F2F2F2",
+        checkBorder: "#D0D0D2",
+        orangeStar: "#FFB340"
       },
       margin: {
         11.5: "45px",

@@ -1,7 +1,17 @@
+"use client"
 import Image from "next/image";
+import { useState } from "react";
 import bottom from "../../../assets/icons/chevron-down.svg";
+import Checkbox from "./checkbox/Checkbox";
 
 const ProductSidebar = () => {
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleCheckboxChange = () => {
+    setIsChecked(!isChecked);
+   
+  };
+
   return (
     <div className="bg-white py-7 w-[300px]">
       <div className="px-5 pb-6 border-b-[2px] border-borderSide">
@@ -32,6 +42,18 @@ const ProductSidebar = () => {
         </div>
         <p>Price: ৳1000 - ৳2500 </p>
       </div>
+      <div className="px-5 py-6">
+      <div className="flex items-center justify-between w-full">
+          <select className="block appearance-none  w-full outline-none">         
+            <option value="option1" className="text-lg leading-7 text-blackSec font-medium" disabled selected hidden>Filter by Rating</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+            
+          </select>
+          <Image src={bottom} alt="bottom" className="w-6 h-6" />
+        </div>
+           <Checkbox label="1" checked={isChecked} onChange={handleCheckboxChange} />
+        </div> 
     </div>
   );
 };
