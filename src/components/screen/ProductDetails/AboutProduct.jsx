@@ -1,3 +1,5 @@
+import PrimaryButton from "@/components/shared/Button/PrimaryButton";
+import SecondaryButton from "@/components/shared/Button/SecondaryButton";
 import Image from "next/image";
 import Link from "next/link";
 import checkstar from "../../../assets/icons/check-star.svg";
@@ -117,16 +119,22 @@ const AboutProduct = () => {
           <button className="size_button">XXl</button>
         </div>
         <div className="flex items-center gap-9">
-           <div className="flex items-center gap-5">
-              <p className="text-sm leading-5 text-black3D">Quantity: </p>
-              <div className="h-[35px] flex items-center">
-                 <button className="h-full px-2 py-[2px] bg-grayPlusBg text-grayPlusText leading-6">-</button>
-                 <span className="h-full p-2  bg-white text-blackPrimary leading-6">2</span>
-                 <button className="h-full px-2 py-[2px] bg-grayPlusBg text-grayPlusText leading-6">+</button>
-              </div>
-              <button></button>
-           </div>
-
+          <div className="flex items-center gap-5">
+            <p className="text-sm leading-5 text-black3D">Quantity: </p>
+            <div className="h-[35px] flex items-center">
+              <button className="h-full px-2 py-[2px] bg-grayPlusBg text-grayPlusText leading-6">
+                -
+              </button>
+              <span className="h-full p-2  bg-white text-blackPrimary leading-6">
+                2
+              </span>
+              <button className="h-full px-2 py-[2px] bg-grayPlusBg text-grayPlusText leading-6">
+                +
+              </button>
+            </div>
+            <PrimaryButton title="Add cart" href="/card" />
+            <SecondaryButton title="Buy Now" href="/buy" />
+          </div>
         </div>
       </div>
     </>

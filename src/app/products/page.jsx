@@ -5,7 +5,7 @@ import { products } from "@/data/products";
 const page = () => {
   return (
     <>
-      <div className="pt-10  bg-backgroundPage">
+      <section className="pt-10  bg-backgroundPage">
         <div className="container_fluid">
           <div className="flex gap-9 2xl:gap-14">
             <div className="w-[300px]">
@@ -37,7 +37,7 @@ const page = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

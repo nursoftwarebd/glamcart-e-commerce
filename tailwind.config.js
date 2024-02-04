@@ -37,6 +37,8 @@ module.exports = {
         backgroundPage: "#FAFAFA",
         backgroundNav: "#FBFBFB",
         bgSearch: "#F6F6F6",
+        bgCart: "#EBF4F9",
+        bgProductDetails:"#FCFCFC",
         blackPrimary: "#333333",
         black: "#424241",
         black3D: "#3D3D3F",
@@ -76,6 +78,7 @@ module.exports = {
       fontFamily: {
         montserrat: "'Montserrat', 'sans-serif'",
         poppins: "'Poppins', 'sans-serif'",
+        lato: "'Lato', 'sans-serif'"
       },
       fontSize: {
         heading1: "45px",
