@@ -13,6 +13,7 @@ const ProductSidebar = () => {
   };
 
   return (
+    <>
     <div className="bg-white py-7 w-[300px]">
       <div className="px-5 pb-6 border-b-[2px] border-borderSide">
         <p className="font-medium text-lg text-black3D">Related Categories</p>
@@ -55,6 +56,7 @@ const ProductSidebar = () => {
            <Checkbox label="1" checked={isChecked} onChange={handleCheckboxChange} />
         </div> 
     </div>
+    </> 
   );
 };
 

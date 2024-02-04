@@ -107,8 +107,8 @@ const Footer = () => {
       </div>
       <div className="container_fluid">
         <div className="flex flex-col xl:flex-row items-center justify-between py-4">
-             <p className="leading-6">Projectnirvoya -   © 2021 All Rights Reserved</p>
-             <div className="flex items-center">
+             <p className="leading-6 text-sm sm:text-base">Projectnirvoya -   © 2021 All Rights Reserved</p>
+             <div className="hidden sm:flex items-center">
               <p className="leading-7 text-lg font-medium text-secondary/80">Pay With</p>
               <Image src={footerbottom} alt="footerbottom" />
              </div>

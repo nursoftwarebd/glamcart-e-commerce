@@ -26,7 +26,7 @@ const page = () => {
                     </div>
                  </div>
               </div>
-              <div className="mt-5 grid grid-cols-3 gap-6">
+              <div className="mt-5 grid lg:grid-cols-2 xl:grid-cols-3 gap-6">
                 {products.slice(0,12).map((product, index) => (
                   <ProductCard key={index} product={product} />
                 ))}
