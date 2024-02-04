@@ -65,10 +65,12 @@ module.exports = {
         lineThrough: "#8D8D8D"
       },
       margin: {
+        7.5:"30px",
         11.5: "45px",
         13: "50px",
       },
       padding: {
+        7.5:"30px",
         11.5: "45px",
         13: "50px",
       },

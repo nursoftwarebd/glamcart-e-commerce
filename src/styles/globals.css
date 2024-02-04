@@ -62,6 +62,7 @@ body {
 .details_pra {
   @apply font-lato text-lg font-normal leading-[34px];
 }
+
 /* slider css */
 
 .slick-slide > div {

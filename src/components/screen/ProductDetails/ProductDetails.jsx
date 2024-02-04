@@ -18,14 +18,14 @@ const ProductDetails = () => {
                 </h4>
                 <div className="pt-6 pl-3 grid lg:grid-cols-2">
                   <div>
-                    <ul className="list-disc list-inside text-lg leading-[34px] text-blackPrimary">
+                    <ul className="list-disc list-inside details_pra  text-blackPrimary">
                       {items.content.slice(0, 6).map((list, index) => (
                         <li key={index}>{list}</li>
                       ))}
                     </ul>
                   </div>
                   <div>
-                    <ul className="list-disc list-inside lg:list-outside text-lg leading-[34px] text-blackPrimary">
+                    <ul className="list-disc list-inside lg:list-outside details_pra  text-blackPrimary">
                       {items.content.slice(6).map((list, index) => (
                         <li key={index}>{list}</li>
                       ))}
