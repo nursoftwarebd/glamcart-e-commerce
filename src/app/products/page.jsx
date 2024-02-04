@@ -1,5 +1,6 @@
 import ProductCard from "@/components/screen/ProductCard";
 import ProductSidebar from "@/components/screen/Products/ProductSidebar";
+import Pagination from "@/components/screen/Products/paging/Pagination";
 import { products } from "@/data/products";
 const page = () => {
   return (
@@ -26,10 +27,13 @@ const page = () => {
                  </div>
               </div>
               <div className="mt-5 grid grid-cols-3 gap-6">
-                {products.map((product, index) => (
+                {products.slice(0,12).map((product, index) => (
                   <ProductCard key={index} product={product} />
                 ))}
               </div>
+               <div className="flex items-center justify-end pt-10 pb-13">
+               <Pagination  />
+               </div>
             </div>
           </div>
         </div>
