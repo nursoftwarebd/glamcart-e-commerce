@@ -2,16 +2,15 @@
 import Image from "next/image";
 import { useState } from "react";
 import Slider from "react-slick";
-import pic1 from '../../../assets/images/home/bag.png';
-import pic2 from '../../../assets/images/home/chair-to.png';
-import pic5 from '../../../assets/images/home/dressblack.png';
-import pic3 from '../../../assets/images/home/flash3.png';
-import pic4 from '../../../assets/images/home/ydress.png';
+import pic1 from "../../../assets/images/home/bag.png";
+import pic2 from "../../../assets/images/home/chair-to.png";
+import pic5 from "../../../assets/images/home/dressblack.png";
+import pic3 from "../../../assets/images/home/flash3.png";
+import pic4 from "../../../assets/images/home/ydress.png";
 import DownArrow from "./DownArrow";
 import UpArrow from "./UpArrow";
 
 const SliderProduct = () => {
- 
   const [imag, setimag] = useState(pic1);
   const imagepack = [
     {
@@ -47,15 +46,14 @@ const SliderProduct = () => {
       img: pic3,
     },
   ];
- 
-  
+
   const settings = {
     dots: false,
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
     nextArrow: <UpArrow />,
-    prevArrow:<DownArrow />,
+    prevArrow: <DownArrow />,
     vertical: true,
     verticalSwiping: true,
     swipeToSlide: true,
@@ -71,8 +69,6 @@ const SliderProduct = () => {
       <div>
         <div className=" flex  gap-[25px] ">
           <div className="w-[75%] border border-red-500">
-            {/* <ReactImageZoom {...prop1} /> */}
-             {/* <Image src={`${imag}`} alt="big"  className="w-[550px] h-[550px]"/> */}
             <Image
               src={imag}
               alt="bigimage"

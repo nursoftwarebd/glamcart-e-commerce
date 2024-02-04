@@ -26,6 +26,7 @@ body {
 .h2 {
   @apply font-poppins text-base lg:text-heading2 font-medium leading-[125%] lg:leading-[246%];
 }
+
 .h4 {
   @apply font-poppins text-heading3 leading-normal font-medium;
 }
@@ -45,6 +46,10 @@ body {
 /* menu list */
 .menu_list {
   @apply font-poppins text-grayMenu text-base uppercase font-medium;
+}
+
+.size_button {
+  @apply min-w-[35px] min-h-[29px] bg-white text-grayTextSize border-[1px] border-borderSize rounded-[1px] py-1 px-[13px] text-sm leading-5;
 }
 
 /* slider css */
