@@ -70,11 +70,15 @@ module.exports = {
         7.5: "30px",
         11.5: "45px",
         13: "50px",
+        15: "60px",
+        18: "70px",
       },
       padding: {
         7.5: "30px",
         11.5: "45px",
         13: "50px",
+        15: "60px",
+        18: "70px",
       },
       boxShadow: {
         "3xl": "0px 2px 8px 0px rgba(0, 0, 0, 0.12)",

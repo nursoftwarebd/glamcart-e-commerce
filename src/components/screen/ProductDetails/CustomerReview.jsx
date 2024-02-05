@@ -2,6 +2,7 @@
 import { customer } from "@/data/customer";
 import Image from "next/image";
 import five_star from "../../../assets/icons/five_star.svg";
+import AddReview from "./AddReview";
 import Progressbar from "./Progressbar";
 
 const CustomerReview = () => {
@@ -60,6 +61,7 @@ const CustomerReview = () => {
           ))}
         </div>
       </div>
+      <AddReview />
     </div>
   );
 };
