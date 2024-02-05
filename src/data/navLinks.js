@@ -236,6 +236,35 @@ export const navLinks = [
           },
         ],
       },
+      {
+        title: "Shoes",
+        subcat: [
+          {
+            name: "Heeled shoes",
+            href: "/heeled-shoes",
+          },
+          {
+            name: "sneakers",
+            href: "/sneakers",
+          },
+          {
+            name: "casual shoes",
+            href: "/casual shoes",
+          },
+          {
+            name: "babet",
+            href: "/babet",
+          },
+          {
+            name: "sandals",
+            href: "/sandals",
+          },
+          {
+            name: "slipper",
+            href: "/slipper",
+          },
+        ],
+      },
     ],
   },
   {

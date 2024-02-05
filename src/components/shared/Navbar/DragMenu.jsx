@@ -137,9 +137,30 @@ const DragMenu = () => {
                           </div>
                         ))}
                       </div>
-                      <div>
+                      <div className="space-y-6">
                         <div>
                           {link.submenu?.slice(4, 5).map((items, index) => (
+                            <div key={index}>
+                              <p className="font-medium text-black3D leading-6 capitalize">
+                                {items.title}
+                              </p>
+                              {items.subcat?.map((menu, index) => (
+                                <ul key={index}>
+                                  <li>
+                                    <Link
+                                      href={menu.href}
+                                      className="text-sm text-grayView leading-[21px] capitalize"
+                                    >
+                                      {menu.name}
+                                    </Link>
+                                  </li>
+                                </ul>
+                              ))}
+                            </div>
+                          ))}
+                        </div>
+                        <div>
+                          {link.submenu?.slice(5, 6).map((items, index) => (
                             <div key={index}>
                               <p className="font-medium text-black3D leading-6 capitalize">
                                 {items.title}
