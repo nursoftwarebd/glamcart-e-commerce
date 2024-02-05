@@ -1,3 +1,6 @@
+import Image from "next/image";
+import addstar from "../../../assets/icons/add_all_star.svg";
+
 const AddReview = () => {
   return (
     <div className="pl-14 pt-18 pb-15 max-w-[745px] space-y-8">
@@ -40,8 +43,17 @@ const AddReview = () => {
             className="w-full bg-backgroundPage rounded-[5px] border-[1px] border-oldGray outline-none p-2 lg:p-5"
           ></textarea>
         </div>
-        <div>Rating</div>
-        <button>Submit</button>
+        <div className="flex items-center gap-4">
+          <p className="text-lg text-blackSec font-medium leading-[27px]">
+            Rating
+          </p>
+          <Image src={addstar} alt="add_all_star" />
+        </div>
+        <button className="w-[180px] h-[60px] bg-secondary p-4 rounded-lg">
+          <span className="text-lg text-backgroundPage font-medium leading-[27px]">
+            Submit
+          </span>
+        </button>
       </form>
     </div>
   );

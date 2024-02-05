@@ -51,6 +51,7 @@ module.exports = {
         grayPlace: "#9B9B9B",
         grayPara: "#646464",
         grayText: "#394146",
+        grayBread: "#02344F",
         graRate: "#636363",
         grayTextSize: "#6E6E6F",
         grayView: "#757575",
