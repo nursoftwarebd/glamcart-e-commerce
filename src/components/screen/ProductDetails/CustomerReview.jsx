@@ -18,34 +18,7 @@ const CustomerReview = () => {
                             <div className=' w-[200px] h-[8px] rounded-[5px] bg-[#FFB340]'></div>
                             <p className='text-[14px] leading-[21px] text-[#3d3d3d]'>79%</p>
                         </div>
-                        <div className=' flex items-center gap-2'>
-                            <p className='text-[14px] leading-[21px] text-[#3d3d3d]'>4 stars</p>
-                            <div className=' w-[200px] h-[8px] rounded-[5px] bg-[#DBDEDF] '>
-                            <div className=' w-[165px] h-[8px] rounded-[5px] bg-[#FFB340] '></div>
-                            </div>
-                            <p className='text-[14px] leading-[21px] text-[#3d3d3d]'>12%</p>
-                        </div>
-                        <div className=' flex items-center gap-2'>
-                            <p className='text-[14px] leading-[21px] text-[#3d3d3d]'>3 stars</p>
-                            <div className=' w-[200px] h-[8px] rounded-[5px] bg-[#DBDEDF] '>
-                            <div className=' w-[140px] h-[8px] rounded-[5px] bg-[#FFB340] '></div>
-                            </div>
-                            <p className='text-[14px] leading-[21px] text-[#3d3d3d]'>4%</p>
-                        </div>
-                        <div className=' flex items-center gap-2'>
-                            <p className='text-[14px] leading-[21px] text-[#3d3d3d]'>2 stars</p>
-                            <div className=' w-[200px] h-[8px] rounded-[5px] bg-[#DBDEDF] '>
-                            <div className=' w-[110px] h-[8px] rounded-[5px] bg-[#FFB340] '></div>
-                            </div>
-                            <p className='text-[14px] leading-[21px] text-[#3d3d3d]'>2%</p>
-                        </div>
-                        <div className=' flex items-center gap-2'>
-                            <p className='text-[14px] leading-[21px] text-[#3d3d3d]'>1 stars</p>
-                            <div className=' w-[200px] h-[8px] rounded-[5px] bg-[#DBDEDF] '>
-                            <div className=' w-[80px] h-[8px] rounded-[5px] bg-[#FFB340] '></div>
-                            </div>
-                            <p className='text-[14px] leading-[21px] text-[#3d3d3d]'>4%</p>
-                        </div>
+                        
                     </div>
       </div>
     </div>
