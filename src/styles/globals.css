@@ -62,6 +62,9 @@ body {
 .details_pra {
   @apply font-lato text-lg font-normal leading-[34px];
 }
+.progress_text {
+  @apply font-poppins text-sm leading-5 text-black3D font-normal;
+}
 
 /* slider css */
 

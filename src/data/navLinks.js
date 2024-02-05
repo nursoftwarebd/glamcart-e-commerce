@@ -2,10 +2,30 @@ export const navLinks = [
   {
     name: "Women's Fashion",
     href: "/women-fashion",
+    submenu: [
+      {
+        name: "men's Fashion",
+        href: "/men-fashion",
+      },
+      {
+        name: "Kid's Fashion",
+        href: "/kid-fashion",
+      },
+    ],
   },
   {
     name: "men's Fashion",
     href: "/men-fashion",
+    submenu: [
+      {
+        name: "Nur Vai Fashion",
+        href: "/men-fashion",
+      },
+      {
+        name: "Kid's Fashion",
+        href: "/kid-fashion",
+      },
+    ],
   },
   {
     name: "Kid's Fashion",
@@ -27,5 +47,4 @@ export const navLinks = [
     name: "Food & Grocery",
     href: "/food-grocery",
   },
- 
 ];

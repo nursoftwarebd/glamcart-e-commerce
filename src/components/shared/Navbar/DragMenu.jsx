@@ -1,8 +1,7 @@
-'use client'
+"use client";
 import { navLinks } from "@/data/navLinks";
-const DragMenu = () => {
-  
 
+const DragMenu = () => {
   // var settings = {
   //   dots:null,
   //   infinite: true,
@@ -12,7 +11,7 @@ const DragMenu = () => {
   //   nextArrow:<NextArrow />,
   //   // prevArrow:slick-disabled ,
   //   initialSlide: 0,
-    
+
   //   responsive: [
   //     {
   //       breakpoint: 1024,
@@ -46,19 +45,18 @@ const DragMenu = () => {
     <>
       <div className="hidden xl:flex lg:mx-8 mt-[25px] relative">
         <ul className="flex items-center gap-8 2xl:gap-10">
-      
-          {navLinks.map((link, index)=>{
-            return(
-              <>
-              <li key={index} className="menu_list group">
+          {navLinks.map((link, index) => {
+            return (
+              <li key={index} className="menu_list group relative">
                 {link.name}
-               
+                <ul className="hidden duration-500 group-hover:block bg-red-500 absolute top-[30px] z-50">
+                  {link.submenu?.map((item, index) => (
+                    <li key={index}>{item.name}</li>
+                  ))}
+                </ul>
               </li>
-             
-              </> 
-            )
+            );
           })}
-        
         </ul>
       </div>
     </>
