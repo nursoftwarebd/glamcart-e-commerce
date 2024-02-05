@@ -68,36 +68,171 @@ export const navLinks = [
             href: "/shorts",
           },
           {
-            name: "Banarasi",
-            href: "/banarasi",
+            name: "Jeans",
+            href: "/jeans",
           },
           {
-            name: "Chiffon",
-            href: "/chiffon",
+            name: "Hoodie",
+            href: "/hoodie",
           },
           {
-            name: "Georgette",
-            href: "/georgette",
+            name: "Dress",
+            href: "/dress",
           },
           {
-            name: "Kanjivaram",
-            href: "/kanjivaram",
+            name: "Sweater",
+            href: "/sweater",
           },
           {
-            name: "Linen",
-            href: "/linen",
+            name: "Jacket",
+            href: "/jacket",
           },
           {
-            name: "Tussar",
-            href: "/tussar",
+            name: "Skirt",
+            href: "/skirt",
           },
           {
-            name: "Bandhani",
-            href: "/bandhani",
+            name: "Blouse",
+            href: "/blouse",
           },
           {
-            name: "Patola",
-            href: "/patola",
+            name: "Pants",
+            href: "/pants",
+          },
+          {
+            name: "Socks",
+            href: "/socks",
+          },
+          {
+            name: "Shoes",
+            href: "/shoes",
+          },
+        ],
+      },
+      {
+        title: "Cosmetic",
+        subcat: [
+          {
+            name: "Perfume",
+            href: "/perfume",
+          },
+          {
+            name: "Eye Make-up",
+            href: "/eye-make-up",
+          },
+          {
+            name: "Lipstick",
+            href: "/lipstick",
+          },
+          {
+            name: "Foundation",
+            href: "/foundation",
+          },
+          {
+            name: "Blush",
+            href: "/blush",
+          },
+          {
+            name: "Mascara",
+            href: "/mascara",
+          },
+          {
+            name: "Nail Polish",
+            href: "/nail-polish",
+          },
+          {
+            name: "Bronzer",
+            href: "/bronzer",
+          },
+          {
+            name: "Eyeliner",
+            href: "/eyeliner",
+          },
+          {
+            name: "Makeup Brushes",
+            href: "/makeup-brushes",
+          },
+          {
+            name: "Hair Spray",
+            href: "/hair-spray",
+          },
+          {
+            name: "Face Mask",
+            href: "/face-mask",
+          },
+        ],
+      },
+      {
+        title: "Sports & Outdoor",
+        subcat: [
+          {
+            name: "Sweatshirt",
+            href: "/sweatshirt",
+          },
+          {
+            name: "T-shirt",
+            href: "/t-shirt",
+          },
+          {
+            name: "Sports Bra",
+            href: "/sports-bra",
+          },
+          {
+            name: "Running Shoes",
+            href: "/running-shoes",
+          },
+          {
+            name: "Athletic Shorts",
+            href: "/athletic-shorts",
+          },
+          {
+            name: "Yoga Pants",
+            href: "/yoga-pants",
+          },
+          {
+            name: "Hiking Boots",
+            href: "/hiking-boots",
+          },
+          {
+            name: "Cycling Jersey",
+            href: "/cycling-jersey",
+          },
+          {
+            name: "Gym Bag",
+            href: "/gym-bag",
+          },
+          {
+            name: "Sunglasses",
+            href: "/sunglasses",
+          },
+          {
+            name: "Water Bottle",
+            href: "/water-bottle",
+          },
+          {
+            name: "Fitness Tracker",
+            href: "/fitness-tracker",
+          },
+        ],
+      },
+      {
+        title: "Personal Care",
+        subcat: [
+          {
+            name: "Perfume",
+            href: "/perfume",
+          },
+          {
+            name: "sexual Health",
+            href: "/sexual-health",
+          },
+          {
+            name: "after shave products",
+            href: "/after-shave-products",
+          },
+          {
+            name: "Razor blade",
+            href: "/razor-blade",
           },
         ],
       },
