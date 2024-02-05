@@ -5,7 +5,7 @@ import SliderProduct from "@/components/screen/ProductDetails/SliderProduct";
 
 const page = () => {
   return (
-    <section className="pt-10  bg-backgroundPage">
+    <section className="pt-10 pb-13  bg-backgroundPage">
       <div className="container_fluid">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           <div className="border border-red-600 h-fit">
@@ -15,11 +15,10 @@ const page = () => {
             <AboutProduct />
           </div>
         </div>
-         {/* product details */}
+        {/* product details */}
         <div>
-           <ProductDetails />
-           <CustomerReview />
-
+          <ProductDetails />
+          <CustomerReview />
         </div>
       </div>
     </section>
