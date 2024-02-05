@@ -118,8 +118,8 @@ const AboutProduct = () => {
           <button className="size_button">Xl</button>
           <button className="size_button">XXl</button>
         </div>
-        <div className="flex items-center gap-9">
-          <div className="flex items-center gap-5">
+        <div className="flex  items-center gap-9">
+          <div className="flex flex-wrap items-center gap-5">
             <p className="text-sm leading-5 text-black3D">Quantity: </p>
             <div className="h-[35px] flex items-center">
               <button className="h-full px-2 py-[2px] bg-grayPlusBg text-grayPlusText leading-6">

@@ -67,7 +67,7 @@ const SliderProduct = () => {
   return (
     <>
       <div>
-        <div className=" flex  gap-[25px] ">
+        <div className="w-full flex  gap-[25px] ">
           <div className="w-[75%] border border-red-500">
             <Image
               src={imag}

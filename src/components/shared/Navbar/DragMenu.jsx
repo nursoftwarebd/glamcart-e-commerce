@@ -1,5 +1,6 @@
 "use client";
 import { navLinks } from "@/data/navLinks";
+import Link from "next/link";
 
 const DragMenu = () => {
   // var settings = {
@@ -43,21 +44,32 @@ const DragMenu = () => {
   // <Slider  {...settings} ></Slider>
   return (
     <>
-      <div className="hidden xl:flex lg:mx-8 mt-[25px] relative">
-        <ul className="flex items-center gap-8 2xl:gap-10">
-          {navLinks.map((link, index) => {
-            return (
-              <li key={index} className="menu_list group relative">
-                {link.name}
-                <ul className="hidden duration-500 group-hover:block bg-red-500 absolute top-[30px] z-50">
-                  {link.submenu?.map((item, index) => (
-                    <li key={index}>{item.name}</li>
-                  ))}
-                </ul>
-              </li>
-            );
-          })}
-        </ul>
+      <div className="relative">
+        <div className="hidden xl:flex lg:mx-8 mt-[25px]">
+          <ul className="flex items-center gap-8 2xl:gap-10">
+            {navLinks.map((link, index) => {
+              return (
+                <li key={index} className="menu_list group">
+                  {link.name}
+                  <div className="w-full duration-500 invisible group-hover:visible  bg-blue-300 absolute top-[30px] left-0 z-[999] px-[74px] py-8">
+                    {link.submenu?.slice(0, 1).map((items, index) => (
+                      <div key={index}>
+                        <p>{items.title}</p>
+                        {items.subcat?.map((menu, index) => (
+                          <ul key={index}>
+                            <li>
+                              <Link href={menu.href}>{menu.name}</Link>
+                            </li>
+                          </ul>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
     </>
   );

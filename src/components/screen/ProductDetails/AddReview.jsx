@@ -3,7 +3,7 @@ import addstar from "../../../assets/icons/add_all_star.svg";
 
 const AddReview = () => {
   return (
-    <div className="pl-14 pt-18 pb-15 max-w-[745px] space-y-8">
+    <div className="pr-14 lg:pr-0 pl-14 pt-18 pb-15 max-w-[745px] space-y-8">
       <div className="space-y-6">
         <h4 className="text-blackSec font-semibold text-2xl leading-9">
           Add Your Review

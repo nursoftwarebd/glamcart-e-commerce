@@ -8,7 +8,7 @@ import Progressbar from "./Progressbar";
 const CustomerReview = () => {
   return (
     <div className="mt-7.5  bg-white border border-border">
-      <div className="pl-14 pt-10 pb-9 flex items-center gap-[74px]">
+      <div className="pl-14 pt-10 pb-9 flex flex-wrap items-center gap-[74px]">
         <div className="space-y-5">
           <h5 className="text-black3D font-medium text-xl leading-[30px]">
             Customer reviews

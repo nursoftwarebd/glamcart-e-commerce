@@ -4,28 +4,108 @@ export const navLinks = [
     href: "/women-fashion",
     submenu: [
       {
-        name: "men's Fashion",
-        href: "/men-fashion",
+        title: "Saree",
+        subcat: [
+          {
+            name: "Cotton",
+            href: "/cotton",
+          },
+          {
+            name: "Silk",
+            href: "/silk",
+          },
+          {
+            name: "Banarasi",
+            href: "/banarasi",
+          },
+          {
+            name: "Chiffon",
+            href: "/chiffon",
+          },
+          {
+            name: "Georgette",
+            href: "/georgette",
+          },
+          {
+            name: "Kanjivaram",
+            href: "/kanjivaram",
+          },
+          {
+            name: "Linen",
+            href: "/linen",
+          },
+          {
+            name: "Tussar",
+            href: "/tussar",
+          },
+          {
+            name: "Bandhani",
+            href: "/bandhani",
+          },
+          {
+            name: "Patola",
+            href: "/patola",
+          },
+          {
+            name: "Linen",
+            href: "/linen",
+          },
+          {
+            name: "Tussar",
+            href: "/tussar",
+          },
+        ],
       },
       {
-        name: "Kid's Fashion",
-        href: "/kid-fashion",
+        title: "Clothes",
+        subcat: [
+          {
+            name: "T-shirt",
+            href: "/t-shirt",
+          },
+          {
+            name: "Shorts",
+            href: "/shorts",
+          },
+          {
+            name: "Banarasi",
+            href: "/banarasi",
+          },
+          {
+            name: "Chiffon",
+            href: "/chiffon",
+          },
+          {
+            name: "Georgette",
+            href: "/georgette",
+          },
+          {
+            name: "Kanjivaram",
+            href: "/kanjivaram",
+          },
+          {
+            name: "Linen",
+            href: "/linen",
+          },
+          {
+            name: "Tussar",
+            href: "/tussar",
+          },
+          {
+            name: "Bandhani",
+            href: "/bandhani",
+          },
+          {
+            name: "Patola",
+            href: "/patola",
+          },
+        ],
       },
     ],
   },
   {
     name: "men's Fashion",
     href: "/men-fashion",
-    submenu: [
-      {
-        name: "Nur Vai Fashion",
-        href: "/men-fashion",
-      },
-      {
-        name: "Kid's Fashion",
-        href: "/kid-fashion",
-      },
-    ],
   },
   {
     name: "Kid's Fashion",
