@@ -59,6 +59,7 @@ module.exports = {
         grayPlusBg: "#EFEFEF",
         grayPlusText: "##ACACAC",
         oldGray: "#A7A7A7",
+        grayEdit: "#999999",
         blackSec: "#383838",
         grayMenu: "#333333d9",
         imageBack: "#F2F2F2",
@@ -69,6 +70,7 @@ module.exports = {
         accountBlack: "#414B56",
       },
       margin: {
+        6.5: "26px",
         7.5: "30px",
         11.5: "45px",
         13: "50px",
@@ -77,6 +79,7 @@ module.exports = {
         21: "90px",
       },
       padding: {
+        6.5: "26px",
         7.5: "30px",
         11.5: "45px",
         13: "50px",
