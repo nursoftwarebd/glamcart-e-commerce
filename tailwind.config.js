@@ -66,6 +66,7 @@ module.exports = {
         orangeStar: "#FFB340",
         grayPrice: "#BABABA",
         lineThrough: "#8D8D8D",
+        accountBlack: "#414B56",
       },
       margin: {
         7.5: "30px",
@@ -73,6 +74,7 @@ module.exports = {
         13: "50px",
         15: "60px",
         18: "70px",
+        21: "90px",
       },
       padding: {
         7.5: "30px",
@@ -80,6 +82,7 @@ module.exports = {
         13: "50px",
         15: "60px",
         18: "70px",
+        21: "90px",
       },
       boxShadow: {
         "3xl": "0px 2px 8px 0px rgba(0, 0, 0, 0.12)",
@@ -88,6 +91,7 @@ module.exports = {
         montserrat: "'Montserrat', 'sans-serif'",
         poppins: "'Poppins', 'sans-serif'",
         lato: "'Lato', 'sans-serif'",
+        rajdhani: "'Rajdhani', 'sans-serif'",
       },
       fontSize: {
         heading1: "45px",

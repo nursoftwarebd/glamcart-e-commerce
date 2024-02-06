@@ -1,5 +1,12 @@
 export const tabs = [
-  { id: 1, title: "Tab 1", content: <div>Content for Tab 1</div> },
-  { id: 2, title: "Tab 2", content: <div>Content for Tab 2</div> },
-  { id: 3, title: "Tab 3", content: <div>Content for Tab 3</div> },
+  { id: 1, title: "my account" },
+  { id: 2, title: "My Orders" },
+  { id: 3, title: "My Wishlist" },
+  { id: 4, title: "Address Book" },
+  {
+    id: 5,
+    title: "Account Information",
+  },
+  { id: 6, title: "Help & FAQ" },
+  { id: 7, title: "Contact Us" },
 ];

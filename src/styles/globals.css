@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Lato:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Lato:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -7,6 +7,7 @@
 /* font-family: 'Montserrat', sans-serif;
 font-family: 'Poppins', sans-serif; 
 font-family: 'Lato', sans-serif;
+font-family: 'Rajdhani', sans-serif;
 */
 
 * {
@@ -64,6 +65,12 @@ body {
 }
 .progress_text {
   @apply font-poppins text-sm leading-5 text-black3D font-normal;
+}
+.my_account {
+  @apply font-rajdhani text-2xl font-semibold leading-[30.62px] text-accountBlack tracking-[2%];
+}
+.account_list {
+  @apply font-poppins text-base capitalize font-normal  leading-6 tracking-[2%];
 }
 
 /* slider css */
