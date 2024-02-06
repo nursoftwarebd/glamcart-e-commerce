@@ -31,7 +31,7 @@ const Tabs = ({ tabs }) => {
         ))}
       </div>
       {/* content */}
-      <div className="bg-white w-full h-fit">
+      <div className="w-full h-fit">
         {activeTab && renderTabContent(activeTab)}
       </div>
     </div>

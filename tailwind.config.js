@@ -43,6 +43,7 @@ module.exports = {
         black: "#424241",
         black3D: "#3D3D3F",
         border: "#F1F1F1",
+        borderAccount: "#ECECEC",
         borderSide: "#F4F4F4",
         borderSize: "#EAEAEA",
         navBorder: "#EFEEEE",
