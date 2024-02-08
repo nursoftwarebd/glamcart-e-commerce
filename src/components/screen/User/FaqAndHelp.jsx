@@ -1,5 +1,6 @@
 import { faqData } from "@/data/faqData";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import minus from "../../../assets/icons/minus.svg";
 import plus from "../../../assets/icons/plus.svg";
@@ -53,11 +54,13 @@ const FaqAndHelp = () => {
           <p className="leading-6 text-grayFaq">
             Have a question we have not answered?
           </p>
-          <button className="w-[158px] h-[41px] px-10 py-[10px] bg-secondary shadow-md rounded-[3px] flex items-center justify-center">
-            <span className="text-sm leading-[21px] font-medium text-white">
-              Contact Us
-            </span>
-          </button>
+          <Link href={"/contact-us"}>
+            <button className="w-[158px] h-[41px] px-10 py-[10px] bg-secondary shadow-md rounded-[3px] flex items-center justify-center">
+              <span className="text-sm leading-[21px] font-medium text-white">
+                Contact Us
+              </span>
+            </button>
+          </Link>
         </div>
       </div>
     </div>

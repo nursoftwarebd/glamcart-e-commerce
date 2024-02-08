@@ -74,6 +74,7 @@ module.exports = {
         grayPrice: "#BABABA",
         lineThrough: "#8D8D8D",
         accountBlack: "#414B56",
+        textBody: "#808080",
       },
       margin: {
         6.5: "26px",
@@ -104,6 +105,7 @@ module.exports = {
       },
       fontSize: {
         heading1: "45px",
+        heading42: "42px",
         heading2: "26px",
         heading27: "27px",
         heading28: "28px",
