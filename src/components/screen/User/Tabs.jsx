@@ -4,6 +4,7 @@
 import { useState } from "react";
 import AccountInformation from "./AccountInformation";
 import AddressBook from "./AddressBook";
+import FaqAndHelp from "./FaqAndHelp";
 import MyAccount from "./MyAccount";
 import MyOrder from "./MyOrder";
 import MyWishlist from "./MyWishlist";
@@ -51,6 +52,8 @@ const renderTabContent = (activeTab) => {
       return <AddressBook />;
     case 5:
       return <AccountInformation />;
+    case 6:
+      return <FaqAndHelp />;
     default:
       return null;
   }
