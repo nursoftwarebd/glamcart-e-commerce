@@ -72,7 +72,12 @@ body {
 .account_list {
   @apply font-poppins text-base capitalize font-normal  leading-6 tracking-[2%];
 }
-
+.order_th {
+  @apply font-poppins text-start border px-5 py-3 text-base font-medium leading-6 tracking-[2%] text-graRate uppercase;
+}
+.order_td {
+  @apply font-poppins text-base px-5 py-3 leading-6 text-grayView border-[.75px] border-borderAccount;
+}
 /* slider css */
 
 .slick-slide > div {
