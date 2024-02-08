@@ -78,6 +78,12 @@ body {
 .order_td {
   @apply font-poppins text-base px-5 py-3 leading-6 text-grayView border-[.75px] border-borderAccount;
 }
+.form_title {
+  @apply font-rajdhani text-lg leading-[23px] font-medium tracking-[2%] text-blackPrimary uppercase;
+}
+.address_form_label {
+  @apply font-poppins text-sm font-normal leading-[21px] text-graRate uppercase;
+}
 /* slider css */
 
 .slick-slide > div {
