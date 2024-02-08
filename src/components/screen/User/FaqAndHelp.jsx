@@ -49,6 +49,16 @@ const FaqAndHelp = () => {
             </div>
           ))}
         </div>
+        <div className="flex flex-col items-center justify-center gap-4 pb-10">
+          <p className="leading-6 text-grayFaq">
+            Have a question we have not answered?
+          </p>
+          <button className="w-[158px] h-[41px] px-10 py-[10px] bg-secondary shadow-md rounded-[3px] flex items-center justify-center">
+            <span className="text-sm leading-[21px] font-medium text-white">
+              Contact Us
+            </span>
+          </button>
+        </div>
       </div>
     </div>
   );
