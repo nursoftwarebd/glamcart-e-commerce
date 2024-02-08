@@ -49,6 +49,7 @@ module.exports = {
         borderSide: "#F4F4F4",
         borderSize: "#EAEAEA",
         borderFaq: "#D8D8D8",
+        borderContact: "#E1E1E1",
         navBorder: "#EFEEEE",
         lightText: "#29292E",
         fadeRed: "#FF5D5D",
@@ -75,6 +76,7 @@ module.exports = {
         lineThrough: "#8D8D8D",
         accountBlack: "#414B56",
         textBody: "#808080",
+        contactLabel: "#2E2E2E",
       },
       margin: {
         6.5: "26px",
