@@ -13,7 +13,7 @@ const Tabs = ({ tabs }) => {
   return (
     <div className="pt-6 flex gap-5">
       {/* button */}
-      <div className="w-[280px] bg-white shadow-md flex flex-col">
+      <div className="w-[280px] h-fit bg-white shadow-md flex flex-col">
         {tabs.map((tab) => (
           <div key={tab.id} className="border-dashed border-b-[1px]">
             <button
