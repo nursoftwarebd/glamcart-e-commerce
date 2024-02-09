@@ -56,10 +56,7 @@ const Navbar = () => {
                 <span className=" leading-[120%] tracking-[0.08px]">Login</span>
               </button>
               {openModal && (
-                <LogInModal
-                  LogInModal={LogInModal}
-                  setOpenModal={setOpenModal}
-                />
+                <LogInModal openModal={openModal} setOpenModal={setOpenModal} />
               )}
               <Link
                 href="#"

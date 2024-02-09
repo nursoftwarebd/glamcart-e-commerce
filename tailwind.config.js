@@ -38,6 +38,7 @@ module.exports = {
         backgroundNav: "#FBFBFB",
         bgSearch: "#F6F6F6",
         bgCart: "#EBF4F9",
+        blueLogIn: "#2874F0",
         starRed: "#FF6565",
         bgProductDetails: "#FCFCFC",
         blackPrimary: "#333333",
@@ -77,6 +78,7 @@ module.exports = {
         accountBlack: "#414B56",
         textBody: "#808080",
         contactLabel: "#2E2E2E",
+        indigoText: "#042847",
       },
       margin: {
         6.5: "26px",
