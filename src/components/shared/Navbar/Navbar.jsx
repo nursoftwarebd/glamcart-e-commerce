@@ -1,5 +1,8 @@
 "use client";
+import LogInModal from "@/components/common/LogInModal";
 import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 import bucket from "../../../assets/icons/bucket.svg";
 import search from "../../../assets/icons/bx_bx-search.svg";
 import heart from "../../../assets/icons/heart.svg";
@@ -8,6 +11,7 @@ import logo from "../../../assets/logo.svg";
 import DragMenu from "./DragMenu";
 
 const Navbar = () => {
+  const [openModal, setOpenModal] = useState(false);
   return (
     <header className="h-[130px] lg:h-[147px] bg-backgroundNav border-b-[1.5px] border-navBorder">
       <div className="container_fluid">
@@ -36,8 +40,9 @@ const Navbar = () => {
           </div>
           <div className="hidden lg:flex items-center">
             <div className="flex items-center gap-10">
-              <a
-                href="#"
+              <button
+                onClick={() => setOpenModal(!openModal)}
+                type="button"
                 className="flex items-center gap-[6px] text-lightText
               "
               >
@@ -49,8 +54,14 @@ const Navbar = () => {
                   />
                 </span>
                 <span className=" leading-[120%] tracking-[0.08px]">Login</span>
-              </a>
-              <a
+              </button>
+              {openModal && (
+                <LogInModal
+                  LogInModal={LogInModal}
+                  setOpenModal={setOpenModal}
+                />
+              )}
+              <Link
                 href="#"
                 className="flex items-center gap-[6px] text-lightText
               "
@@ -65,7 +76,7 @@ const Navbar = () => {
                 <span className=" leading-[120%] tracking-[0.08px]">
                   Wishlist
                 </span>
-              </a>
+              </Link>
               <a
                 href="#"
                 className="flex items-center gap-[6px] text-lightText
