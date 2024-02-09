@@ -1,6 +1,7 @@
 import Footer from "@/components/shared/Footer/Footer";
 import Navbar from "@/components/shared/Navbar/Navbar";
 import "../styles/globals.css";
+import "../styles/hero-click-slider.css";
 
 export const metadata = {
   title: "Nirvoya",

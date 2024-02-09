@@ -24,7 +24,7 @@ body {
 }
 
 .h1 {
-  @apply font-montserrat text-sm sm:text-xl lg:text-heading2 xl:text-heading1 font-bold leading-normal xl:leading-[55px];
+  @apply font-montserrat text-sm sm:text-xl lg:text-heading2  xl:text-[36px] 2xl:text-heading1 font-bold leading-normal xl:leading-[55px];
 }
 .h2 {
   @apply font-poppins text-base lg:text-heading2 font-medium leading-[125%] lg:leading-[246%];

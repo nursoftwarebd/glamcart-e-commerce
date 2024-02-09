@@ -1,0 +1,51 @@
+/* .slick-slider {
+  position: relative;
+  transition: all 900ms ease;
+}
+
+.slick-initialized {
+  overflow: hidden;
+}
+.slick-dots {
+  text-align: center;
+}
+
+.slick-dots li button {
+  width: 16px !important;
+  height: 16px !important;
+  border: 1px solid #f1f1f1;
+  border-radius: 50%;
+  position: absolute;
+  top: 77%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+}
+
+.slick-dots li button::before {
+  color: #f1f1f1 !important;
+  opacity: 1 !important;
+  font-size: 70px !important;
+}
+
+.slick-active::after {
+  background-color: #8b8b8b;
+  content: "";
+  position: absolute;
+  top: 86%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.slick-dots {
+  bottom: 22px !important;
+  left: 20px;
+}
+
+.text-hidden {
+  display: none;
+} */
+.slick-dots {
+  bottom: 25px !important;
+}

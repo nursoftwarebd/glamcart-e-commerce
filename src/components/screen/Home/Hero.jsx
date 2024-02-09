@@ -1,42 +1,49 @@
 "use client";
 // Import Swiper React components
 import "swiper/css/pagination";
-import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import Image from "next/image";
+import Slider from "react-slick";
 import "swiper/css";
-import { Pagination } from "swiper/modules";
-
 import herothree from "../../../assets/images/home/herothree.png";
 import herotwo from "../../../assets/images/home/herotwo.png";
 import HeroBanner from "./HeroBanner";
 
 const Hero = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    nextArrow: false,
+    // autoplay: true,
+    prevArrow: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    // appendDots: (dots) => <ul>{dots}</ul>,
+    // customPaging: (i) => (
+    //   <div className="ft-slick__dots--custom">
+    //     <div className="loading" />
+    //   </div>
+    // ),
+  };
   return (
     <section className="pt-3 bg-backgroundPage">
       <div className="container_fluid">
         <div className="grid lg:grid-cols-3 gap-7">
           <div className="w-full lg:col-span-2">
-            <Swiper
-              pagination={true}
-              modules={[Pagination]}
-              spaceBetween={0}
-              slidesPerView={1}
-              
-            >
-              <SwiperSlide>
-                <HeroBanner />
-              </SwiperSlide>
-              <SwiperSlide>
-                <HeroBanner />
-              </SwiperSlide>
-              <SwiperSlide>
-                <HeroBanner />
-              </SwiperSlide>
-              <SwiperSlide>
-                <HeroBanner />
-              </SwiperSlide>
-            </Swiper>
+            <div className="slider-container">
+              <Slider {...settings}>
+                <div>
+                  <HeroBanner />
+                </div>
+                <div>
+                  <HeroBanner />
+                </div>
+                <div>
+                  <HeroBanner />
+                </div>
+              </Slider>
+            </div>
           </div>
           {/* for large screen */}
           <div className="hidden lg:grid lg:col-span-1 gap-y-7">
