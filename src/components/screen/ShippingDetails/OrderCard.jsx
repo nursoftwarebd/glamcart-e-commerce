@@ -1,4 +1,6 @@
 import RoundedCheckbox from "@/components/common/RoundedCheckbox";
+import { paymentMethodData } from "@/data/paymentMethodData";
+import Image from "next/image";
 
 const OrderCard = () => {
   return (
@@ -63,13 +65,34 @@ const OrderCard = () => {
         </h3>
       </div>
       <div className="py-7">
-        <p className="p-6">Payment Methods</p>
+        <h4 className="pb-4 text-xl text-black3D font-medium leading-[30px] tracking-[2%]">
+          Payment Methods
+        </h4>
         <div className="space-y-4">
-          <div className="flex items-center justify-between">
-            <RoundedCheckbox />
-          </div>
+          {paymentMethodData.map((paymentMethod) => (
+            <div
+              key={paymentMethod.id}
+              className="flex items-center justify-between"
+            >
+              <div className="flex items-center gap-3">
+                <RoundedCheckbox />
+                <p className="leading-6 text-grayView tracking-[2%]">
+                  {paymentMethod.policyName}
+                </p>
+              </div>
+              <Image
+                src={paymentMethod.logo}
+                alt={`payment logo ${paymentMethod.policyName}`}
+              />
+            </div>
+          ))}
         </div>
       </div>
+      <button className="w-full h-[56.28px] bg-secondary flex items-center justify-center rounded-[5px]">
+        <span className="text-xl text-backgroundNav font-semibold leading-[30px]">
+          PLACE ORDER
+        </span>
+      </button>
     </div>
   );
 };
