@@ -68,6 +68,7 @@ module.exports = {
         grayFaq: "#666666",
         oldGray: "#A7A7A7",
         grayEdit: "#999999",
+        grayForm: "#E3E3E3",
         blackSec: "#383838",
         grayMenu: "#333333d9",
         imageBack: "#F2F2F2",
@@ -106,6 +107,7 @@ module.exports = {
         poppins: "'Poppins', 'sans-serif'",
         lato: "'Lato', 'sans-serif'",
         rajdhani: "'Rajdhani', 'sans-serif'",
+        dmSans: "'DM Sans', 'sans-serif'",
       },
       fontSize: {
         heading1: "45px",
