@@ -116,6 +116,7 @@ module.exports = {
       },
       fontSize: {
         heading1: "45px",
+        heading30: "30px",
         heading42: "42px",
         heading2: "26px",
         heading27: "27px",
