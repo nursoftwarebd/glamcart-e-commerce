@@ -1,4 +1,5 @@
 import Checkbox from "@/components/common/Checkbox";
+import { checkOutData } from "@/data/checkOutData";
 import Image from "next/image";
 import deleteButton from "../../assets/icons/delete.svg";
 
@@ -25,6 +26,24 @@ const page = () => {
                     REMOVE
                   </span>
                 </button>
+              </div>
+              <div className="space-y-5">
+                {checkOutData.map((checkOutData) => {
+                  return (
+                    <div
+                      key={checkOutData.id}
+                      className="w-full py-7 pl-7 pr-12 bg-white flex items-center gap-10"
+                    >
+                      <Checkbox />
+                      <div className="flex items-center justify-between">
+                        <div className="flex gap-6">
+                          <Image src={checkOutData.img} alt="" />
+                        </div>
+                        <div></div>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
             <div className="w-full xl:max-w-[439px] border border-red-700">

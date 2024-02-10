@@ -8,13 +8,17 @@ const Checkbox = () => {
         >
           <input
             type="checkbox"
-            class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-[#CBD5E0] checked:border-[#005eb8] checked:bg-[#005eb8] hover:before:opacity-10"
+            class="
+            h-[27px] w-[27px]
+            border-[3px] border-[#C4C4C4]            
+            checked:border-secondary checked:bg-secondary
+            before:content[''] peer relative  cursor-pointer appearance-none rounded-md   hover:before:opacity-10"
             id="checkbox"
           />
           <span class="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-3.5 w-3.5"
+              class="h-4 w-4"
               viewBox="0 0 20 20"
               fill="currentColor"
               stroke="currentColor"
