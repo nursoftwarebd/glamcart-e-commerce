@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const OrderCard = () => {
   return (
-    <div className="w-full xl:w-[439px] 2xl:w-[439px] border border-red-500 p-7 bg-white rounded-[5px]">
+    <div className="w-full xl:w-[439px] 2xl:w-[439px] p-7 bg-white rounded-[5px]">
       <h5 className="text-xl text-blackPrimary font-medium leading-[30px]">
         My Orders
       </h5>
@@ -60,7 +60,7 @@ const OrderCard = () => {
         <h5 className="text-lg text-blackPrimary font-medium leading-[27px]">
           Order Total
         </h5>
-        <h3 className="text-heading28 text-secondary font-semibold leading-[42px]">
+        <h3 className="text-xl md:text-heading28 text-secondary font-semibold leading-[42px]">
           ৳1,956.66
         </h3>
       </div>
