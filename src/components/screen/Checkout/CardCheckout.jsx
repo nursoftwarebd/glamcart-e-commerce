@@ -23,8 +23,8 @@ const CardCheckout = () => {
     }
   };
   return (
-    <div className="w-[937px] space-y-5">
-      <div className="py-7.5 pl-6.5 pr-12 w-[937px] bg-white flex items-center justify-between">
+    <div className="w-auto 2xl:max-w-[937px] space-y-5">
+      <div className="py-7.5 pl-6.5 pr-12 w-auto 2xl:max-w-[937px] bg-white flex items-center justify-between">
         {/* all select */}
         <div className="flex items-center gap-10">
           <Checkbox />

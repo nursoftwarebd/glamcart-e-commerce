@@ -80,6 +80,7 @@ module.exports = {
         lineThrough: "#8D8D8D",
         accountBlack: "#414B56",
         textBody: "#808080",
+        lightGrayBlue: "#F3F3F3",
         contactLabel: "#2E2E2E",
         indigoText: "#042847",
       },
