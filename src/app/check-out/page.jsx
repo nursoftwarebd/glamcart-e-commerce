@@ -1,7 +1,4 @@
-import Checkbox from "@/components/common/Checkbox";
-import { checkOutData } from "@/data/checkOutData";
-import Image from "next/image";
-import deleteButton from "../../assets/icons/delete.svg";
+import CardCheckout from "@/components/screen/Checkout/CardCheckout";
 
 export const metadata = {
   title: "NIRVOYA - Check Out Page",
@@ -13,39 +10,7 @@ const page = () => {
       <section className="pt-11 pb-13  bg-backgroundPage">
         <div className="container_fluid">
           <div className="flex flex-col md:flex-row md:justify-between gap-7">
-            <div className="w-[937px] border border-red-700">
-              <div className="py-7.5 pl-6.5 pr-12 w-[937px] bg-white flex items-center justify-between">
-                {/* all select */}
-                <div className="flex items-center gap-10">
-                  <Checkbox />
-                  <p className="leading-6 text-blackPrimary">Select All</p>
-                </div>
-                <button className="flex items-center gap-1">
-                  <Image src={deleteButton} alt="deleteButton" />
-                  <span className="font-medium text-grayDelete leading-6 ">
-                    REMOVE
-                  </span>
-                </button>
-              </div>
-              <div className="space-y-5">
-                {checkOutData.map((checkOutData) => {
-                  return (
-                    <div
-                      key={checkOutData.id}
-                      className="w-full py-7 pl-7 pr-12 bg-white flex items-center gap-10"
-                    >
-                      <Checkbox />
-                      <div className="flex items-center justify-between">
-                        <div className="flex gap-6">
-                          <Image src={checkOutData.img} alt="" />
-                        </div>
-                        <div></div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
+            <CardCheckout />
             <div className="w-full xl:max-w-[439px] border border-red-700">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem eius
               soluta deleniti. Sed neque expedita quisquam nulla officia autem

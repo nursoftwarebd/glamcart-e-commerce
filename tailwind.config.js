@@ -71,6 +71,7 @@ module.exports = {
         grayForm: "#E3E3E3",
         grayDelete: "#A4A4A4",
         blackSec: "#383838",
+        blackGray: "#4D4D4D",
         grayMenu: "#333333d9",
         imageBack: "#F2F2F2",
         checkBorder: "#D0D0D2",

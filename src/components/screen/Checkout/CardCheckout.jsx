@@ -1,0 +1,95 @@
+"use client";
+import Checkbox from "@/components/common/Checkbox";
+import { checkOutData } from "@/data/checkOutData";
+import Image from "next/image";
+import { useState } from "react";
+import plusIcon from "../../../assets/icons/+.svg";
+import minusIcon from "../../../assets/icons/-.svg";
+import {
+  default as deleteButton,
+  default as deleteItem,
+} from "../../../assets/icons/delete.svg";
+
+const CardCheckout = () => {
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    setCount((prevCount) => prevCount + 1);
+  };
+
+  const decrement = () => {
+    if (count > 0) {
+      setCount((prevCount) => prevCount - 1);
+    }
+  };
+  return (
+    <div className="w-[937px] space-y-5">
+      <div className="py-7.5 pl-6.5 pr-12 w-[937px] bg-white flex items-center justify-between">
+        {/* all select */}
+        <div className="flex items-center gap-10">
+          <Checkbox />
+          <p className="leading-6 text-blackPrimary">Select All</p>
+        </div>
+        <button className="flex items-center gap-1">
+          <Image src={deleteButton} alt="deleteButton" />
+          <span className="font-medium text-grayDelete leading-6 ">REMOVE</span>
+        </button>
+      </div>
+
+      <div className="space-y-5">
+        {checkOutData.map((checkOutData) => {
+          return (
+            <div
+              key={checkOutData.id}
+              className="w-full py-7 pl-7 pr-12 bg-white flex items-center gap-10"
+            >
+              <Checkbox />
+              <div className="w-full flex items-start justify-between">
+                <div className="flex gap-6">
+                  <Image
+                    src={checkOutData.img}
+                    alt={`checkout ${checkOutData.name}`}
+                    className="rounded-[5px]"
+                  />
+                  <div className="space-y-5">
+                    <h4 className="text-lg text-blackPrimary font-medium leading-[27px]">
+                      {checkOutData.name}
+                    </h4>
+                    <h3 className="text-xl font-semibold leading-[30px] text-secondary">
+                      {checkOutData.price}
+                    </h3>
+                  </div>
+                </div>
+                <div className="space-y-11">
+                  <h5 className="text-lg text-end leading-[27px] text-blackGray">
+                    {checkOutData.sku}
+                  </h5>
+                  <div className="flex items-center justify-end gap-[22px]">
+                    <div className="w-[120px] h-[56px] flex items-center justify-center rounded-[5px] border-[1px] border-borderFaq gap-5">
+                      <span onClick={decrement} className="cursor-pointer">
+                        <Image src={minusIcon} alt="minusIcon" />
+                      </span>
+
+                      <span className="text-xl font-medium leading-[30px] text-secondary">
+                        {count}
+                      </span>
+                      <span onClick={increment} className="cursor-pointer">
+                        {" "}
+                        <Image src={plusIcon} alt="minusIcon" />
+                      </span>
+                    </div>
+                    <button className="w-[60px] h-[56px] flex items-center justify-center rounded-[5px] border-[1px] border-borderFaq">
+                      <Image src={deleteItem} alt="deleteItem" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+export default CardCheckout;
