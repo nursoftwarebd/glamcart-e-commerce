@@ -66,6 +66,7 @@ module.exports = {
         grayPlusText: "##ACACAC",
         grayBorderForm: "#D6D3D3",
         grayFaq: "#666666",
+        grayBorderPage: "#E2E2E2",
         oldGray: "#A7A7A7",
         grayEdit: "#999999",
         grayForm: "#E3E3E3",

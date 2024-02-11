@@ -1,3 +1,4 @@
+import BlogPaginations from "@/components/screen/Blog/BlogPaginations";
 import { blogData } from "@/data/blogData";
 import Image from "next/image";
 
@@ -59,6 +60,7 @@ const BlogPage = () => {
               );
             })}
           </div>
+          <BlogPaginations />
         </div>
       </section>
     </>
