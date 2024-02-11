@@ -120,6 +120,7 @@ module.exports = {
         heading30: "30px",
         heading42: "42px",
         heading36: "36px",
+        heading56: "56px",
         heading2: "26px",
         heading27: "27px",
         heading28: "28px",

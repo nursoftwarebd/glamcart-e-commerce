@@ -46,7 +46,7 @@ const DragMenu = () => {
     <>
       <div className="relative">
         <div className="hidden xl:flex lg:mx-8 mt-[25px]">
-          <ul className="flex items-center gap-8 2xl:gap-10">
+          <ul className="flex items-center gap-8 xl:gap-12">
             {navLinks.map((link, index) => {
               return (
                 <li key={index} className="menu_list group">
