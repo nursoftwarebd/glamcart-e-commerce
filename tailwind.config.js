@@ -84,6 +84,11 @@ module.exports = {
         lightGrayBlue: "#F3F3F3",
         contactLabel: "#2E2E2E",
         indigoText: "#042847",
+        linkEndBg: "#5D9DB1",
+        twitterBg: "#53D1E2",
+        facebookBg: "#4391DA",
+        whatsBg: "#3AB137",
+        shareBg: "#FF7020",
       },
       margin: {
         6.5: "26px",
