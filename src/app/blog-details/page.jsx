@@ -1,4 +1,5 @@
 import Comments from "@/components/screen/BlogDetails/Comments";
+import LeaveCommentForm from "@/components/screen/BlogDetails/LeaveCommentForm";
 import TagAndShare from "@/components/screen/BlogDetails/TagAndShare";
 import Breadcrumb from "@/components/shared/Breadcrum/Breadcrumb";
 import { blogDetails } from "@/data/blogDetails";
@@ -53,6 +54,7 @@ const BlogDetailsPage = () => {
 
         <TagAndShare />
         <Comments />
+        <LeaveCommentForm />
       </div>
     </section>
   );
