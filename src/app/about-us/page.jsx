@@ -1,4 +1,5 @@
 import AboutHero from "@/components/screen/About/AboutHero";
+import OurFeature from "@/components/screen/About/OurFeature";
 import OurMission from "@/components/screen/About/OurMission";
 
 export const metadata = {
@@ -11,6 +12,7 @@ const page = () => {
     <section className=" bg-backgroundPage">
       <AboutHero />
       <OurMission />
+      <OurFeature />
     </section>
   );
 };

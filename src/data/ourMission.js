@@ -10,6 +10,7 @@ export const ourMission = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
     img: one,
     link: "/online-shop",
+    learn: "Learn More >>",
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ export const ourMission = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
     img: two,
     link: "/trusted-seller",
+    learn: "Learn More >>",
   },
   {
     id: 3,
@@ -26,5 +28,6 @@ export const ourMission = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
     img: three,
     link: "/expand-store",
+    learn: "Learn More >>",
   },
 ];

@@ -89,6 +89,8 @@ module.exports = {
         facebookBg: "#4391DA",
         whatsBg: "#3AB137",
         shareBg: "#FF7020",
+        lightPink: "#FFF2F2",
+        darkBlack: "#363848",
       },
       margin: {
         6.5: "26px",
@@ -119,6 +121,7 @@ module.exports = {
         lato: "'Lato', 'sans-serif'",
         rajdhani: "'Rajdhani', 'sans-serif'",
         dmSans: "'DM Sans', 'sans-serif'",
+        openSans: "'Open Sans', 'sans-serif'",
       },
       fontSize: {
         heading1: "45px",
