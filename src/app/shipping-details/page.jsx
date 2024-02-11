@@ -8,20 +8,18 @@ export const metadata = {
 
 const ShippingDetailsPage = () => {
   return (
-    <>
-      <section className="pt-15 pb-13  bg-backgroundPage">
-        <div className="container_fluid">
-          <div className="w-full flex flex-col xl:flex-row xl:justify-between gap-7 2xl:gap-10">
-            <div>
-              <ShippingForm />
-            </div>
-            <div>
-              <OrderCard />
-            </div>
+    <section className="pt-15 pb-13  bg-backgroundPage">
+      <div className="container_fluid">
+        <div className="w-full flex flex-col xl:flex-row xl:justify-between gap-7 2xl:gap-10">
+          <div>
+            <ShippingForm />
+          </div>
+          <div>
+            <OrderCard />
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 
