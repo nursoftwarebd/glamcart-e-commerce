@@ -11,7 +11,7 @@ const OurMission = () => {
           heading="Our Mission"
           sebHeading="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
         />
-        <div className="pt-10 grid grid-cols-3 gap-7">
+        <div className="pt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
           {ourMission.map((ourMission) => {
             return (
               <div
@@ -25,7 +25,7 @@ const OurMission = () => {
                       alt={`our mission ${ourMission.title}`}
                     />
                   </div>
-                  <h3 className="text-heading30 leading-[40px] text-blackPrimary font-semibold">
+                  <h3 className="text-2xl md:text-heading30 leading-[40px] text-blackPrimary font-semibold">
                     {ourMission.title}
                   </h3>
                 </div>

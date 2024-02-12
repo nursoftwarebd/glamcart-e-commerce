@@ -74,6 +74,7 @@ module.exports = {
         blackSec: "#383838",
         blackGray: "#4D4D4D",
         grayMenu: "#333333d9",
+        gray53: "#535353",
         imageBack: "#F2F2F2",
         checkBorder: "#D0D0D2",
         orangeStar: "#FFB340",
@@ -91,6 +92,7 @@ module.exports = {
         shareBg: "#FF7020",
         lightPink: "#FFF2F2",
         darkBlack: "#363848",
+        dark2: "#3B2F4A",
       },
       margin: {
         6.5: "26px",
@@ -129,6 +131,7 @@ module.exports = {
         heading40: "40px",
         heading30: "30px",
         heading42: "42px",
+        heading35: "35px",
         heading36: "36px",
         heading56: "56px",
         heading2: "26px",
