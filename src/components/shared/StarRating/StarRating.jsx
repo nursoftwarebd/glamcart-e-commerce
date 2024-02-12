@@ -8,6 +8,7 @@ const StarRating = ({ rating, onStarClick }) => {
       value={rating}
       onStarClick={onStarClick}
       starColor="#F39C12"
+      size="25px"
       emptyStarColor="#BDC3C7"
     />
   );

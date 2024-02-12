@@ -17,13 +17,13 @@ const Navbar = () => {
       <div className="container_fluid">
         <div className="flex items-center justify-between pt-3">
           {/* logo */}
-          <div className="hidden lg:flex w-[141px] h-[80px]">
+          <Link href={"/"} className="hidden lg:flex w-[141px] h-[80px]">
             <Image
               src={logo}
               alt="logo"
               className="w-full h-full object-center object-fill"
             />
-          </div>
+          </Link>
           <div className="w-full lg:w-[365px] xl:w-[665px] 2xl:w-[778px] h-[50px] border-[1px] border-border rounded-[5px]  flex items-center">
             <input
               placeholder="I'm looking for..."

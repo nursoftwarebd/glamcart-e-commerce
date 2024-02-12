@@ -26,7 +26,7 @@ const LogInModal = ({ openModal, setOpenModal }) => {
     >
       <div className="w-[972px] h-auto rounded-[24px]">
         <div className="grid grid-cols-2">
-          <div className="bg-blueLogIn rounded-tl-[24px] rounded-bl-[24px] px-[84px] py-[100px]">
+          <div className="bg-blueLogIn rounded-tl-[24px] rounded-bl-[24px] px-[84px] py-[100px] ">
             <h3 className="text-heading28 font-semibold leading-[42px] tracking-[3%] text-white">
               Login
             </h3>
@@ -47,7 +47,7 @@ const LogInModal = ({ openModal, setOpenModal }) => {
                   <Image src={logCross} alt="logCross" />
                 </button>
               </div>
-              <div className="px-[60px] pt-[60px] pb-[132px] ">
+              <div className="px-[60px] pt-15 pb-[135px] ">
                 <form className="space-y-5">
                   <h3 className="text-2xl text-indigoText font-medium leading-9">
                     Welcome to Project Nirvoya! Please login.
