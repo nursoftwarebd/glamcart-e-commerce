@@ -1,5 +1,6 @@
 // import Hero from "@/components/screen/Home/Hero";
 
+import TrySwiper from "@/components/common/TrySwiper";
 import Category from "@/components/screen/Home/Category";
 import Featured from "@/components/screen/Home/Featured";
 import FlashDeals from "@/components/screen/Home/FlashDeals";
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero />
       <Category />
       <FlashDeals />
+      <TrySwiper />
       <Featured />
     </>
   );
