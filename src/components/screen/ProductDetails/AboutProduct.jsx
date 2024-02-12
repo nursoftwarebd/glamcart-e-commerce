@@ -1,7 +1,9 @@
+"use client";
 import PrimaryButton from "@/components/shared/Button/PrimaryButton";
 import SecondaryButton from "@/components/shared/Button/SecondaryButton";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import checkstar from "../../../assets/icons/check-star.svg";
 import checkfill from "../../../assets/icons/checkfill.svg";
 import loveass from "../../../assets/icons/love_ass.svg";
@@ -9,6 +11,17 @@ import bstar from "../../../assets/icons/star.svg";
 import tick from "../../../assets/icons/tick.svg";
 
 const AboutProduct = () => {
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  const decrement = () => {
+    if (count > 0) {
+      setCount(count - 1);
+    }
+  };
   return (
     <>
       <div className="">
@@ -121,14 +134,20 @@ const AboutProduct = () => {
         <div className="flex  items-center gap-9">
           <div className="flex flex-wrap items-center gap-5">
             <p className="text-sm leading-5 text-black3D">Quantity: </p>
-            <div className="h-[35px] flex items-center">
-              <button className="h-full px-2 py-[2px] bg-grayPlusBg text-grayPlusText leading-6">
+            <div className="w-[85px] h-[35px] flex items-center">
+              <button
+                onClick={decrement}
+                className="w-[26px] h-full px-2 py-[2px] bg-grayPlusBg text-grayPlusText leading-6"
+              >
                 -
               </button>
               <span className="h-full p-2  bg-white text-blackPrimary leading-6">
-                2
+                {count}
               </span>
-              <button className="h-full px-2 py-[2px] bg-grayPlusBg text-grayPlusText leading-6">
+              <button
+                onClick={increment}
+                className="w-[26px] h-full px-2 py-[2px] bg-grayPlusBg text-grayPlusText leading-6"
+              >
                 +
               </button>
             </div>

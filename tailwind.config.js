@@ -93,6 +93,7 @@ module.exports = {
         lightPink: "#FFF2F2",
         darkBlack: "#363848",
         dark2: "#3B2F4A",
+        borderLog: "#D2D2D2",
       },
       margin: {
         6.5: "26px",

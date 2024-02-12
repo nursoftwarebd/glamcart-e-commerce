@@ -1,4 +1,5 @@
 "use client";
+import SocialShare from "@/components/common/SocialShare";
 import Image from "next/image";
 import { useState } from "react";
 import Slider from "react-slick";
@@ -68,11 +69,11 @@ const SliderProduct = () => {
     <>
       <div>
         <div className="w-full flex  gap-[25px] ">
-          <div className="w-[75%] border border-red-500">
+          <div className="w-[75%]">
             <Image
               src={imag}
               alt="bigimage"
-              className=" w-[550px] h-[500px] 2xl:h-[550px] border border-red-500"
+              className=" w-[550px] h-[500px] 2xl:h-[550px]"
             />
           </div>
 
@@ -89,7 +90,7 @@ const SliderProduct = () => {
                       <Image
                         src={imgitem.img}
                         alt="small_images"
-                        className="w-full object-fill h-[92px] 2xl:h-[104px] border border-red-500"
+                        className="w-full object-fill h-[92px] 2xl:h-[104px]"
                       />
                     </div>
                   </>
@@ -97,6 +98,9 @@ const SliderProduct = () => {
               })}
             </Slider>
           </div>
+        </div>
+        <div className="pt-11">
+          <SocialShare />
         </div>
       </div>
     </>
