@@ -1,4 +1,17 @@
+import Dropdown from "@/components/common/Dropdown";
+
 const AddressBook = () => {
+  const options1 = [
+    { value: "1", label: "Option 1" },
+    { value: "2", label: "Option 2" },
+    { value: "3", label: "Option 3" },
+  ];
+
+  const options2 = [
+    { value: "A", label: "Option 5" },
+    { value: "B", label: "Option B" },
+    { value: "C", label: "Option C" },
+  ];
   return (
     <div className="bg-white shadow-md">
       <div className="py-3 px-5 border-borderAccount border-b-[.75px] flex items-center justify-between">
@@ -81,19 +94,13 @@ const AddressBook = () => {
                   <label htmlFor="" className="address_form_label">
                     Country <span className="text-red-500">*</span>
                   </label>
-                  <input
-                    type="text"
-                    className="w-full h-[45px] xl:w-[400px] px-4 py-3 outline-none bg-backgroundPage rounded-[2px] border-[1px] border-grayBorderForm"
-                  />
+                  <Dropdown options={options1} select="Select Country" />
                 </div>
                 <div className="space-y-3 flex flex-col">
                   <label htmlFor="" className="address_form_label">
                     City/Area <span className="text-red-500">*</span>
                   </label>
-                  <input
-                    type="text"
-                    className="w-full h-[45px] xl:w-[400px] px-4 py-3 outline-none bg-backgroundPage rounded-[2px] border-[1px] border-grayBorderForm"
-                  />
+                  <Dropdown options={options2} select="Select City or Area" />
                 </div>
               </div>
               <div className="w-full flex items-center gap-10">

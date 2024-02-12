@@ -1,6 +1,20 @@
+"use client";
+
 import Checkbox from "@/components/common/Checkbox";
+import Dropdown from "@/components/common/Dropdown";
 
 const ShippingForm = () => {
+  const options1 = [
+    { value: "1", label: "Option 1" },
+    { value: "2", label: "Option 2" },
+    { value: "3", label: "Option 3" },
+  ];
+
+  const options2 = [
+    { value: "A", label: "Option 5" },
+    { value: "B", label: "Option B" },
+    { value: "C", label: "Option C" },
+  ];
   return (
     <div className="w-full  2xl:w-[920px]">
       <div className="bg-white shadow-md">
@@ -84,19 +98,13 @@ const ShippingForm = () => {
                     <label htmlFor="" className="address_form_label">
                       Country <span className="text-red-500">*</span>
                     </label>
-                    <input
-                      type="text"
-                      className="w-full h-[45px] xl:w-[400px] px-4 py-3 outline-none bg-backgroundPage rounded-[2px] border-[1px] border-grayBorderForm"
-                    />
+                    <Dropdown options={options1} select="Select Country" />
                   </div>
                   <div className="w-full sm:w-1/2 space-y-3 flex flex-col">
                     <label htmlFor="" className="address_form_label">
                       City/Area <span className="text-red-500">*</span>
                     </label>
-                    <input
-                      type="text"
-                      className="w-full h-[45px] xl:w-[400px] px-4 py-3 outline-none bg-backgroundPage rounded-[2px] border-[1px] border-grayBorderForm"
-                    />
+                    <Dropdown options={options2} select="Select City or Area" />
                   </div>
                 </div>
                 <div className="w-full flex flex-col sm:flex-row items-center gap-10">
@@ -120,6 +128,7 @@ const ShippingForm = () => {
                   </div>
                 </div>
               </div>
+              <div></div>
             </div>
 
             <div className="pt-8 flex items-center gap-8">
