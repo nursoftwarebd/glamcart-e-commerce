@@ -10,11 +10,11 @@ const DragMenu = () => {
   return (
     <>
       <div className="mt-[25px]">
-        <div className="xl:hidden">
+        <div className="xl:hidden ">
           <TrySwiper />
         </div>
-        <div className="hidden xl:flex lg:mx-8">
-          <div className="flex items-center gap-8 xl:gap-12">
+        <div className="hidden xl:flex x1xl:mx-8  relative">
+          <div className="flex items-center  gap-8 xl:gap-8 x1xl:gap-14 2xl:gap-12">
             {navLinks.map((link, index) => (
               <div key={index} className="menu_list group">
                 {link.name}

@@ -86,11 +86,14 @@ body {
 .address_form_label {
   @apply font-poppins text-sm font-normal leading-[21px] text-graRate uppercase;
 }
+.small_nav_text {
+  @apply font-poppins text-sm leading-[21px] font-medium text-blackPrimary/85 uppercase;
+}
 /* slider css */
 
-.slick-slide > div {
+/* .slick-slide > div {
   margin: 0 10px;
-}
+} */
 /* .slick-slide > div:nth-child(1) {
   margin-left: 0 !important;
 } */

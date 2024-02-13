@@ -14,7 +14,7 @@ const Navbar = () => {
   const [openModal, setOpenModal] = useState(false);
   return (
     <header className="h-[130px] lg:h-[147px] bg-backgroundNav border-b-[1.5px] border-navBorder">
-      <div className="container_fluid">
+      <div className="container_fluid flex flex-col justify-between">
         <div className="flex items-center justify-between pt-3">
           {/* logo */}
           <Link href={"/"} className="hidden lg:flex w-[141px] h-[80px]">
@@ -97,6 +97,7 @@ const Navbar = () => {
           </div>
         </div>
         {/* menu part */}
+
         <DragMenu />
       </div>
     </header>
