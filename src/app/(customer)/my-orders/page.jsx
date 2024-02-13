@@ -1,7 +1,7 @@
 import { customerOrder } from "@/data/customerOrder";
 import Link from "next/link";
 
-const MyOrder = () => {
+const page = () => {
   return (
     <div className="bg-white shadow-md">
       <div className="py-3 px-5 border-borderAccount border-b-[.75px] flex items-center justify-between">
@@ -39,4 +39,4 @@ const MyOrder = () => {
   );
 };
 
-export default MyOrder;
+export default page;

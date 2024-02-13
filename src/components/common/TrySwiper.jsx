@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
@@ -43,20 +44,56 @@ const TrySwiper = () => {
         modules={[Navigation]}
         className="mySwiper small_nav_text"
       >
-        <SwiperSlide>WOMENS FASHION </SwiperSlide>
-        <SwiperSlide>MENS FASHION</SwiperSlide>
-        <SwiperSlide>KIDS FASHION</SwiperSlide>
-        <SwiperSlide>HOME & LIFESTYLE</SwiperSlide>
-        <SwiperSlide>ARTS & CRAFTS</SwiperSlide>
-        <SwiperSlide>COMPUTER & ELECTRONICS</SwiperSlide>
-        <SwiperSlide>FOOD & GROCERY</SwiperSlide>
-        <SwiperSlide>WOMENS FASHION </SwiperSlide>
-        <SwiperSlide>MENS FASHION</SwiperSlide>
-        <SwiperSlide>KIDS FASHION</SwiperSlide>
-        <SwiperSlide>HOME & LIFESTYLE</SwiperSlide>
-        <SwiperSlide>ARTS & CRAFTS</SwiperSlide>
-        <SwiperSlide>COMPUTER & ELECTRONICS</SwiperSlide>
-        <SwiperSlide>FOOD & GROCERY</SwiperSlide>
+        <SwiperSlide>
+          {" "}
+          <Link href={"#"}> WOMENS FASHION </Link>
+        </SwiperSlide>
+        <SwiperSlide>
+          {" "}
+          <Link href={"#"}> MENS FASHION </Link>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Link href={"#"}> KIDS FASHION </Link>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Link href={"#"}> HOME & LIFESTYLE </Link>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Link href={"#"}> ARTS & CRAFTS </Link>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Link href={"#"}> COMPUTER & ELECTRONICS </Link>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Link href={"#"}> FOOD & GROCERY </Link>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Link href={"#"}> WOMENS FASHION </Link>
+        </SwiperSlide>
+        <SwiperSlide>
+          {" "}
+          <Link href={"#"}> MENS FASHION </Link>
+        </SwiperSlide>
+        <SwiperSlide>
+          {" "}
+          <Link href={"#"}> KIDS FASHION </Link>
+        </SwiperSlide>
+        <SwiperSlide>
+          {" "}
+          <Link href={"#"}> HOME & LIFESTYLE </Link>
+        </SwiperSlide>
+        <SwiperSlide>
+          {" "}
+          <Link href={"#"}> ARTS & CRAFTS </Link>
+        </SwiperSlide>
+        <SwiperSlide>
+          {" "}
+          <Link href={"#"}> COMPUTER & ELECTRONICS </Link>
+        </SwiperSlide>
+        <SwiperSlide>
+          {" "}
+          <Link href={"#"}> FOOD & GROCERY </Link>
+        </SwiperSlide>
       </Swiper>
       {/* <button class="prev-slide-button pre_button">
         <Image src={arrowRight} alt="arrow-right-2" />

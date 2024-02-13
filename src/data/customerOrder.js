@@ -1,4 +1,4 @@
-export const myOrder = [
+export const customerOrder = [
   {
     id: 1,
     order: "4000000012",
