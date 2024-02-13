@@ -7,10 +7,13 @@ const CustomerLayout = ({ children }) => {
     <section className="pt-6 pb-21 bg-backgroundPage">
       <div className="container_fluid">
         <h3 className="my_account">My Account</h3>
-        <div className="pt-6 flex gap-5">
+        <div className="pt-6 flex flex-col lg:flex-row gap-5">
           <div className="w-[280px] h-fit bg-white shadow-md flex flex-col">
             {tabs.map((tab) => (
-              <div key={tab.id} className="border-dashed border-b-[1px]">
+              <div
+                key={tab.id}
+                className="border-dashed border-b-[1px] w-full pl-[18px] py-[14px] text-start account_list"
+              >
                 <Link href={tab.link}>{tab.title}</Link>
               </div>
             ))}

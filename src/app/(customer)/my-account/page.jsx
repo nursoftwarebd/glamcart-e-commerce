@@ -17,7 +17,10 @@ const page = () => {
         </div>
         <div className="px-5 py-6.5">
           {userInfo.map((info) => (
-            <div key={info.id} className="flex items-center lg:gap-[200px]">
+            <div
+              key={info.id}
+              className="flex flex-col sm:flex-row items-start sm:items-center justify-between lg:justify-start gap-y-5 sm:gap-y-0 lg:gap-[200px]"
+            >
               <div className="space-y-6">
                 <div>
                   <span className="text-grayEdit leading-6 uppercase">

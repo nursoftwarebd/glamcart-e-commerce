@@ -2,7 +2,7 @@ import { accountInfo } from "@/data/accountInfo";
 import Image from "next/image";
 import edit from "../../../assets/icons/edit.svg";
 
-const AccountInformationPage = () => {
+const AccountInformation = () => {
   return (
     <div>
       <div className="bg-white shadow-md">
@@ -86,4 +86,4 @@ const AccountInformationPage = () => {
   );
 };
 
-export default AccountInformationPage;
+export default AccountInformation;
