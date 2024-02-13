@@ -1,3 +1,4 @@
+"use client";
 import { tabs } from "@/data/tabs";
 import Link from "next/link";
 
