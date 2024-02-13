@@ -1,0 +1,10 @@
+.pre_button {
+  position: absolute;
+  left: 3px;
+  top: 3px;
+}
+.next_button {
+  position: absolute;
+  top: 3px;
+  right: -10px;
+}

@@ -1,12 +1,19 @@
 "use client";
+import TrySwiper from "@/components/common/TrySwiper";
 import { navLinks } from "@/data/navLinks";
 import Link from "next/link";
+import "swiper/css";
+import "swiper/css/navigation";
+import "../../../styles/customswiper.css";
 
 const DragMenu = () => {
   return (
     <>
-      <div className="relative">
-        <div className="hidden xl:flex lg:mx-8 mt-[25px]">
+      <div className="mt-[25px]">
+        <div className="xl:hidden">
+          <TrySwiper />
+        </div>
+        <div className="hidden xl:flex lg:mx-8">
           <div className="flex items-center gap-8 xl:gap-12">
             {navLinks.map((link, index) => (
               <div key={index} className="menu_list group">
