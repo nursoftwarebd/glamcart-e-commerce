@@ -2,12 +2,12 @@ import Image from "next/image";
 import heroone from "../../../assets/images/home/heroone.png";
 const HeroBanner = () => {
   return (
-    <div className="relative h-[200px] sm:h-[480px] xl:h-[563px]">
-      <div className="w-full lg:w-[600px] xl:w-[830px] 2xl:w-[925px] h-[200px] sm:h-[480px] xl:h-[563px]">
+    <div className="relative w-full h-[200px] sm:h-[480px] xl:h-[563px]">
+      <div className="w-full  h-[200px] sm:h-[480px] xl:h-[563px]">
         <Image
           src={heroone}
           alt="hero-one"
-          className="w-full h-full object-fill rounded-[10px]"
+          className="w-full h-full  rounded-[10px]"
         />
       </div>
       <div className="absolute left-4 sm:left-[20px] 2xl:left-[60px] top-[20px] sm:top-[150px] xl:top-[190px] 2xl:top-[150px] space-y-2 sm:space-y-7">
