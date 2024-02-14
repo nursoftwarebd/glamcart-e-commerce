@@ -36,7 +36,7 @@ const CustomerLayout = ({ children }) => {
                     : "border-l-[3px] border-transparent"
                 }`}
               >
-                <div className="border-dashed border-b-[1px] pl-[10px] py-[14px] text-start account_list">
+                <div className="border-dashed border-b-[1px]  pl-[10px] py-[14px] text-start account_list">
                   <Link
                     href={tab.link}
                     onClick={toggleMenu}
@@ -62,7 +62,7 @@ const CustomerLayout = ({ children }) => {
                     : "border-l-[3px] border-transparent"
                 }`}
               >
-                <div className="border-dashed border-b-[1px] pl-[10px] py-[14px] text-start account_list">
+                <div className="border-dashed border-b-[1px]  pl-[10px] py-[14px] text-start account_list">
                   <Link href={tab.link} className="">
                     {tab.title}
                   </Link>
