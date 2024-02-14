@@ -10,7 +10,7 @@ import "../../styles/customswiper.css";
 
 const TrySwiper = () => {
   return (
-    <div className="h-6 relative">
+    <div className="relative">
       <Swiper
         breakpoints={{
           350: {
@@ -45,59 +45,75 @@ const TrySwiper = () => {
         className="mySwiper small_nav_text"
       >
         <SwiperSlide>
-          {" "}
-          <Link href={"#"}> WOMENS FASHION </Link>
+          <Link href={"#"} className="border border-red-500">
+            WOMENS FASHION
+          </Link>
         </SwiperSlide>
         <SwiperSlide>
-          {" "}
-          <Link href={"#"}> MENS FASHION </Link>
+          <Link href={"#"} className="border border-red-500">
+            MENS FASHION
+          </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <Link href={"#"}> KIDS FASHION </Link>
+          <Link href={"#"} className="border border-red-500">
+            KIDS FASHION
+          </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <Link href={"#"}> HOME & LIFESTYLE </Link>
+          <Link href={"#"} className="border border-red-500">
+            HOME & LIFESTYLE
+          </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <Link href={"#"}> ARTS & CRAFTS </Link>
+          <Link href={"#"} className="border border-red-500">
+            ARTS & CRAFTS
+          </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <Link href={"#"}> COMPUTER & ELECTRONICS </Link>
+          <Link href={"#"} className="border border-red-500">
+            COMPUTER & ELECTRONICS
+          </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <Link href={"#"}> FOOD & GROCERY </Link>
+          <Link href={"#"} className="border border-red-500">
+            FOOD & GROCERY
+          </Link>
         </SwiperSlide>
         <SwiperSlide>
-          <Link href={"#"}> WOMENS FASHION </Link>
+          <Link href={"#"} className="border border-red-500">
+            WOMENS FASHION
+          </Link>
         </SwiperSlide>
         <SwiperSlide>
-          {" "}
-          <Link href={"#"}> MENS FASHION </Link>
+          <Link href={"#"} className="border border-red-500">
+            MENS FASHION
+          </Link>
         </SwiperSlide>
         <SwiperSlide>
-          {" "}
-          <Link href={"#"}> KIDS FASHION </Link>
+          <Link href={"#"} className="border border-red-500">
+            KIDS FASHION
+          </Link>
         </SwiperSlide>
         <SwiperSlide>
-          {" "}
-          <Link href={"#"}> HOME & LIFESTYLE </Link>
+          <Link href={"#"} className="border border-red-500">
+            HOME & LIFESTYLE
+          </Link>
         </SwiperSlide>
         <SwiperSlide>
-          {" "}
-          <Link href={"#"}> ARTS & CRAFTS </Link>
+          <Link href={"#"} className="border border-red-500">
+            ARTS & CRAFTS
+          </Link>
         </SwiperSlide>
         <SwiperSlide>
-          {" "}
-          <Link href={"#"}> COMPUTER & ELECTRONICS </Link>
+          <Link href={"#"} className="border border-red-500">
+            COMPUTER & ELECTRONICS
+          </Link>
         </SwiperSlide>
         <SwiperSlide>
-          {" "}
           <Link href={"#"}> FOOD & GROCERY </Link>
         </SwiperSlide>
       </Swiper>
-      {/* <button class="prev-slide-button pre_button">
-        <Image src={arrowRight} alt="arrow-right-2" />
-      </button> */}
+
       <button class="next-slide-button next_button">
         <Image src={arrowRight} alt="arrow-right-2" />
       </button>
