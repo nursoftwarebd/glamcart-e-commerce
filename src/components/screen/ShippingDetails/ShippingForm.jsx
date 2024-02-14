@@ -28,7 +28,7 @@ const ShippingForm = () => {
             <div className="space-y-5">
               <h5 className="form_title">Contact Information</h5>
               <div className="space-y-5">
-                <div className="w-full flex flex-col sm:flex-row items-center gap-10">
+                <div className="w-full flex flex-col sm:flex-row items-center gap-y-5 gap-x-10">
                   <div className="w-full sm:w-1/2 space-y-3 flex flex-col">
                     <label htmlFor="" className="address_form_label">
                       First name
@@ -48,7 +48,7 @@ const ShippingForm = () => {
                     />
                   </div>
                 </div>
-                <div className="w-full flex flex-col sm:flex-row items-center gap-10">
+                <div className="w-full flex flex-col sm:flex-row items-center gap-y-5 gap-x-10">
                   <div className="w-full sm:w-1/2 space-y-3 flex flex-col">
                     <label htmlFor="" className="address_form_label">
                       EMAIL ADDRESS
@@ -93,7 +93,7 @@ const ShippingForm = () => {
                 </div>
               </div>
               <div className="space-y-5">
-                <div className="w-full flex flex-col sm:flex-row items-center gap-10">
+                <div className="w-full flex flex-col sm:flex-row items-center gap-y-5 gap-x-10">
                   <div className="w-full sm:w-1/2 space-y-3 flex flex-col">
                     <label htmlFor="" className="address_form_label">
                       Country <span className="text-red-500">*</span>
@@ -107,7 +107,7 @@ const ShippingForm = () => {
                     <Dropdown options={options2} select="Select City or Area" />
                   </div>
                 </div>
-                <div className="w-full flex flex-col sm:flex-row items-center gap-10">
+                <div className="w-full flex flex-col sm:flex-row items-center gap-y-5 gap-x-10">
                   <div className="w-full sm:w-1/2 space-y-3 flex flex-col">
                     <label htmlFor="" className="address_form_label">
                       Select at district, state of province

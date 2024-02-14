@@ -17,7 +17,10 @@ const AccountInformation = () => {
         </div>
         <div className="px-5 pt-6.5 pb-[30px]">
           {accountInfo.map((info) => (
-            <div key={info.id} className="flex items-center lg:gap-[200px]">
+            <div
+              key={info.id}
+              className="flex flex-col sm:flex-row items-start sm:items-center justify-between lg:justify-start gap-y-5 sm:gap-y-0 gap-[100px] xl:gap-[200px]"
+            >
               <div className="space-y-6">
                 <div className="space-y-[5px]">
                   <span className="text-grayEdit leading-6 uppercase">
