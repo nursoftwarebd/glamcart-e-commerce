@@ -5,50 +5,48 @@ import twiter from "../assets/icons/twiter.svg";
 
 export const socialLinks = [
   {
-    id:1,
+    id: 1,
     icon: facebook,
-    href: "#"
+    href: "#",
   },
   {
-    id:2,
+    id: 2,
     icon: twiter,
-    href: "#"
+    href: "#",
   },
   {
-    id:3,
+    id: 3,
     icon: linkend,
-    href: "#"
+    href: "#",
   },
   {
-    id:4,
+    id: 4,
     icon: instra,
-    href: "#"
+    href: "#",
   },
-  
 ];
 
 export const quickLink = [
   {
     title: "QUICK LINKS",
     links: [
-      { label: "about us", href: "#" },
-      { label: "contact us", href: "#" },
-      { label: "products", href: "#" },
+      { label: "about us", href: "/about-us" },
+      { label: "contact us", href: "/contact-us" },
+      { label: "products", href: "/products" },
       { label: "login", href: "#" },
       { label: "sign up", href: "#" },
     ],
   },
-  
 ];
 
 export const customerArea = [
   {
     title: "CUSTOMER AREA",
     links: [
-      { label: "my account", href: "#" },
-      { label: "orders", href: "#" },
+      { label: "my account", href: "/my-account" },
+      { label: "orders", href: "/orders" },
       { label: "terms", href: "#" },
-      { label: "shipping information", href: "#" },
+      { label: "shipping information", href: "/shipping-details" },
     ],
-  }
-]
+  },
+];

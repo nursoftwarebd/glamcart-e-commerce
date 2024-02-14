@@ -2,7 +2,7 @@ import { customerArea, quickLink, socialLinks } from "@/data/footer";
 import Image from "next/image";
 import Link from "next/link";
 import hphone from "../../../assets/icons/hphone.svg";
-import footerbottom from '../../../assets/images/home/bottom.png';
+import footerbottom from "../../../assets/images/home/bottom.png";
 import flogo from "../../../assets/logo.svg";
 import FooterTop from "./FooterTop";
 
@@ -44,7 +44,7 @@ const Footer = () => {
                       <li key={index}>
                         <Link
                           href={link.href}
-                          className="text-lg leading-7 sm:leading-[44px] text-blackPrimary/80 capitalize"
+                          className="text-lg leading-7 sm:leading-[44px] text-blackPrimary/80 capitalize hover:text-primary duration-200"
                         >
                           {link.label}
                         </Link>
@@ -65,7 +65,7 @@ const Footer = () => {
                       <li key={index}>
                         <Link
                           href={link.href}
-                          className="text-lg leading-7 sm:leading-[44px] text-blackPrimary/80 capitalize"
+                          className="text-lg leading-7 sm:leading-[44px] text-blackPrimary/80 capitalize hover:text-primary duration-200"
                         >
                           {link.label}
                         </Link>
@@ -98,7 +98,9 @@ const Footer = () => {
                   <Link
                     href={"tel:(+972) 8-9584514"}
                     className="text-heading28 leading-[24px] text-secondary font-semibold"
-                  >099 456 789</Link>
+                  >
+                    099 456 789
+                  </Link>
                 </div>
               </div>
             </div>
@@ -107,11 +109,15 @@ const Footer = () => {
       </div>
       <div className="container_fluid">
         <div className="flex flex-col xl:flex-row items-center justify-between py-4">
-             <p className="leading-6 text-sm sm:text-base">Projectnirvoya -   © 2021 All Rights Reserved</p>
-             <div className="hidden sm:flex items-center">
-              <p className="leading-7 text-lg font-medium text-secondary/80">Pay With</p>
-              <Image src={footerbottom} alt="footerbottom" />
-             </div>
+          <p className="leading-6 text-sm sm:text-base">
+            Projectnirvoya - © 2021 All Rights Reserved
+          </p>
+          <div className="hidden sm:flex items-center">
+            <p className="leading-7 text-lg font-medium text-secondary/80">
+              Pay With
+            </p>
+            <Image src={footerbottom} alt="footerbottom" />
+          </div>
         </div>
       </div>
     </footer>

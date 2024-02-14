@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -8,10 +7,8 @@ import google from "../../assets/icons/google.svg";
 import logCross from "../../assets/icons/login_cross.svg";
 import openeye from "../../assets/icons/open.svg";
 import loginpic from "../../assets/images/login/bro.svg";
-// import SignUpModal from "./SignUpModal";
 
-const LogInModal = ({ openModal, setOpenModal }) => {
-  // const [signModal, setSignModal] = useState(false);
+const SignUpModal = ({ signModal, setSignModal }) => {
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [password, setPassword] = useState("");
 
@@ -45,7 +42,7 @@ const LogInModal = ({ openModal, setOpenModal }) => {
               <div className="flex justify-end">
                 <button
                   className="pt-[10px] pr-[10px]"
-                  onClick={() => setOpenModal(!openModal)}
+                  onClick={() => setSignModal(!signModal)}
                 >
                   <Image src={logCross} alt="logCross" />
                 </button>
@@ -136,20 +133,13 @@ const LogInModal = ({ openModal, setOpenModal }) => {
                 <div className="pt-10">
                   <p className="text-sm leading-[21px] text-grayView">
                     Have no account yet?{" "}
-                    <span className="text-secondary">Create an account</span>
+                    <span>
+                      <Link href={"#"} className="text-secondary">
+                        {" "}
+                        Create an account
+                      </Link>
+                    </span>
                   </p>
-                  {/* <p
-                    onClick={() => setSignModal(!signModal)}
-                    className="text-secondary"
-                  >
-                    Create an account
-                  </p>
-                  {signModal && (
-                    <SignUpModal
-                      signModal={signModal}
-                      setSignModal={setSignModal}
-                    />
-                  )} */}
                 </div>
               </div>
             </div>
@@ -160,4 +150,4 @@ const LogInModal = ({ openModal, setOpenModal }) => {
   );
 };
 
-export default LogInModal;
+export default SignUpModal;
