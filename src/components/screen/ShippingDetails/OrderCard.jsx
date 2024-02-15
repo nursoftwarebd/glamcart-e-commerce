@@ -88,11 +88,13 @@ const OrderCard = () => {
           ))}
         </div>
       </div>
-      <button className="w-full h-[56.28px] bg-secondary flex items-center justify-center rounded-[5px]">
-        <span className="text-xl text-backgroundNav font-semibold leading-[30px]">
-          PLACE ORDER
-        </span>
-      </button>
+      <div className="flex items-center justify-center ">
+        <button className="w-full sm:w-[380px] h-[56.28px] bg-secondary rounded-[5px]">
+          <span className="text-xl text-backgroundNav font-semibold leading-[30px]">
+            PLACE ORDER
+          </span>
+        </button>
+      </div>
     </div>
   );
 };

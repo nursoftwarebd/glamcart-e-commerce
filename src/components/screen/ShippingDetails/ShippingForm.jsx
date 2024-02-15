@@ -23,7 +23,7 @@ const ShippingForm = () => {
             Shipping Details
           </h3>
         </div>
-        <div className="px-7 sm:px-[38px] pt-5 pb-13">
+        <div className="px-5 xl:px-[38px] pt-5 pb-13">
           <form action="#" className="w-full">
             <div className="space-y-5">
               <h5 className="form_title">Contact Information</h5>
