@@ -18,7 +18,7 @@ const AboutHero = () => {
               <h2 className="text-2xl md:text-heading30 xl:text-heading44 text-blackPrimary leading-[66px] font-semibold">
                 {aboutUsHero.title}
               </h2>
-              <p className="w-auto sm:max-w-[480px] md:max-w-[650px] 2xl:max-w-[750px] text-base xl:text-lg text-dark2 leading-7">
+              <p className="w-auto sm:max-w-[480px] md:max-w-[650px] 2xl:max-w-[750px] text-base xl:text-lg text-dark2 leading-5 md:leading-7">
                 {aboutUsHero.description}
               </p>
             </div>

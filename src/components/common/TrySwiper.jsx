@@ -47,7 +47,7 @@ const TrySwiper = () => {
       >
         {navLinks.map((navLinks, index) => (
           <SwiperSlide key={index}>
-            <Link href={navLinks.href} className="border border-red-500">
+            <Link href={navLinks.href} className="">
               {navLinks.name}
             </Link>
           </SwiperSlide>

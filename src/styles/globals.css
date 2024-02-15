@@ -29,7 +29,7 @@ body {
   @apply font-montserrat text-sm sm:text-xl lg:text-heading2  xl:text-[36px] 2xl:text-heading1 font-bold leading-normal xl:leading-[55px];
 }
 .h2 {
-  @apply font-poppins text-base lg:text-heading2 font-medium leading-[125%] lg:leading-[246%];
+  @apply font-poppins text-heading3 md:text-heading2 font-medium leading-[125%] lg:leading-[246%];
 }
 .h3 {
   @apply font-poppins text-base lg:text-2xl leading-[36px];
@@ -89,14 +89,3 @@ body {
 .small_nav_text {
   @apply font-poppins text-sm leading-[21px] font-medium text-blackPrimary/85 uppercase;
 }
-/* slider css */
-
-/* .slick-slide > div {
-  margin: 0 10px;
-} */
-/* .slick-slide > div:nth-child(1) {
-  margin-left: 0 !important;
-} */
-/* .slick-disabled {
-  display: none;
-} */

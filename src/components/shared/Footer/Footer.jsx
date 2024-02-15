@@ -25,7 +25,7 @@ const Footer = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
-              <div className="flex items-center gap-5 pt-2 sm:pt-6">
+              <div className="flex items-center gap-5 pt-7 pb-4 sm:pb-0 sm:pt-6">
                 {socialLinks.map((socialLink, index) => (
                   <Link key={index} href={socialLink.href}>
                     <Image src={socialLink.icon} alt="" />

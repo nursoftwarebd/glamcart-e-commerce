@@ -25,7 +25,7 @@ const OurMission = () => {
                       alt={`our mission ${ourMission.title}`}
                     />
                   </div>
-                  <h3 className="text-2xl md:text-heading30 leading-[40px] text-blackPrimary font-semibold">
+                  <h3 className="text-xl sm:text-2xl md:text-heading30 leading-[40px] text-blackPrimary font-semibold">
                     {ourMission.title}
                   </h3>
                 </div>
