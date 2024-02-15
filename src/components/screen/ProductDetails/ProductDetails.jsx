@@ -3,12 +3,12 @@ import { productDetails } from "@/data/productDetails";
 const ProductDetails = () => {
   return (
     <div className="mt-20 border-[1px] border-border">
-      <div className="pl-14 h-[76px] border-[1px] border-border bg-bgProductDetails flex items-center">
-        <h3 className="h3 text-secondary">
+      <div className="pl-5 xl:pl-14 h-[76px] border-[1px] border-border bg-bgProductDetails flex items-center">
+        <h3 className="h3  text-secondary">
           Producr details of LED Monitor With High Quality In The World
         </h3>
       </div>
-      <div className="px-14 pt-6 pb-8 border-b-[1px] border-border bg-white">
+      <div className="pl-5 xl:px-14 pt-6 pb-8 border-b-[1px] border-border bg-white">
         {productDetails.map((items, index) => {
           return (
             <>
@@ -37,7 +37,7 @@ const ProductDetails = () => {
           );
         })}
       </div>
-      <div className="px-14 pt-6 pb-8 bg-white">
+      <div className="px-5 xl:px-14 pt-6 pb-8 bg-white">
         {productDetails.map((items, index) => {
           return (
             <>
@@ -47,12 +47,16 @@ const ProductDetails = () => {
                 </h4>
                 <div className="pt-6">
                   {items.contenttwo.slice(0, 1).map((list, index) => (
-                    <h5 className="details_pra text-blackPrimary" key={index}>{list}</h5>
+                    <h5 className="details_pra text-blackPrimary" key={index}>
+                      {list}
+                    </h5>
                   ))}
                 </div>
                 <div className="pt-12">
-                  {items.contenttwo.slice(1, ).map((list, index) => (
-                    <h5 className="details_pra text-blackPrimary" key={index}>{list}</h5>
+                  {items.contenttwo.slice(1).map((list, index) => (
+                    <h5 className="details_pra text-blackPrimary" key={index}>
+                      {list}
+                    </h5>
                   ))}
                 </div>
               </div>

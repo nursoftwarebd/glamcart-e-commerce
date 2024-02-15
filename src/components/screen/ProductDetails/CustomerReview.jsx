@@ -8,8 +8,8 @@ import Progressbar from "./Progressbar";
 const CustomerReview = () => {
   return (
     <div className="mt-7.5  bg-white border border-border">
-      <div className="pl-14 pt-10 pb-9 flex flex-wrap items-center gap-[74px]">
-        <div className="space-y-5">
+      <div className="pl-5 xl:pl-14 pt-10 pb-9 flex flex-wrap items-center gap-10 sm:gap-[74px]">
+        <div className="space-y-2 sm:space-y-5">
           <h5 className="text-black3D font-medium text-xl leading-[30px]">
             Customer reviews
           </h5>
@@ -25,14 +25,14 @@ const CustomerReview = () => {
         </button>
       </div>
       <div className="">
-        <h4 className="pl-14 pb-5 border-b-[2px] border-border/70 text-2xl leading-7 font-medium text-blackPrimary">
+        <h4 className="pl-5 xl:pl-14 pb-5 border-b-[2px] border-border/70 text-2xl leading-7 font-medium text-blackPrimary">
           Reviews (4)
         </h4>
-        <div className="px-14 pt-5 space-y-9">
+        <div className="px-5 xl:px-14 pt-5 space-y-9">
           {customer.map((items, index) => (
             <div key={index} className="space-y-6">
               <div className="flex gap-4">
-                <div className="w-14 h-14">
+                <div className="w-[70px] h-[70px] sm:w-14 sm:h-14">
                   <Image
                     src={items.image}
                     alt={items.name}
@@ -47,14 +47,14 @@ const CustomerReview = () => {
                     <span className="text-graRate font-medium text-lg leading-[27px]">
                       {items.rate}
                     </span>
-                    <Image src={items.star} alt="star" />
-                    <p className="text-oldGray text-lg leading-[27px]">
+                    <Image src={items.star} alt="star" className="w-[80px]" />
+                    <p className="text-oldGray text-xs sm:text-lg leading-5 sm:leading-[27px]">
                       {items.time}
                     </p>
                   </div>
                 </div>
               </div>
-              <p className="text-blackSec text-lg leading-[27px]">
+              <p className="text-blackSec text-sm sm:text-lg leading-6 sm:leading-[27px]">
                 {items.description}
               </p>
             </div>

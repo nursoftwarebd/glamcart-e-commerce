@@ -32,7 +32,7 @@ body {
   @apply font-poppins text-heading3 md:text-heading2 font-medium leading-[125%] lg:leading-[246%];
 }
 .h3 {
-  @apply font-poppins text-base lg:text-2xl leading-[36px];
+  @apply font-poppins text-base lg:text-2xl leading-7 sm:leading-[36px];
 }
 .h4 {
   @apply font-poppins text-heading3 leading-normal font-medium;

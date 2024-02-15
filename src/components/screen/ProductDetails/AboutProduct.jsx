@@ -26,11 +26,11 @@ const AboutProduct = () => {
     <>
       <div className="">
         <div className="border-b-[1px] border-border pb-5">
-          <h3 className=" font-medium text-heading2 leading-10 text-blackPrimary">
+          <h3 className=" font-medium text-xl sm:text-heading2 leading-7 sm:leading-10 text-blackPrimary">
             Super Skinny Rib Trouser & Joggers for Men By Sowdagar Trouser
           </h3>
-          <div className="pt-5 flex items-center">
-            <div className="flex items-center pr-4 border-r-[2px] border-imageBack">
+          <div className="pt-5 flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0">
+            <div className="flex items-center pr-0 sm:pr-4 sm:border-r-[2px] border-imageBack">
               <span className="font-medium text-lg text-blackPrimary leading-7">
                 4.0
               </span>
@@ -63,13 +63,13 @@ const AboutProduct = () => {
               </div>
               <span className="text-lg text-grayPrice leading-5">(223)</span>
             </div>
-            <div className="flex items-center px-4 border-r-[2px] border-imageBack gap-2">
+            <div className="flex items-center pr-0 sm:px-4 sm:border-r-[2px] border-imageBack gap-2">
               <Image src={tick} alt="tick" className="w-[21px] h-[15px]" />
               <p className="font-semibold text-lg leading-7 text-blackPrimary">
                 4,320 <span className="font-normal">Sold</span>
               </p>
             </div>
-            <div className="flex items-center pl-4">
+            <div className="flex items-center pl-0 sm:pl-4">
               <Image
                 src={loveass}
                 alt="love_ass"
@@ -84,21 +84,21 @@ const AboutProduct = () => {
             </div>
           </div>
           <div className="pt-8 flex items-center gap-6">
-            <h2 className="text-4xl leading-[54px] font-semibold text-secondary">
+            <h2 className="text-2xl sm:text-4xl leading-[54px] font-semibold text-secondary">
               $976.33
             </h2>
             <div className="flex items-center gap-4">
-              <p className="line-through text-xl leading-[30px] text-lineThrough">
+              <p className="line-through text-lg sm:text-xl leading-[30px] text-lineThrough">
                 $1,020.99
               </p>
-              <div className="w-[48px] h-[30px] bg-gradient-to-r from-[#FF7A00] to-[#FFB800] rounded-[2px]  flex items-center justify-center">
-                <p className="text-white text-sm font-semibold leading-5">
+              <div className="w-[38px] h-7 sm:w-[48px] sm:h-[30px] bg-gradient-to-r from-[#FF7A00] to-[#FFB800] rounded-[2px]  flex items-center justify-center">
+                <p className="text-white text-xs sm:text-sm font-semibold leading-5">
                   20%
                 </p>
               </div>
             </div>
           </div>
-          <div className="pt-3 flex items-center gap-4">
+          <div className="pt-1 sm:pt-3 flex items-center gap-4">
             <p className="leading-6 text-black3D font-medium">
               SKU:{" "}
               <span className="text-grayView font-normal">12314124124</span>

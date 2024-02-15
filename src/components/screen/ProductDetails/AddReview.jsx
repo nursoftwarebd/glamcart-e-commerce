@@ -8,7 +8,7 @@ const AddReview = () => {
     setRating(nextValue);
   };
   return (
-    <div className="pr-14 lg:pr-0 pl-14 pt-18 pb-15 max-w-[745px] space-y-8">
+    <div className="pr-5 xl:pr-14 lg:pr-0 pl-5  xl:pl-14 pt-13 sm:pt-18 pb-10 sm:pb-15 max-w-[745px] space-y-8">
       <div className="space-y-6">
         <h4 className="text-blackSec font-semibold text-2xl leading-9">
           Add Your Review
@@ -18,8 +18,8 @@ const AddReview = () => {
           eiusmod
         </p>
       </div>
-      <form action="#" className="space-y-8">
-        <div className="space-y-5">
+      <form action="#" className="space-y-4 md:space-y-8">
+        <div className="space-y-3 md:space-y-5">
           <label htmlFor="" className="text-lg leading-[27px] text-blackSec">
             Name *
           </label>

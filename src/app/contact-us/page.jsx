@@ -15,7 +15,7 @@ const ContactUsPage = () => {
       <div className="container_fluid">
         <div className="w-full xl:max-w-[1144px]">
           <div>
-            <h2 className="text-heading42 font-semibold leading-[88px] text-blackPrimary">
+            <h2 className="text-heading30 sm:text-heading42 font-semibold leading-10  md:leading-[88px] text-blackPrimary">
               Get connect with us
             </h2>
             <p className="pt-2 leading-[27px] text-textBody max-w-[888px]">
@@ -89,7 +89,7 @@ const ContactUsPage = () => {
               </form>
             </div>
             <div className="w-full lg:max-w-[416px] h-fit">
-              <h3 className="text-2xl font-semibold leading-[48px] text-contactLabel">
+              <h3 className="text-xl sm:text-2xl font-semibold leading-[48px] text-contactLabel">
                 Our Office
               </h3>
               <div className="mt-[14px] py-[30px] pl-[15px] pr-7 w-full  bg-white rounded-lg border-[1px] border-grayForm/60">

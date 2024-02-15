@@ -69,28 +69,28 @@ const SliderProduct = () => {
     <>
       <div>
         <div className="w-full flex  gap-[25px] ">
-          <div className="w-[75%]">
+          <div className="w-[85%] sm:w-[75%]">
             <Image
               src={imag}
               alt="bigimage"
-              className=" w-[550px] h-[500px] 2xl:h-[550px]"
+              className="w-[550px] h-[350px] sm:h-[500px] 2xl:h-[550px]"
             />
           </div>
 
-          <div className="w-[25%] relative space-y-[7px] flex flex-col items-center justify-center">
-            <Slider {...settings} className="w-[104px]">
+          <div className="w-[15%] sm:w-[25%] relative space-y-[7px] flex flex-col items-center justify-center">
+            <Slider {...settings} className="w-full sm:w-[104px]">
               {imagepack.map((imgitem, index) => {
                 return (
                   <>
                     <div
                       key={index}
                       onClick={() => setimag(imgitem.img)}
-                      className="w-full h-[92px] 2xl:h-[104px]"
+                      className="w-12 h-12 sm:w-full sm:h-[92px] 2xl:h-[104px]"
                     >
                       <Image
                         src={imgitem.img}
                         alt="small_images"
-                        className="w-full object-fill h-[92px] 2xl:h-[104px]"
+                        className="object-fill w-12 h-12 sm:w-full sm:h-[92px] 2xl:h-[104px]"
                       />
                     </div>
                   </>
