@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const PriceRange = () => {
   // const [minPrice, setMinPrice] = useState(0);
-  const [maxPrice, setMaxPrice] = useState(150);
+  const [maxPrice, setMaxPrice] = useState(1000);
 
   // const handleMinPriceChange = (e) => {
   //   setMinPrice(e.target.value);
@@ -19,15 +19,15 @@ const PriceRange = () => {
         <input
           type="range"
           min="0"
-          max="1000"
+          max="2500"
           step="1"
           value={maxPrice}
           onChange={handleMaxPriceChange}
-          className="w-full mt-2"
+          className="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg text-red-500"
         />
       </div>
       <div>
-        <div className="flex items-center">Price: ৳0 - ৳{maxPrice}</div>
+        <div className="flex items-center">Price: ৳1000 - ৳{maxPrice}</div>
       </div>
     </div>
   );
