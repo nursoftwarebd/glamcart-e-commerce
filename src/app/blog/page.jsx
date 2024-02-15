@@ -25,7 +25,7 @@ const BlogPage = () => {
             </p>
           </div>
         </div>
-        <div className="mt-9 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-12 gap-x-7 2xl:gap-x-10">
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-12 gap-x-7 2xl:gap-x-10">
           {blogData.map((blogData) => {
             return (
               <div key={blogData.id}>

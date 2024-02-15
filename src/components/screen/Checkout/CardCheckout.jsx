@@ -44,28 +44,28 @@ const CardCheckout = () => {
               className="w-full py-7 pl-7 pr-12 bg-white flex items-center gap-10"
             >
               <Checkbox />
-              <div className="w-full flex items-start justify-between">
-                <div className="flex gap-6">
+              <div className="w-full flex flex-col sm:flex-row items-start justify-between">
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-6">
                   <Image
                     src={checkOutData.img}
                     alt={`checkout ${checkOutData.name}`}
-                    className="rounded-[5px]"
+                    className="w-[100px] h-[100px] sm:h-[130px] sm:w-[130px] rounded-[5px]"
                   />
-                  <div className="space-y-5">
-                    <h4 className="text-lg text-blackPrimary font-medium leading-[27px]">
+                  <div className="space-y-2 sm:space-y-5">
+                    <h4 className="text-sm sm:text-lg text-blackPrimary font-medium leading-5 sm:leading-[27px]">
                       {checkOutData.name}
                     </h4>
-                    <h3 className="text-xl font-semibold leading-[30px] text-secondary">
+                    <h3 className="text-base sm:text-xl font-semibold leading-5 sm:leading-[30px] text-secondary">
                       {checkOutData.price}
                     </h3>
                   </div>
                 </div>
-                <div className="space-y-11">
-                  <h5 className="text-lg text-end leading-[27px] text-blackGray">
+                <div className="space-y-5 sm:space-y-11">
+                  <h5 className="text-base sm:text-lg text-start sm:text-end leading-[27px] text-blackGray">
                     {checkOutData.sku}
                   </h5>
                   <div className="flex items-center justify-end gap-[22px]">
-                    <div className="w-[120px] h-[56px] flex items-center justify-center rounded-[5px] border-[1px] border-borderFaq gap-5">
+                    <div className="w-[90px] sm:w-[120px] h-12 sm:h-[56px] flex items-center justify-center rounded-[5px] border-[1px] border-borderFaq gap-3 sm:gap-5">
                       <span onClick={decrement} className="cursor-pointer">
                         <Image src={minusIcon} alt="minusIcon" />
                       </span>
@@ -78,7 +78,7 @@ const CardCheckout = () => {
                         <Image src={plusIcon} alt="minusIcon" />
                       </span>
                     </div>
-                    <button className="w-[60px] h-[56px] flex items-center justify-center rounded-[5px] border-[1px] border-borderFaq">
+                    <button className="w-12 sm:w-[60px] h-12 sm:h-[56px] flex items-center justify-center rounded-[5px] border-[1px] border-borderFaq">
                       <Image src={deleteItem} alt="deleteItem" />
                     </button>
                   </div>
