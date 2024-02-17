@@ -23,7 +23,7 @@ const PriceRange = () => {
           step="1"
           value={maxPrice}
           onChange={handleMaxPriceChange}
-          className="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg text-red-500"
+          className="w-full h-3 "
         />
       </div>
       <div>

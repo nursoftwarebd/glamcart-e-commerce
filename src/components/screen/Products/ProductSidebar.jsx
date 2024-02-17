@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import bottom from "../../../assets/icons/chevron-down.svg";
 import PriceRange from "./PriceRange";
@@ -21,10 +22,20 @@ const ProductSidebar = () => {
             <li className="text-grayView leading-6">Men’s fashion</li>
           </ol>
           <ul className="pl-8 capitalize">
-            <li className="text-primary leading-6">Men’s Jacket</li>
-            <li className="text-grayView leading-6">Mens T-Shirts</li>
-            <li className="text-grayView leading-6">Casual Shirts</li>
-            <li className="text-grayView leading-6">Summer T-Shirts</li>
+            <li className="text-primary leading-6">
+              <Link href={"#"}>Men’s Jacket</Link>
+            </li>
+            <li className="text-grayView leading-6">
+              <Link href={"#"}>Mens T-Shirts</Link>
+            </li>
+            <li className="text-grayView leading-6">
+              {" "}
+              <Link href={"#"}>Casual Shirts</Link>
+            </li>
+            <li className="text-grayView leading-6">
+              {" "}
+              <Link href={"#"}>Summer T-Shirts</Link>
+            </li>
           </ul>
         </div>
         <div className="px-5 py-6 border-b-[2px] border-borderSide">
