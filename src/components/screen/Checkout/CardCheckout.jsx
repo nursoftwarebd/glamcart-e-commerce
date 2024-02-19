@@ -1,7 +1,8 @@
 "use client";
+import { getCartTotal } from "@/app/redux/slices/cartSlice";
 import Checkbox from "@/components/common/Checkbox";
 import Image from "next/image";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import plusIcon from "../../../assets/icons/+.svg";
 import minusIcon from "../../../assets/icons/-.svg";
 import {
@@ -13,72 +14,116 @@ const CardCheckout = () => {
   const { cart, totalQuantity, totalPrice } = useSelector(
     (state) => state.allcarts
   );
-  console.log(cart);
+
+  const dispatch = useDispatch();
+  dispatch(getCartTotal());
 
   return (
-    <div className="w-auto 2xl:max-w-[937px] space-y-5">
-      <div className="py-7.5 pl-6.5 pr-12 w-auto 2xl:max-w-[937px] bg-white flex items-center justify-between">
-        {/* all select */}
-        <div className="flex items-center gap-10">
-          <Checkbox />
-          <p className="leading-6 text-blackPrimary">Select All</p>
-        </div>
-        <button className="flex items-center gap-1">
-          <Image src={deleteButton} alt="deleteButton" />
-          <span className="font-medium text-grayDelete leading-6 ">REMOVE</span>
-        </button>
-      </div>
+    <section>
+      <div className="flex flex-col xl:flex-row xl:justify-between gap-7">
+        <div className="w-auto 2xl:max-w-[937px] space-y-5">
+          <div className="py-7.5 pl-6.5 pr-12 w-auto 2xl:max-w-[937px] bg-white flex items-center justify-between">
+            {/* all select */}
+            <div className="flex items-center gap-10">
+              <Checkbox />
+              <p className="leading-6 text-blackPrimary">Select All</p>
+            </div>
+            <button className="flex items-center gap-1">
+              <Image src={deleteButton} alt="deleteButton" />
+              <span className="font-medium text-grayDelete leading-6 ">
+                REMOVE
+              </span>
+            </button>
+          </div>
 
-      <div className="space-y-5">
-        {cart.map((data) => (
-          <div
-            key={data.id}
-            className="w-full py-7 pl-7 pr-12 bg-white flex items-center gap-10"
-          >
-            <Checkbox />
-            <div className="w-full flex flex-col sm:flex-row items-start justify-between">
-              <div className="flex flex-col sm:flex-row gap-2 sm:gap-6">
-                <Image
-                  src={data.image}
-                  alt={`checkout ${data.title}`}
-                  className="w-[100px] h-[100px] sm:h-[130px] sm:w-[130px] rounded-[5px]"
-                />
-                <div className="space-y-2 sm:space-y-5">
-                  <h4 className="text-sm sm:text-lg text-blackPrimary font-medium leading-5 sm:leading-[27px]">
-                    {data.title}
-                  </h4>
-                  <h3 className="text-base sm:text-xl font-semibold leading-5 sm:leading-[30px] text-secondary">
-                    {data.amount}
-                  </h3>
-                </div>
-              </div>
-              <div className="space-y-5 sm:space-y-11">
-                <h5 className="text-base sm:text-lg text-start sm:text-end leading-[27px] text-blackGray">
-                  Sku
-                </h5>
-                <div className="flex items-center justify-end gap-[22px]">
-                  <div className="w-[90px] sm:w-[120px] h-12 sm:h-[56px] flex items-center justify-center rounded-[5px] border-[1px] border-borderFaq gap-3 sm:gap-5">
-                    <span className="cursor-pointer">
-                      <Image src={minusIcon} alt="minusIcon" />
-                    </span>
-
-                    <span className="text-xl font-medium leading-[30px] text-secondary">
-                      {data.quantity}
-                    </span>
-                    <span className="cursor-pointer">
-                      <Image src={plusIcon} alt="minusIcon" />
-                    </span>
+          <div className="space-y-5">
+            {cart.map((data) => (
+              <div
+                key={data.id}
+                className="w-full py-7 pl-7 pr-12 bg-white flex items-center gap-10"
+              >
+                <Checkbox />
+                <div className="w-full flex flex-col sm:flex-row items-start justify-between">
+                  <div className="flex flex-col sm:flex-row gap-2 sm:gap-6">
+                    <Image
+                      src={data.image}
+                      alt={`checkout ${data.title}`}
+                      className="w-[100px] h-[100px] sm:h-[130px] sm:w-[130px] rounded-[5px]"
+                    />
+                    <div className="space-y-2 sm:space-y-5">
+                      <h4 className="text-sm sm:text-lg text-blackPrimary font-medium leading-5 sm:leading-[27px]">
+                        {data.title}
+                      </h4>
+                      <h3 className="text-base sm:text-xl font-semibold leading-5 sm:leading-[30px] text-secondary">
+                        {data.amount}
+                      </h3>
+                    </div>
                   </div>
-                  <button className="w-12 sm:w-[60px] h-12 sm:h-[56px] flex items-center justify-center rounded-[5px] border-[1px] border-borderFaq">
-                    <Image src={deleteItem} alt="deleteItem" />
-                  </button>
+                  <div className="space-y-5 sm:space-y-11">
+                    <h5 className="text-base sm:text-lg text-start sm:text-end leading-[27px] text-blackGray">
+                      Sku
+                    </h5>
+                    <div className="flex items-center justify-end gap-[22px]">
+                      <div className="w-[90px] sm:w-[120px] h-12 sm:h-[56px] flex items-center justify-center rounded-[5px] border-[1px] border-borderFaq gap-3 sm:gap-5">
+                        <span className="cursor-pointer">
+                          <Image src={minusIcon} alt="minusIcon" />
+                        </span>
+
+                        <span className="text-xl font-medium leading-[30px] text-secondary">
+                          {data.quantity}
+                        </span>
+                        <span className="cursor-pointer">
+                          <Image src={plusIcon} alt="minusIcon" />
+                        </span>
+                      </div>
+                      <button className="w-12 sm:w-[60px] h-12 sm:h-[56px] flex items-center justify-center rounded-[5px] border-[1px] border-borderFaq">
+                        <Image src={deleteItem} alt="deleteItem" />
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+        <div className="w-full sm:w-[439px] h-fit px-7.5 pt-7.5 pb-13 bg-white rounded-[5px]">
+          <h4 className="text-xl font-medium leading-[30px] text-blackPrimary">
+            My Orders
+          </h4>
+          <div className="py-7 space-y-3 border-b-[1.73px] border-lightGrayBlue">
+            <div className="flex items-center justify-between">
+              <p className="text-lg leading-[26px] text-lineThrough">
+                Subtotal
+              </p>
+              <h4 className="text-xl font-medium leading-[30px] text-blackPrimary">
+                ৳{totalPrice}
+              </h4>
+            </div>
+            <div className="flex items-center justify-between">
+              <p className="text-lg leading-[26px] text-lineThrough">
+                {/* Free Shipping */} Total Quantity
+              </p>
+              <h4 className="text-xl font-medium leading-[30px] text-blackPrimary">
+                {totalQuantity}
+              </h4>
             </div>
           </div>
-        ))}
+          <div className="pt-6 pb-7.5 flex items-center justify-between">
+            <p className="text-lg font-medium leading-[27px] text-blackPrimary">
+              Order Total
+            </p>
+            <h3 className="text-xl 2xl:text-heading28 leading-[42px] font-semibold text-secondary">
+              ৳1,956.66
+            </h3>
+          </div>
+          <button className="w-full 2xl:w-[380px] h-14 px-1 2xl:px-0 rounded bg-secondary flex items-center justify-center">
+            <span className="text-xl text-backgroundNav leading-[30px] font-semibold">
+              Proceed to Checkout
+            </span>
+          </button>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
