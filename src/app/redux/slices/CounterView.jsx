@@ -1,3 +1,4 @@
+"use client";
 import { useDispatch, useSelector } from "react-redux";
 import { decrement, increment, reset } from "./CounterSlice";
 
