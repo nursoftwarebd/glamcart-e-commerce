@@ -1,4 +1,5 @@
 "use client";
+import { addToCart } from "@/app/redux/slices/cartSlice";
 import SectionTitle from "@/components/shared/SectionTitle/SectionTitle";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
@@ -9,7 +10,7 @@ import star from "../../../assets/icons/star.svg";
 
 const Featured = () => {
   const items = useSelector((state) => state.allcarts.items);
-  const dispatch = useDispatch;
+  const dispatch = useDispatch();
   // console.log(items);
 
   return (
@@ -20,14 +21,14 @@ const Featured = () => {
 
         {/* featured products */}
         <div className="mt-5  grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
-          {items.map((product, index) => (
+          {items.map((item, index) => (
             <div
               key={index}
               className="bg-white border-[1px] w-full h-auto border-grayBorder px-[9px] pt-2 pb-[15px] rounded-[10px]"
             >
               <div className="w-full h-[313px] flex items-end bg-imageBack rounded-[10px] relative">
                 <Image
-                  src={product.image}
+                  src={item.image}
                   alt="product-images"
                   className="w-full h-full mix-blend-multiply rounded-[10px] object-fill"
                 />
@@ -65,11 +66,14 @@ const Featured = () => {
                   </div>
                   <span className=" text-xs text-blackPrimary">(0)</span>
                 </div>
-                <h5 className="h5 text-blackSec">{product.title}</h5>
+                <h5 className="h5 text-blackSec">{item.title}</h5>
                 <div className="flex items-center justify-between pr-[11px]">
-                  <h4 className="h4 text-primary">৳{product.amount}</h4>
+                  <h4 className="h4 text-primary">৳{item.amount}</h4>
                   {/* ::: cart :::: */}
-                  <button className="w-[24px] h-[21px] ">
+                  <button
+                    onClick={() => dispatch(addToCart(item))}
+                    className="w-[24px] h-[21px] "
+                  >
                     <Image
                       src={basket}
                       alt="basket"

@@ -74,8 +74,8 @@ const Navbar = () => {
                   Wishlist
                 </span>
               </Link>
-              <a
-                href="#"
+              <Link
+                href="/check-out"
                 className="flex items-center gap-[6px] text-lightText
               "
               >
@@ -89,7 +89,7 @@ const Navbar = () => {
                 <span className=" leading-[120%] tracking-[0.08px]">
                   My cart
                 </span>
-              </a>
+              </Link>
             </div>
             <div className="ml-2 w-5 h-5 rounded-full flex items-center justify-center bg-fadeRed">
               <span className="text-white font-medium text-xs">1</span>

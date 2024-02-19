@@ -2,7 +2,7 @@
 import Checkbox from "@/components/common/Checkbox";
 import { checkOutData } from "@/data/checkOutData";
 import Image from "next/image";
-import { useState } from "react";
+import { useSelector } from "react-redux";
 import plusIcon from "../../../assets/icons/+.svg";
 import minusIcon from "../../../assets/icons/-.svg";
 import {
@@ -11,17 +11,11 @@ import {
 } from "../../../assets/icons/delete.svg";
 
 const CardCheckout = () => {
-  const [count, setCount] = useState(0);
+  const { cart, totalQuantity, totalPrice } = useSelector(
+    (state) => state.allcarts
+  );
+  console.log(cart);
 
-  const increment = () => {
-    setCount((prevCount) => prevCount + 1);
-  };
-
-  const decrement = () => {
-    if (count > 0) {
-      setCount((prevCount) => prevCount - 1);
-    }
-  };
   return (
     <div className="w-auto 2xl:max-w-[937px] space-y-5">
       <div className="py-7.5 pl-6.5 pr-12 w-auto 2xl:max-w-[937px] bg-white flex items-center justify-between">
@@ -66,15 +60,14 @@ const CardCheckout = () => {
                   </h5>
                   <div className="flex items-center justify-end gap-[22px]">
                     <div className="w-[90px] sm:w-[120px] h-12 sm:h-[56px] flex items-center justify-center rounded-[5px] border-[1px] border-borderFaq gap-3 sm:gap-5">
-                      <span onClick={decrement} className="cursor-pointer">
+                      <span className="cursor-pointer">
                         <Image src={minusIcon} alt="minusIcon" />
                       </span>
 
                       <span className="text-xl font-medium leading-[30px] text-secondary">
-                        {count}
+                        2
                       </span>
-                      <span onClick={increment} className="cursor-pointer">
-                        {" "}
+                      <span className="cursor-pointer">
                         <Image src={plusIcon} alt="minusIcon" />
                       </span>
                     </div>

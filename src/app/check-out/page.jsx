@@ -10,6 +10,7 @@ const CheckOutPage = () => {
       <div className="container_fluid">
         <div className="flex flex-col xl:flex-row xl:justify-between gap-7">
           <CardCheckout />
+
           <div className="w-full sm:w-[439px] h-fit px-7.5 pt-7.5 pb-13 bg-white rounded-[5px]">
             <h4 className="text-xl font-medium leading-[30px] text-blackPrimary">
               My Orders
