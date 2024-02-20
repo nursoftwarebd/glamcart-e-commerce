@@ -1,4 +1,4 @@
-import StarRating from "@/components/shared/StarRating/StarRating";
+// import StarRating from "@/components/shared/StarRating/StarRating";
 import { useState } from "react";
 
 const AddReview = () => {
@@ -53,7 +53,7 @@ const AddReview = () => {
             Rating
           </p>
           {/* <Image src={addstar} alt="add_all_star" /> */}
-          <StarRating rating={rating} onStarClick={handleStarClick} />
+          {/* <StarRating rating={rating} onStarClick={handleStarClick} /> */}
         </div>
         <button className="w-[180px] h-[60px] bg-secondary p-4 rounded-lg">
           <span className="text-lg text-backgroundPage font-medium leading-[27px]">
