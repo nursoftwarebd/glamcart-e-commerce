@@ -69,7 +69,7 @@ export const cartSlice = createSlice({
     },
     decreaseItemQuantity: (state, action) => {
       state.cart = state.cart.map((item) => {
-        if (item.id === action.payload) {
+        if (item.id === action.payload && item.quantity > 1) {
           return { ...item, quantity: item.quantity - 1 };
         }
         return item;
@@ -78,5 +78,11 @@ export const cartSlice = createSlice({
   },
 });
 
-export const { addToCart, getCartTotal, removeItem } = cartSlice.actions;
+export const {
+  addToCart,
+  getCartTotal,
+  removeItem,
+  increaseItemQuantity,
+  decreaseItemQuantity,
+} = cartSlice.actions;
 export default cartSlice.reducer;

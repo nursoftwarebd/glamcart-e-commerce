@@ -1,5 +1,10 @@
 "use client";
-import { getCartTotal, removeItem } from "@/app/redux/slices/cartSlice";
+import {
+  decreaseItemQuantity,
+  getCartTotal,
+  increaseItemQuantity,
+  removeItem,
+} from "@/app/redux/slices/cartSlice";
 import Checkbox from "@/components/common/Checkbox";
 import Image from "next/image";
 import { useEffect } from "react";
@@ -59,25 +64,35 @@ const CardCheckout = () => {
                         {data.title}
                       </h4>
                       <h3 className="text-base sm:text-xl font-semibold leading-5 sm:leading-[30px] text-secondary">
-                        {data.price}
+                        ৳{data.price}
                       </h3>
                     </div>
                   </div>
                   <div className="space-y-5 sm:space-y-11">
                     <h5 className="text-base sm:text-lg text-start sm:text-end leading-[27px] text-blackGray">
-                      Sku
+                      Sku {data.sku}
                     </h5>
                     <div className="flex items-center justify-end gap-[22px]">
                       <div className="w-[90px] sm:w-[120px] h-12 sm:h-[56px] flex items-center justify-center rounded-[5px] border-[1px] border-borderFaq gap-3 sm:gap-5">
-                        <span className="cursor-pointer">
+                        <span
+                          onClick={() =>
+                            dispatch(decreaseItemQuantity(data.id))
+                          }
+                          className="cursor-pointer"
+                        >
                           <Image src={minusIcon} alt="minusIcon" />
                         </span>
 
                         <span className="text-xl font-medium leading-[30px] text-secondary">
                           {data.quantity}
                         </span>
-                        <span className="cursor-pointer">
-                          <Image src={plusIcon} alt="minusIcon" />
+                        <span
+                          onClick={() =>
+                            dispatch(increaseItemQuantity(data.id))
+                          }
+                          className="cursor-pointer"
+                        >
+                          <Image src={plusIcon} alt="plusIcon" />
                         </span>
                       </div>
                       <button
@@ -120,7 +135,7 @@ const CardCheckout = () => {
               Order Total
             </p>
             <h3 className="text-xl 2xl:text-heading28 leading-[42px] font-semibold text-secondary">
-              ৳1,956.66
+              ৳{totalPrice}
             </h3>
           </div>
           <button className="w-full 2xl:w-[380px] h-14 px-1 2xl:px-0 rounded bg-secondary flex items-center justify-center">
