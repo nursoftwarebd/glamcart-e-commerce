@@ -17,7 +17,7 @@ import {
 } from "../../../assets/icons/delete.svg";
 
 const CardCheckout = () => {
-  const { cart, totalQuantity, totalPrice } = useSelector(
+  const { cart, totalQuantity, totalPrice, selectedItems } = useSelector(
     (state) => state.allcarts
   );
 
@@ -27,6 +27,24 @@ const CardCheckout = () => {
     dispatch(getCartTotal());
   }, [cart]);
 
+  // Toggle item selection
+  const toggleItemSelection = (id) => {
+    dispatch(toggleItemSelection(id));
+  };
+
+  // Select all items
+  const selectAllItems = () => {
+    dispatch(selectAllItems());
+  };
+
+  // Remove selected items
+  const removeSelectedItems = () => {
+    selectedItems.forEach((id) => {
+      dispatch(removeItem(id));
+    });
+    dispatch(clearSelectedItems());
+  };
+
   return (
     <section>
       <div className="flex flex-col xl:flex-row xl:justify-between gap-7">
@@ -34,10 +52,16 @@ const CardCheckout = () => {
           <div className="py-7.5 pl-6.5 pr-12 w-auto 2xl:max-w-[937px] bg-white flex items-center justify-between">
             {/* all select */}
             <div className="flex items-center gap-10">
-              <Checkbox />
+              <Checkbox
+                checked={selectedItems.length === cart.length}
+                onChange={selectAllItems}
+              />
               <p className="leading-6 text-blackPrimary">Select All</p>
             </div>
-            <button className="flex items-center gap-1">
+            <button
+              onClick={removeSelectedItems}
+              className="flex items-center gap-1"
+            >
               <Image src={deleteButton} alt="deleteButton" />
               <span className="font-medium text-grayDelete leading-6 ">
                 REMOVE

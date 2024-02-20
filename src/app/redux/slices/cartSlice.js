@@ -6,6 +6,7 @@ const initialState = {
   items: featuredProducts,
   totalQuantity: 0,
   totalPrice: 0,
+  selectedItems: [],
 };
 
 export const cartSlice = createSlice({
@@ -75,6 +76,21 @@ export const cartSlice = createSlice({
         return item;
       });
     },
+    // remove and select all
+    toggleItemSelection: (state, action) => {
+      const index = state.selectedItems.indexOf(action.payload);
+      if (index === -1) {
+        state.selectedItems.push(action.payload);
+      } else {
+        state.selectedItems.splice(index, 1);
+      }
+    },
+    selectAllItems: (state) => {
+      state.selectedItems = state.cart.map((item) => item.id);
+    },
+    clearSelectedItems: (state) => {
+      state.selectedItems = [];
+    },
   },
 });
 
@@ -84,5 +100,8 @@ export const {
   removeItem,
   increaseItemQuantity,
   decreaseItemQuantity,
+  toggleItemSelection,
+  selectAllItems,
+  clearSelectedItems,
 } = cartSlice.actions;
 export default cartSlice.reducer;

@@ -31,16 +31,16 @@ const Hero = () => {
               className="mySwiper"
             >
               <SwiperSlide>
-                <HeroBanner />{" "}
+                <HeroBanner />
               </SwiperSlide>
               <SwiperSlide>
-                <HeroBanner />{" "}
+                <HeroBanner />
               </SwiperSlide>
               <SwiperSlide>
-                <HeroBanner />{" "}
+                <HeroBanner />
               </SwiperSlide>
               <SwiperSlide>
-                <HeroBanner />{" "}
+                <HeroBanner />
               </SwiperSlide>
             </Swiper>
           </div>
@@ -54,7 +54,7 @@ const Hero = () => {
                   className="w-full h-full object-fill rounded-[10px]"
                 />
               </div>
-              <div className="absolute left-[50px] xl:left-[64px]   bottom-[20px] rounded-[5px]  h-[56px] px-4 xl:px-8 py-4  bg-backgroundPage/80 ">
+              <div className="absolute left-[50px] xl:left-[90px] 2xl:left-[75px]   bottom-[20px] rounded-[5px]  h-[56px] px-4 xl:px-8 py-4  bg-backgroundPage/80 ">
                 <h4 className="text-secondary hero-banner">
                   Groceries collection
                 </h4>
@@ -68,7 +68,7 @@ const Hero = () => {
                   className="w-full h-full object-fill rounded-[10px]"
                 />
               </div>
-              <div className="absolute  left-[28px]   bottom-[20px] rounded-[5px]  h-[56px] px-4 xl:px-8 py-4  bg-backgroundPage/80">
+              <div className="absolute  left-[28px]   bottom-[20px] xl:left-[55px] 2xl:left-[45px] rounded-[5px]  h-[56px] px-4 xl:px-8 py-4  bg-backgroundPage/80">
                 <h4 className="hero-banner text-secondary">
                   Health & Beauty collection
                 </h4>
