@@ -17,15 +17,27 @@ export const cartSlice = createSlice({
       if (find >= 0) {
         state.cart[find].quantity += 1;
       } else {
-        state.cart.push(action.payload);
+        // Create a new object with quantity property
+        const newItem = {
+          ...action.payload,
+          quantity: 1,
+        };
+        state.cart.push(newItem);
       }
     },
     getCartTotal: (state) => {
       let { totalQuantity, totalPrice } = state.cart.reduce(
         (cartTotal, cartItem) => {
           const { price, quantity } = cartItem;
+          console.log("Price:", price, "Quantity:", quantity); // Log price and quantity
           const itemTotal = price * quantity;
-          cartTotal.totalPrice += itemTotal;
+          console.log("Item total:", itemTotal); // Log item total
+          if (!isNaN(itemTotal)) {
+            // Check if itemTotal is not NaN
+            cartTotal.totalPrice += itemTotal;
+          } else {
+            console.error("Item total is NaN:", cartItem); // Log item if itemTotal is NaN
+          }
           cartTotal.totalQuantity += quantity;
           return cartTotal;
         },
@@ -34,7 +46,14 @@ export const cartSlice = createSlice({
           totalQuantity: 0,
         }
       );
-      state.totalPrice = parseInt(totalPrice.toFixed(2));
+      console.log("Total price before:", totalPrice); // Log total price before
+      if (!isNaN(totalPrice)) {
+        // Check if totalPrice is not NaN
+        state.totalPrice = parseInt(totalPrice.toFixed(2));
+      } else {
+        console.error("Total price is NaN"); // Log if totalPrice is NaN
+      }
+      console.log("Total price after:", state.totalPrice); // Log total price after
       state.totalQuantity = totalQuantity;
     },
   },

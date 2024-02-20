@@ -2,6 +2,7 @@
 import { getCartTotal } from "@/app/redux/slices/cartSlice";
 import Checkbox from "@/components/common/Checkbox";
 import Image from "next/image";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import plusIcon from "../../../assets/icons/+.svg";
 import minusIcon from "../../../assets/icons/-.svg";
@@ -16,7 +17,10 @@ const CardCheckout = () => {
   );
 
   const dispatch = useDispatch();
-  dispatch(getCartTotal());
+
+  useEffect(() => {
+    dispatch(getCartTotal());
+  }, [cart]);
 
   return (
     <section>
@@ -55,7 +59,7 @@ const CardCheckout = () => {
                         {data.title}
                       </h4>
                       <h3 className="text-base sm:text-xl font-semibold leading-5 sm:leading-[30px] text-secondary">
-                        {data.amount}
+                        {data.price}
                       </h3>
                     </div>
                   </div>

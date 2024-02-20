@@ -1,8 +1,10 @@
 "use client";
+import { getCartTotal } from "@/app/redux/slices/cartSlice";
 import LogInModal from "@/components/common/LogInModal";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import bucket from "../../../assets/icons/bucket.svg";
 import search from "../../../assets/icons/bx_bx-search.svg";
 import heart from "../../../assets/icons/heart.svg";
@@ -12,6 +14,14 @@ import DragMenu from "./DragMenu";
 
 const Navbar = () => {
   const [openModal, setOpenModal] = useState(false);
+
+  const { cart, totalQuantity } = useSelector((state) => state.allcarts);
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getCartTotal());
+  }, [cart]);
+
   return (
     <header className="h-[130px] lg:h-[147px] bg-backgroundNav border-b-[1.5px] border-navBorder">
       <div className="container_fluid flex flex-col justify-between">
@@ -92,7 +102,9 @@ const Navbar = () => {
               </Link>
             </div>
             <div className="ml-2 w-5 h-5 rounded-full flex items-center justify-center bg-fadeRed">
-              <span className="text-white font-medium text-xs">1</span>
+              <span className="text-white font-medium text-xs">
+                {totalQuantity}
+              </span>
             </div>
           </div>
         </div>

@@ -68,7 +68,7 @@ const Featured = () => {
                 </div>
                 <h5 className="h5 text-blackSec">{item.title}</h5>
                 <div className="flex items-center justify-between pr-[11px]">
-                  <h4 className="h4 text-primary">৳{item.amount}</h4>
+                  <h4 className="h4 text-primary">৳{item.price}</h4>
                   {/* ::: cart :::: */}
                   <button
                     onClick={() => dispatch(addToCart(item))}
