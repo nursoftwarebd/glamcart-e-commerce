@@ -56,8 +56,27 @@ export const cartSlice = createSlice({
       console.log("Total price after:", state.totalPrice); // Log total price after
       state.totalQuantity = totalQuantity;
     },
+    removeItem: (state, action) => {
+      state.cart = state.cart.filter((item) => item.id !== action.payload);
+    },
+    increaseItemQuantity: (state, action) => {
+      state.cart = state.cart.map((item) => {
+        if (item.id === action.payload) {
+          return { ...item, quantity: item.quantity + 1 };
+        }
+        return item;
+      });
+    },
+    decreaseItemQuantity: (state, action) => {
+      state.cart = state.cart.map((item) => {
+        if (item.id === action.payload) {
+          return { ...item, quantity: item.quantity - 1 };
+        }
+        return item;
+      });
+    },
   },
 });
 
-export const { addToCart, getCartTotal } = cartSlice.actions;
+export const { addToCart, getCartTotal, removeItem } = cartSlice.actions;
 export default cartSlice.reducer;

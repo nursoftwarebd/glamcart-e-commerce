@@ -1,5 +1,5 @@
 "use client";
-import { getCartTotal } from "@/app/redux/slices/cartSlice";
+import { getCartTotal, removeItem } from "@/app/redux/slices/cartSlice";
 import Checkbox from "@/components/common/Checkbox";
 import Image from "next/image";
 import { useEffect } from "react";
@@ -80,7 +80,10 @@ const CardCheckout = () => {
                           <Image src={plusIcon} alt="minusIcon" />
                         </span>
                       </div>
-                      <button className="w-12 sm:w-[60px] h-12 sm:h-[56px] flex items-center justify-center rounded-[5px] border-[1px] border-borderFaq">
+                      <button
+                        onClick={() => dispatch(removeItem(data.id))}
+                        className="w-12 sm:w-[60px] h-12 sm:h-[56px] flex items-center justify-center rounded-[5px] border-[1px] border-borderFaq"
+                      >
                         <Image src={deleteItem} alt="deleteItem" />
                       </button>
                     </div>
