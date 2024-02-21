@@ -145,6 +145,7 @@ module.exports = {
         heading28: "28px",
         heading3: "22px",
         paragraph1: "19px",
+        paragraph10: "10px",
       },
     },
   },

@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import bucket from "../../../assets/icons/bucket.svg";
 import search from "../../../assets/icons/bx_bx-search.svg";
 import heart from "../../../assets/icons/heart.svg";
+import homeMenu from "../../../assets/icons/menu_user.svg";
 import user from "../../../assets/icons/user.svg";
 import logo from "../../../assets/logo.svg";
 import DragMenu from "./DragMenu";
@@ -15,20 +16,19 @@ import DragMenu from "./DragMenu";
 const Navbar = () => {
   const [openModal, setOpenModal] = useState(false);
   const { cart, totalQuantity } = useSelector((state) => state.allcarts);
+  const [isVisible, setIsVisible] = useState(false);
 
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getCartTotal());
   }, [cart]);
 
-  const [isVisible, setIsVisible] = useState(false);
-
+  // for small screen nav
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       setIsVisible(scrollY > 40);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -126,15 +126,20 @@ const Navbar = () => {
         <DragMenu />
       </div>
       <div
-        className={`fixed bottom-0 left-0 w-full lg:hidden z-[999] bg-gray-800 text-white transition-opacity ${
+        className={`fixed bottom-0 left-0 w-full h-[66px] lg:hidden z-[999] bg-gray-800 text-white transition-opacity ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
       >
-        <div className="flex justify-between py-3 px-4">
+        <div className="flex justify-around items-center">
           {/* Your bottom navigation items go here */}
-          <a href="#" className="text-white">
-            Item 1
-          </a>
+          <div className="w-[107px] h-[66px] flex items-center justify-center border border-red-600">
+            <Link href={"/"} className="flex flex-col items-center">
+              <Image src={homeMenu} alt="home_menu" className="" />
+              <p className="text-paragraph10 font-medium leading-5 tracking-[0.2px]  text-secondary">
+                Home
+              </p>
+            </Link>
+          </div>
           <a href="#" className="text-white">
             Item 2
           </a>
