@@ -8,7 +8,9 @@ import { useDispatch, useSelector } from "react-redux";
 import bucket from "../../../assets/icons/bucket.svg";
 import search from "../../../assets/icons/bx_bx-search.svg";
 import heart from "../../../assets/icons/heart.svg";
-import homeMenu from "../../../assets/icons/menu_user.svg";
+import homeMenu from "../../../assets/icons/ic_menu_home.svg";
+import wishlist from "../../../assets/icons/ic_menu_wishlist.svg";
+import user_menu from "../../../assets/icons/menu_user.svg";
 import user from "../../../assets/icons/user.svg";
 import logo from "../../../assets/logo.svg";
 import DragMenu from "./DragMenu";
@@ -126,13 +128,13 @@ const Navbar = () => {
         <DragMenu />
       </div>
       <div
-        className={`fixed bottom-0 left-0 w-full h-[66px] lg:hidden z-[999] bg-gray-800 text-white transition-opacity ${
+        className={`fixed bottom-0 left-0 w-full h-[66px] lg:hidden z-[999] bg-white shadow-md transition-opacity ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
       >
         <div className="flex justify-around items-center">
           {/* Your bottom navigation items go here */}
-          <div className="w-[107px] h-[66px] flex items-center justify-center border border-red-600">
+          <div className="w-[107px] h-[66px] flex items-center justify-center">
             <Link href={"/"} className="flex flex-col items-center">
               <Image src={homeMenu} alt="home_menu" className="" />
               <p className="text-paragraph10 font-medium leading-5 tracking-[0.2px]  text-secondary">
@@ -140,12 +142,42 @@ const Navbar = () => {
               </p>
             </Link>
           </div>
-          <a href="#" className="text-white">
-            Item 2
-          </a>
-          <a href="#" className="text-white">
-            Item 3
-          </a>
+          <div className="w-[107px] h-[66px] flex items-center justify-center">
+            <Link href={"/"} className="flex flex-col items-center">
+              <Image
+                src={wishlist}
+                alt="wishlist"
+                className="w-[26.4px] h-[26.4px]"
+              />
+              <p className="text-paragraph10 font-medium leading-5 tracking-[0.2px]  text-black3D">
+                Wishlist
+              </p>
+            </Link>
+          </div>
+          <div className="w-[107px] h-[66px] flex items-center justify-center">
+            <Link
+              href={"/check-out"}
+              className="flex flex-col items-center relative"
+            >
+              <Image src={bucket} alt="home_menu" className="object-fill" />
+              <p className="text-paragraph10 font-medium leading-5 tracking-[0.2px]  text-black3D">
+                order
+              </p>
+              <div className="absolute top-[-8px] right-[-5px] w-5 h-5 rounded-full flex items-center justify-center bg-fadeRed">
+                <span className="text-white font-medium text-xs">
+                  {totalQuantity}
+                </span>
+              </div>
+            </Link>
+          </div>
+          <div className="w-[107px] h-[66px] flex items-center justify-center">
+            <Link href={"/my-account"} className="flex flex-col items-center">
+              <Image src={user_menu} alt="home_menu" className="" />
+              <p className="text-paragraph10 font-medium leading-5 tracking-[0.2px]  text-black3D">
+                Account
+              </p>
+            </Link>
+          </div>
         </div>
       </div>
     </header>
