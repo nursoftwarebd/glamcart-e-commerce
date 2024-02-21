@@ -14,13 +14,26 @@ import DragMenu from "./DragMenu";
 
 const Navbar = () => {
   const [openModal, setOpenModal] = useState(false);
-
   const { cart, totalQuantity } = useSelector((state) => state.allcarts);
 
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getCartTotal());
   }, [cart]);
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setIsVisible(scrollY > 40);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <header className="h-[130px] lg:h-[147px] bg-backgroundNav border-b-[1.5px] border-navBorder">
@@ -111,6 +124,24 @@ const Navbar = () => {
         {/* menu part */}
 
         <DragMenu />
+      </div>
+      <div
+        className={`fixed bottom-0 left-0 w-full lg:hidden z-[999] bg-gray-800 text-white transition-opacity ${
+          isVisible ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        <div className="flex justify-between py-3 px-4">
+          {/* Your bottom navigation items go here */}
+          <a href="#" className="text-white">
+            Item 1
+          </a>
+          <a href="#" className="text-white">
+            Item 2
+          </a>
+          <a href="#" className="text-white">
+            Item 3
+          </a>
+        </div>
       </div>
     </header>
   );
