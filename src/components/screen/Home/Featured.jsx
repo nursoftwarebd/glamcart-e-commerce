@@ -13,6 +13,11 @@ const Featured = () => {
   const dispatch = useDispatch();
   // console.log(items);
 
+  const handleAddToCart = (item) => {
+    dispatch(addToCart(item));
+    alert("Added to cart!"); // Show alert when item is added to cart
+  };
+
   return (
     <section className="pt-13 pb-10 bg-backgroundPage">
       <div className="container_fluid">
@@ -71,7 +76,7 @@ const Featured = () => {
                   <h4 className="h4 text-primary">৳{item.price}</h4>
                   {/* ::: cart :::: */}
                   <button
-                    onClick={() => dispatch(addToCart(item))}
+                    onClick={() => handleAddToCart(item)}
                     className="w-[24px] h-[21px] "
                   >
                     <Image
