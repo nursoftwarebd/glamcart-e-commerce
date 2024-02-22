@@ -1,12 +1,21 @@
 "use client";
+import { addToCart } from "@/app/redux/slices/cartSlice";
 import Image from "next/image";
+import { useDispatch } from "react-redux";
 import basket from "../../assets/icons/basket.svg";
 import love from "../../assets/icons/product_blank_love.svg";
 import starcolor from "../../assets/icons/star-color.svg";
 import star from "../../assets/icons/star.svg";
 
-const ProductCard = ({ product }) => {
-  const { title, image, amount } = product;
+const ProductCard = ({ item }) => {
+  const { title, image, price } = item;
+  const dispatch = useDispatch();
+
+  const handleAddToCart = (item) => {
+    dispatch(addToCart(item));
+    alert("Added to cart!");
+  };
+
   return (
     <div className="bg-white border-[1px] w-full h-auto border-grayBorder px-[9px] pt-2 pb-[15px] rounded-[10px]">
       <div className="w-full h-[313px] flex items-end bg-imageBack rounded-[10px] relative">
@@ -35,9 +44,12 @@ const ProductCard = ({ product }) => {
         </div>
         <h5 className="h5 text-blackSec">{title}</h5>
         <div className="flex items-center justify-between pr-[11px]">
-          <h4 className="h4 text-primary">৳{amount}</h4>
+          <h4 className="h4 text-primary">৳{price}</h4>
           {/* ::: cart :::: */}
-          <button className="w-[24px] h-[21px] ">
+          <button
+            onClick={() => handleAddToCart(item)}
+            className="w-[24px] h-[21px] "
+          >
             <Image
               src={basket}
               alt="basket"
