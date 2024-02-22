@@ -16,9 +16,11 @@ input[type="range"]::-webkit-slider-thumb {
   pointer-events: auto;
   width: 24px;
   height: 24px;
+  border-width: 1px !important;
+  border-color: solid green !important;
   border-radius: 50%;
   -webkit-appearance: none;
-  @apply bg-green-500;
+  @apply shadow-xl bg-white;
 }
 
 * {

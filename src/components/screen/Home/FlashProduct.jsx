@@ -2,6 +2,8 @@
 import { addToCart } from "@/app/redux/slices/cartSlice";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import basket from "../../../assets/icons/basket.svg";
 import love from "../../../assets/icons/love.svg";
 import starcolor from "../../../assets/icons/star-color.svg";
@@ -14,7 +16,7 @@ const FlashProduct = () => {
 
   const handleAddToCart = (item) => {
     dispatch(addToCart(item));
-    alert("Added to cart!");
+    toast("Add to cart!", { autoClose: 1700 });
   };
 
   return (

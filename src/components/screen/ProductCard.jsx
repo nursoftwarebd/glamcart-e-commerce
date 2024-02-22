@@ -7,14 +7,20 @@ import love from "../../assets/icons/product_blank_love.svg";
 import starcolor from "../../assets/icons/star-color.svg";
 import star from "../../assets/icons/star.svg";
 
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const ProductCard = ({ item }) => {
   const { title, image, price } = item;
   const dispatch = useDispatch();
 
   const handleAddToCart = (item) => {
     dispatch(addToCart(item));
-    alert("Added to cart!");
+    toast("Add to cart!", { autoClose: 1700 });
+    // alert("Added to cart!");
   };
+
+  // const notify = () => toast("Wow so easy!");
 
   return (
     <div className="bg-white border-[1px] w-full h-auto border-grayBorder px-[9px] pt-2 pb-[15px] rounded-[10px]">

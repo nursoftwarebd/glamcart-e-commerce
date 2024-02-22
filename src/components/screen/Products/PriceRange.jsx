@@ -1,35 +1,4 @@
-// "use client";
-
-// import { useState } from "react";
-
-// const PriceRange = () => {
-//   const [maxPrice, setMaxPrice] = useState(1000);
-
-//   const handleMaxPriceChange = (e) => {
-//     setMaxPrice(e.target.value);
-//   };
-
-//   return (
-//     <div className="py-5">
-//       <div className="py-5">
-//         <input
-//           type="range"
-//           min="0"
-//           max="2500"
-//           step="1"
-//           value={maxPrice}
-//           onChange={handleMaxPriceChange}
-//           className="w-full h-3 "
-//         />
-//       </div>
-//       <div>
-//         <div className="flex items-center">Price: ৳1000 - ৳{maxPrice}</div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default PriceRange;
+"use client";
 import { useEffect, useRef, useState } from "react";
 
 const PriceRange = ({ initialMin, initialMax, min, max, step, priceCap }) => {
@@ -71,32 +40,10 @@ const PriceRange = ({ initialMin, initialMax, min, max, step, priceCap }) => {
   return (
     <div>
       <div>
-        <div className="flex justify-between items-center my-6 ">
-          <div className="rounded-md">
-            <span className="p-2 font-semibold"> Min</span>
-            <input
-              onChange={(e) => setMinValue(e.target.value)}
-              type="number"
-              value={minValue}
-              className="w-24 rounded-md border border-gray-400"
-            />
-          </div>
-          <div className="ml-2 font-semibold text-lg"> - </div>
-          <div className=" ">
-            <span className="p-2 font-semibold"> Max</span>
-            <input
-              onChange={(e) => setMaxValue(e.target.value)}
-              type="number"
-              value={maxValue}
-              className="w-24 rounded-md border border-gray-400"
-            />
-          </div>
-        </div>
-
-        <div className="mb-4">
+        <div className="py-9">
           <div className="slider relative h-[6px] rounded-[5px] bg-checkBorder">
             <div
-              className="progress absolute h-[6px] bg-green-300 rounded-[5px] "
+              className="progress absolute h-[6px] bg-secondary rounded-[5px]"
               ref={progressRef}
             ></div>
           </div>
@@ -122,6 +69,13 @@ const PriceRange = ({ initialMin, initialMax, min, max, step, priceCap }) => {
               className="range-max absolute w-full  -top-1 h-1  bg-transparent appearance-none  pointer-events-none"
             />
           </div>
+        </div>
+
+        <div className="flex items-center">
+          <h4 className="text-lg leading-[27px] text-blackPrimary ">
+            Price: <span className="font-medium">৳{minValue}</span> -
+            <span className="font-medium"> ৳{maxValue}</span>
+          </h4>
         </div>
       </div>
     </div>
