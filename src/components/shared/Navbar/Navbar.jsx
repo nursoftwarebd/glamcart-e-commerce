@@ -127,13 +127,14 @@ const Navbar = () => {
 
         <DragMenu />
       </div>
+
+      {/* Your bottom navigation items go here */}
       <div
         className={`fixed bottom-0 left-0 w-full h-[66px] lg:hidden z-[999] bg-white shadow-xl transition-opacity ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
       >
         <div className="flex justify-around items-center">
-          {/* Your bottom navigation items go here */}
           {bottomMenu.slice(0, 2).map((bottomMenu) => (
             <div
               key={bottomMenu.id}

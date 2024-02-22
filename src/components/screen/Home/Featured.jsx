@@ -15,7 +15,7 @@ const Featured = () => {
 
   const handleAddToCart = (item) => {
     dispatch(addToCart(item));
-    alert("Added to cart!"); // Show alert when item is added to cart
+    alert("Added to cart!");
   };
 
   return (

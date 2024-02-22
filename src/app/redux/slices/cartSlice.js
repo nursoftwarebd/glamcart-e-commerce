@@ -1,9 +1,11 @@
 import { featuredProducts } from "@/data/featuredProducts";
+import { products } from "@/data/products";
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   cart: [],
   items: featuredProducts,
+  allProductsItem: products,
   totalQuantity: 0,
   totalPrice: 0,
   selectedItems: [],

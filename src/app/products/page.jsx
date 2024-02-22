@@ -1,7 +1,6 @@
-import ProductCard from "@/components/screen/ProductCard";
+import AllProducts from "@/components/screen/Products/AllProducts";
 import ProductSidebar from "@/components/screen/Products/ProductSidebar";
 import Pagination from "@/components/screen/Products/paging/Pagination";
-import { products } from "@/data/products";
 
 export const metadata = {
   title: "NIRVOYA - Products Page",
@@ -19,7 +18,7 @@ const page = () => {
           <div className="w-full pt-6">
             <div className="flex items-center justify-between">
               <p className="text-lg leading-7 text-black/50 font-medium">
-                Showing <span className="text-black">20</span> of{" "}
+                Showing <span className="text-black">20</span> of
                 <span className="text-black">160</span> product
               </p>
               <div className="flex items-center gap-3">
@@ -39,11 +38,12 @@ const page = () => {
                 </div>
               </div>
             </div>
-            <div className="mt-5 grid lg:grid-cols-2 xl:grid-cols-3 gap-6">
+            {/* <div className="mt-5 grid lg:grid-cols-2 xl:grid-cols-3 gap-6">
               {products.slice(0, 12).map((product, index) => (
                 <ProductCard key={index} product={product} />
               ))}
-            </div>
+            </div> */}
+            <AllProducts />
             <div className="flex items-center justify-end pt-10 pb-13">
               <Pagination />
             </div>

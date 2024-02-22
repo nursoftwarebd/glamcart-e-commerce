@@ -27,6 +27,7 @@ const CardCheckout = () => {
     dispatch(getCartTotal());
   }, [cart]);
 
+  //------------------------------------
   // Toggle item selection
   const toggleItemSelection = (id) => {
     dispatch(toggleItemSelection(id));
