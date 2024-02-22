@@ -1,21 +1,21 @@
 "use client";
 import { getCartTotal } from "@/app/redux/slices/cartSlice";
 import LogInModal from "@/components/common/LogInModal";
+import { bottomMenu } from "@/data/bottomMenu";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import bucket from "../../../assets/icons/bucket.svg";
 import search from "../../../assets/icons/bx_bx-search.svg";
 import heart from "../../../assets/icons/heart.svg";
-import homeMenu from "../../../assets/icons/ic_menu_home.svg";
-import wishlist from "../../../assets/icons/ic_menu_wishlist.svg";
-import user_menu from "../../../assets/icons/menu_user.svg";
 import user from "../../../assets/icons/user.svg";
 import logo from "../../../assets/logo.svg";
 import DragMenu from "./DragMenu";
 
 const Navbar = () => {
+  const pathname = usePathname();
   const [openModal, setOpenModal] = useState(false);
   const { cart, totalQuantity } = useSelector((state) => state.allcarts);
   const [isVisible, setIsVisible] = useState(false);
@@ -128,56 +128,77 @@ const Navbar = () => {
         <DragMenu />
       </div>
       <div
-        className={`fixed bottom-0 left-0 w-full h-[66px] lg:hidden z-[999] bg-white shadow-md transition-opacity ${
+        className={`fixed bottom-0 left-0 w-full h-[66px] lg:hidden z-[999] bg-white shadow-xl transition-opacity ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
       >
         <div className="flex justify-around items-center">
           {/* Your bottom navigation items go here */}
-          <div className="w-[107px] h-[66px] flex items-center justify-center">
-            <Link href={"/"} className="flex flex-col items-center">
-              <Image src={homeMenu} alt="home_menu" className="" />
-              <p className="text-paragraph10 font-medium leading-5 tracking-[0.2px]  text-secondary">
-                Home
-              </p>
-            </Link>
-          </div>
-          <div className="w-[107px] h-[66px] flex items-center justify-center">
-            <Link href={"/"} className="flex flex-col items-center">
-              <Image
-                src={wishlist}
-                alt="wishlist"
-                className="w-[26.4px] h-[26.4px]"
-              />
-              <p className="text-paragraph10 font-medium leading-5 tracking-[0.2px]  text-black3D">
-                Wishlist
-              </p>
-            </Link>
-          </div>
-          <div className="w-[107px] h-[66px] flex items-center justify-center">
-            <Link
-              href={"/check-out"}
-              className="flex flex-col items-center relative"
+          {bottomMenu.slice(0, 2).map((bottomMenu) => (
+            <div
+              key={bottomMenu.id}
+              className="w-[107px] h-[66px] flex items-center justify-center"
             >
-              <Image src={bucket} alt="home_menu" className="object-fill" />
-              <p className="text-paragraph10 font-medium leading-5 tracking-[0.2px]  text-black3D">
-                order
-              </p>
-              <div className="absolute top-[-8px] right-[-5px] w-5 h-5 rounded-full flex items-center justify-center bg-fadeRed">
-                <span className="text-white font-medium text-xs">
-                  {totalQuantity}
-                </span>
-              </div>
-            </Link>
-          </div>
-          <div className="w-[107px] h-[66px] flex items-center justify-center">
-            <Link href={"/my-account"} className="flex flex-col items-center">
-              <Image src={user_menu} alt="home_menu" className="" />
-              <p className="text-paragraph10 font-medium leading-5 tracking-[0.2px]  text-black3D">
-                Account
-              </p>
-            </Link>
-          </div>
+              <Link
+                href={bottomMenu.src}
+                className={`flex flex-col items-center ${
+                  pathname === bottomMenu.src
+                    ? "text-secondary"
+                    : "text-black3D"
+                }`}
+              >
+                <Image src={bottomMenu.img} alt="home_menu" className="" />
+                <p className="text-paragraph10 font-medium leading-5 tracking-[0.2px]">
+                  {bottomMenu.name}
+                </p>
+              </Link>
+            </div>
+          ))}
+          {bottomMenu.slice(2, 3).map((bottomMenu) => (
+            <div
+              key={bottomMenu.id}
+              className="w-[107px] h-[66px] flex items-center justify-center"
+            >
+              <Link
+                href={bottomMenu.src}
+                className={`flex flex-col items-center relative ${
+                  pathname === bottomMenu.src
+                    ? "text-secondary"
+                    : "text-black3D"
+                }`}
+              >
+                <Image src={bottomMenu.img} alt="home_menu" className="" />
+                <p className="text-paragraph10 font-medium leading-5 tracking-[0.2px]">
+                  {bottomMenu.name}
+                </p>
+                <div className="absolute top-[-8px] right-[-5px] w-5 h-5 rounded-full flex items-center justify-center bg-fadeRed">
+                  <span className="text-white font-medium text-xs">
+                    {totalQuantity}
+                  </span>
+                </div>
+              </Link>
+            </div>
+          ))}
+          {bottomMenu.slice(3, 4).map((bottomMenu) => (
+            <div
+              key={bottomMenu.id}
+              className="w-[107px] h-[66px] flex items-center justify-center"
+            >
+              <Link
+                href={bottomMenu.src}
+                className={`flex flex-col items-center ${
+                  pathname === bottomMenu.src
+                    ? "text-secondary"
+                    : "text-black3D"
+                }`}
+              >
+                <Image src={bottomMenu.img} alt="home_menu" className="" />
+                <p className="text-paragraph10 font-medium leading-5 tracking-[0.2px]">
+                  {bottomMenu.name}
+                </p>
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
     </header>
