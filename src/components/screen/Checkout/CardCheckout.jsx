@@ -7,6 +7,7 @@ import {
 } from "@/app/redux/slices/cartSlice";
 import Checkbox from "@/components/common/Checkbox";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import plusIcon from "../../../assets/icons/+.svg";
@@ -49,8 +50,8 @@ const CardCheckout = () => {
   return (
     <section>
       <div className="flex flex-col xl:flex-row xl:justify-between gap-7">
-        <div className="w-auto 2xl:max-w-[937px] space-y-5">
-          <div className="py-7.5 pl-6.5 pr-12 w-auto 2xl:max-w-[937px] bg-white flex items-center justify-between">
+        <div className="w-full 2xl:max-w-[937px] space-y-5">
+          <div className="w-full py-7.5 pl-6.5 pr-12  2xl:max-w-[937px] bg-white flex items-center justify-between">
             {/* all select */}
             <div className="flex items-center gap-10">
               <Checkbox
@@ -163,11 +164,14 @@ const CardCheckout = () => {
               ৳{totalPrice}
             </h3>
           </div>
-          <button className="w-full 2xl:w-[380px] h-14 px-1 2xl:px-0 rounded bg-secondary flex items-center justify-center">
+          <Link
+            href={"/shipping-details"}
+            className="w-full 2xl:w-[380px] h-14 px-1 2xl:px-0 rounded bg-secondary flex items-center justify-center"
+          >
             <span className="text-xl text-backgroundNav leading-[30px] font-semibold">
               Proceed to Checkout
             </span>
-          </button>
+          </Link>
         </div>
       </div>
     </section>

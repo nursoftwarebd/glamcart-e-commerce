@@ -1,36 +1,42 @@
+"use client";
+import { getCartTotal } from "@/app/redux/slices/cartSlice";
 import RoundedCheckbox from "@/components/common/RoundedCheckbox";
 import { paymentMethodData } from "@/data/paymentMethodData";
 import Image from "next/image";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 const OrderCard = () => {
+  const { cart, totalQuantity, totalPrice, selectedItems } = useSelector(
+    (state) => state.allcarts
+  );
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getCartTotal());
+  }, [cart]);
   return (
     <div className="w-full xl:w-[439px] 2xl:w-[439px] p-7 bg-white rounded-[5px]">
       <h5 className="text-xl text-blackPrimary font-medium leading-[30px]">
         My Orders
       </h5>
       <div className="py-7.5 border-b-[1.73px] border-lightGrayBlue space-y-3">
-        <div className="flex items-center justify-between">
-          <p className="max-w-[203px] text-lg text-lineThrough leading-[26px]">
-            LED Monitor With High Quality In The World
-          </p>
-          <div>
-            <h5 className="flex items-center text-xl  leading-[30px] text-lineThrough gap-3">
-              <span>1X</span>
-              <span className="font-medium text-blackPrimary">৳976.33</span>
-            </h5>
+        {cart.map((cartItem) => (
+          <div key={cartItem.id} className="flex items-center justify-between">
+            <p className="max-w-[203px] text-lg text-lineThrough leading-[26px]">
+              {cartItem.title}
+            </p>
+            <div>
+              <h5 className="flex items-center text-xl  leading-[30px] text-lineThrough gap-3">
+                <span>1X</span>
+                <span className="font-medium text-blackPrimary">
+                  ৳{cartItem.price}
+                </span>
+              </h5>
+            </div>
           </div>
-        </div>
-        <div className="flex items-center justify-between">
-          <p className="max-w-[203px] text-lg text-lineThrough leading-[26px]">
-            Magic Pen for iPad
-          </p>
-          <div>
-            <h5 className="flex items-center text-xl  leading-[30px] text-lineThrough gap-3">
-              <span>1X</span>
-              <span className="font-medium text-blackPrimary">৳976.33</span>
-            </h5>
-          </div>
-        </div>
+        ))}
       </div>
       <div className="pt-7 pb-5 border-b-[1.73px] border-lightGrayBlue space-y-3">
         <div className="flex items-center justify-between">
@@ -40,7 +46,9 @@ const OrderCard = () => {
           <div>
             <h5 className="flex items-center text-xl  leading-[30px] text-lineThrough gap-3">
               <span>1X</span>
-              <span className="font-medium text-blackPrimary">৳968.56</span>
+              <span className="font-medium text-blackPrimary">
+                ৳{totalPrice}
+              </span>
             </h5>
           </div>
         </div>
@@ -61,7 +69,7 @@ const OrderCard = () => {
           Order Total
         </h5>
         <h3 className="text-xl md:text-heading28 text-secondary font-semibold leading-[42px]">
-          ৳1,956.66
+          ৳{totalPrice}
         </h3>
       </div>
       <div className="py-7">
