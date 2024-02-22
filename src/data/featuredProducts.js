@@ -15,7 +15,7 @@ export const featuredProducts = [
     id: 1,
     title: "Headrest Executive Mesh Office Chair set",
     image: watch,
-    price: 1540,
+    price: 1000,
     sku: "12314124124",
   },
   {

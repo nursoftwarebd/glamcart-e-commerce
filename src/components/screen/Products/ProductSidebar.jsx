@@ -56,7 +56,14 @@ const ProductSidebar = () => {
             <Image src={bottom} alt="bottom" className="w-6 h-6" />
           </div>
           {/* price range */}
-          <PriceRange />
+          <PriceRange
+            initialMin={2500}
+            initialMax={7500}
+            min={0}
+            max={10000}
+            step={100}
+            priceCap={1000}
+          />
         </div>
         <div className="px-5 py-6">
           <div className="flex items-center justify-between w-full">

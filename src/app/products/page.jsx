@@ -19,7 +19,7 @@ const page = () => {
             <div className="flex items-center justify-between">
               <p className="text-lg leading-7 text-black/50 font-medium">
                 Showing <span className="text-black">20</span> of
-                <span className="text-black">160</span> product
+                <span className="text-black"> 160</span> product
               </p>
               <div className="flex items-center gap-3">
                 <p className="text-lg text-black/50 leading-7">Sort by:</p>
@@ -38,11 +38,7 @@ const page = () => {
                 </div>
               </div>
             </div>
-            {/* <div className="mt-5 grid lg:grid-cols-2 xl:grid-cols-3 gap-6">
-              {products.slice(0, 12).map((product, index) => (
-                <ProductCard key={index} product={product} />
-              ))}
-            </div> */}
+
             <AllProducts />
             <div className="flex items-center justify-end pt-10 pb-13">
               <Pagination />

@@ -11,6 +11,15 @@ font-family: 'Rajdhani', sans-serif
 font-family: 'DM Sans', sans-serif;
 font-family: 'Open Sans', sans-serif;
 */
+/* Price Range */
+input[type="range"]::-webkit-slider-thumb {
+  pointer-events: auto;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  @apply bg-green-500;
+}
 
 * {
   margin: 0;
