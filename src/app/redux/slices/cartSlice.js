@@ -1,4 +1,5 @@
 import { featuredProducts } from "@/data/featuredProducts";
+import { flashProducts } from "@/data/flashProducts";
 import { products } from "@/data/products";
 import { createSlice } from "@reduxjs/toolkit";
 
@@ -6,6 +7,7 @@ const initialState = {
   cart: [],
   items: featuredProducts,
   allProductsItem: products,
+  flashProducts: flashProducts,
   totalQuantity: 0,
   totalPrice: 0,
   selectedItems: [],

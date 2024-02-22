@@ -22,7 +22,7 @@ const Featured = () => {
     <section className="pt-13 pb-10 bg-backgroundPage">
       <div className="container_fluid">
         {/* title */}
-        <SectionTitle heading={"Featured Product"} href={"/featured-product"} />
+        <SectionTitle heading={"Featured Product"} href={"/products"} />
 
         {/* featured products */}
         <div className="mt-5  grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
