@@ -26,20 +26,9 @@ const ProductCard = ({ item }) => {
     toast("Add to cart!", { autoClose: 1700 });
   };
 
-  // const handleAddToWishList = (item) => {
-  //   dispatch(addToWishList(item));
-  //   setWishList(!isWishList);
-  //   toast("Add to wishList!", { autoClose: 1700 });
-  // };
-
-  // const handleRemoveToWishList = (item) => {
-  //   dispatch(removeWishListItem(item));
-  //   setWishList(!isWishList);
-  //   toast.error("Remove to wishList!", { autoClose: 1700 });
-  // };
   const handleToggleWishList = (item) => {
     if (isWishList) {
-      dispatch(removeWishListItem(item));
+      dispatch(removeWishListItem(item.id));
       toast.error("Remove from wishlist!", { autoClose: 1700 });
     } else {
       dispatch(addToWishList(item));
@@ -56,22 +45,6 @@ const ProductCard = ({ item }) => {
           alt="product-images"
           className="w-full h-full mix-blend-multiply rounded-[10px] object-fill"
         />
-
-        {/* {isWishList ? (
-          <div
-            onClick={() => handleAddToWishList(item)}
-            className="cursor-pointer absolute top-[21px] right-[14px] w-[23px] h-5"
-          >
-            <Image src={heart} alt="heart" className="w-full h-full" />
-          </div>
-        ) : (
-          <div
-            onClick={() => handleRemoveToWishList(item)}
-            className="cursor-pointer absolute top-[21px] right-[14px] w-[23px] h-5"
-          >
-            <Image src={blankHeart} alt="love" className="w-full h-full" />
-          </div>
-        )} */}
         <div
           onClick={() => handleToggleWishList(item)}
           className="cursor-pointer absolute top-[21px] right-[14px] w-[23px] h-5"
