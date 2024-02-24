@@ -1,31 +1,52 @@
 "use client";
-import { addToCart, addToWishList } from "@/app/redux/slices/cartSlice";
+import {
+  addToCart,
+  addToWishList,
+  removeWishListItem,
+} from "@/app/redux/slices/cartSlice";
 import Image from "next/image";
 import { useDispatch } from "react-redux";
 import basket from "../../assets/icons/basket.svg";
-import love from "../../assets/icons/product_blank_love.svg";
+import blankHeart from "../../assets/icons/blank_heart.svg";
+import heart from "../../assets/icons/full_heart.svg";
 import starcolor from "../../assets/icons/star-color.svg";
 import star from "../../assets/icons/star.svg";
 
+import { useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const ProductCard = ({ item }) => {
+  const [isWishList, setWishList] = useState(false);
   const { title, image, price } = item;
   const dispatch = useDispatch();
 
   const handleAddToCart = (item) => {
     dispatch(addToCart(item));
     toast("Add to cart!", { autoClose: 1700 });
-    // alert("Added to cart!");
-  };
-  const handleAddToWishList = (item) => {
-    dispatch(addToWishList(item));
-    toast("Add to wishList!", { autoClose: 1700 });
-    // alert("Added to cart!");
   };
 
-  // const notify = () => toast("Wow so easy!");
+  // const handleAddToWishList = (item) => {
+  //   dispatch(addToWishList(item));
+  //   setWishList(!isWishList);
+  //   toast("Add to wishList!", { autoClose: 1700 });
+  // };
+
+  // const handleRemoveToWishList = (item) => {
+  //   dispatch(removeWishListItem(item));
+  //   setWishList(!isWishList);
+  //   toast.error("Remove to wishList!", { autoClose: 1700 });
+  // };
+  const handleToggleWishList = (item) => {
+    if (isWishList) {
+      dispatch(removeWishListItem(item));
+      toast.error("Remove from wishlist!", { autoClose: 1700 });
+    } else {
+      dispatch(addToWishList(item));
+      toast("Added to wishlist!", { autoClose: 1700 });
+    }
+    setWishList(!isWishList);
+  };
 
   return (
     <div className="bg-white border-[1px] w-full h-auto border-grayBorder px-[9px] pt-2 pb-[15px] rounded-[10px]">
@@ -36,11 +57,30 @@ const ProductCard = ({ item }) => {
           className="w-full h-full mix-blend-multiply rounded-[10px] object-fill"
         />
 
+        {/* {isWishList ? (
+          <div
+            onClick={() => handleAddToWishList(item)}
+            className="cursor-pointer absolute top-[21px] right-[14px] w-[23px] h-5"
+          >
+            <Image src={heart} alt="heart" className="w-full h-full" />
+          </div>
+        ) : (
+          <div
+            onClick={() => handleRemoveToWishList(item)}
+            className="cursor-pointer absolute top-[21px] right-[14px] w-[23px] h-5"
+          >
+            <Image src={blankHeart} alt="love" className="w-full h-full" />
+          </div>
+        )} */}
         <div
-          onClick={() => handleAddToWishList(item)}
+          onClick={() => handleToggleWishList(item)}
           className="cursor-pointer absolute top-[21px] right-[14px] w-[23px] h-5"
         >
-          <Image src={love} alt="love" className="w-full h-full" />
+          <Image
+            src={isWishList ? heart : blankHeart}
+            alt="love"
+            className="w-full h-full"
+          />
         </div>
       </div>
       {/* card details */}

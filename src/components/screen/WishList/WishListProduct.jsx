@@ -48,7 +48,7 @@ const WishListProduct = () => {
                 onClick={() => handleAddToCart(item)}
                 className="cursor-pointer  font-bold text-secondary text-xl"
               >
-                Buy Now
+                Add to cart
               </button>
               <div className="font-bold text-blackPrimary text-xl">||</div>
               <button

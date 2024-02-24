@@ -46,6 +46,7 @@ export const cartSlice = createSlice({
         state.wishList.push(newItem);
       }
     },
+
     getCartTotal: (state) => {
       let { totalQuantity, totalPrice } = state.cart.reduce(
         (cartTotal, cartItem) => {

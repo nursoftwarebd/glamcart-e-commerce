@@ -1,17 +1,18 @@
 "use client";
 import { addToCart } from "@/app/redux/slices/cartSlice";
 import Image from "next/image";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import basket from "../../../assets/icons/basket.svg";
-import love from "../../../assets/icons/love.svg";
+import love from "../../../assets/icons/full_heart.svg";
 import starcolor from "../../../assets/icons/star-color.svg";
 import star from "../../../assets/icons/star.svg";
 
 const FlashProduct = () => {
+  const [isFlashWishList, setFlashWishList] = useState(false);
   const items = useSelector((state) => state.allcarts.flashProducts);
-
   const dispatch = useDispatch();
 
   const handleAddToCart = (item) => {
