@@ -84,7 +84,7 @@ const Navbar = () => {
                 <LogInModal openModal={openModal} setOpenModal={setOpenModal} />
               )}
               <Link
-                href="#"
+                href="/wishlist"
                 className="flex items-center gap-[6px] text-lightText
               "
               >
