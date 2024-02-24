@@ -6,7 +6,7 @@ const FlashDeals = () => {
     <section className="pt-11.5 bg-backgroundPage">
       <div className="container_fluid">
         {/* title */}
-        <SectionTitle heading={"Flash Deals"} href={"/flash-products"} />
+        <SectionTitle heading={"Flash Deals"} href={"/products"} />
 
         {/* flash Products */}
         <FlashProduct />

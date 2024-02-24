@@ -12,11 +12,11 @@ const page = () => {
     <section className="pt-10  bg-backgroundPage">
       <div className="container_fluid">
         <div className="flex gap-9 2xl:gap-14">
-          <div className="w-[300px]">
+          <div className="hidden lg:block w-[300px]">
             <ProductSidebar />
           </div>
           <div className="w-full pt-6">
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-0">
               <p className="text-lg leading-7 text-black/50 font-medium">
                 Showing <span className="text-black">20</span> of
                 <span className="text-black"> 160</span> product

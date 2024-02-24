@@ -4,7 +4,7 @@ import Title from "./Title";
 
 const OurFeature = () => {
   return (
-    <div className="pt-16">
+    <div className="py-16">
       <div className="container_fluid">
         <Title
           heading="Feature"
