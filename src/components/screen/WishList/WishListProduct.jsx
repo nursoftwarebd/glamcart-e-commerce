@@ -18,11 +18,11 @@ const WishListProduct = () => {
 
   return (
     <div>
-      <div className="w-full">
+      <div className="w-full space-y-5">
         {wishList.map((item) => (
           <div
             key={item.id}
-            className="w-full py-7 pl-7 pr-12 bg-white flex items-center justify-between"
+            className="w-full py-7 pl-7 pr-12 bg-white flex  flex-col lg:flex-row lg:items-center justify-between"
           >
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-6">
               <Image
@@ -30,7 +30,7 @@ const WishListProduct = () => {
                 alt={`checkout ${item.title}`}
                 className="w-[100px] h-[100px] sm:h-[130px] sm:w-[130px] rounded-[5px]"
               />
-              <div className="space-y-2 sm:space-y-5">
+              <div className="space-y-2 md:space-y-5">
                 <h4 className="text-sm sm:text-lg text-blackPrimary font-medium leading-5 sm:leading-[27px]">
                   {item.title}
                 </h4>
@@ -43,19 +43,19 @@ const WishListProduct = () => {
               </div>
             </div>
 
-            <div className="flex items-center gap-5">
+            <div className="mt-4 lg:mt-0 flex items-center gap-5">
               <button
                 onClick={() => handleAddToCart(item)}
-                className="cursor-pointer w-[120px] border border-red-400"
+                className="cursor-pointer  font-bold text-secondary text-xl"
               >
-                Add To cart
+                Buy Now
               </button>
-
+              <div className="font-bold text-blackPrimary text-xl">||</div>
               <button
                 onClick={() => dispatch(removeWishListItem(item.id))}
-                className="cursor-pointer w-[120px] border border-red-400"
+                className="cursor-pointer  font-bold text-fadeRed text-xl "
               >
-                Remove items
+                Remove
               </button>
             </div>
           </div>

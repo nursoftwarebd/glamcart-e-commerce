@@ -13,7 +13,7 @@ export const bottomMenu = [
   {
     id: 2,
     name: "Wishlist",
-    src: "/",
+    src: "/wishlist",
     img: pic2,
   },
   {
