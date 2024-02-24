@@ -12,10 +12,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import plusIcon from "../../../assets/icons/+.svg";
 import minusIcon from "../../../assets/icons/-.svg";
-import {
-  default as deleteButton,
-  default as deleteItem,
-} from "../../../assets/icons/delete.svg";
+import { default as deleteItem } from "../../../assets/icons/delete.svg";
 
 const CardCheckout = () => {
   const { cart, totalQuantity, totalPrice, selectedItems } = useSelector(
@@ -28,49 +25,10 @@ const CardCheckout = () => {
     dispatch(getCartTotal());
   }, [cart]);
 
-  //------------------------------------
-  // Toggle item selection
-  const toggleItemSelection = (id) => {
-    dispatch(toggleItemSelection(id));
-  };
-
-  // Select all items
-  const selectAllItems = () => {
-    dispatch(selectAllItems());
-  };
-
-  // Remove selected items
-  const removeSelectedItems = () => {
-    selectedItems.forEach((id) => {
-      dispatch(removeItem(id));
-    });
-    dispatch(clearSelectedItems());
-  };
-
   return (
     <section>
       <div className="flex flex-col xl:flex-row xl:justify-between gap-7">
-        <div className="w-full 2xl:max-w-[937px] space-y-5">
-          <div className="w-full py-7.5 pl-6.5 pr-12  2xl:max-w-[937px] bg-white flex items-center justify-between">
-            {/* all select */}
-            <div className="flex items-center gap-10">
-              <Checkbox
-                checked={selectedItems.length === cart.length}
-                onChange={selectAllItems}
-              />
-              <p className="leading-6 text-blackPrimary">Select All</p>
-            </div>
-            <button
-              onClick={removeSelectedItems}
-              className="flex items-center gap-1"
-            >
-              <Image src={deleteButton} alt="deleteButton" />
-              <span className="font-medium text-grayDelete leading-6 ">
-                REMOVE
-              </span>
-            </button>
-          </div>
-
+        <div className="w-full 2xl:max-w-[937px]">
           <div className="space-y-5">
             {cart.map((data) => (
               <div

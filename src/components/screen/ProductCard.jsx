@@ -1,5 +1,5 @@
 "use client";
-import { addToCart } from "@/app/redux/slices/cartSlice";
+import { addToCart, addToWishList } from "@/app/redux/slices/cartSlice";
 import Image from "next/image";
 import { useDispatch } from "react-redux";
 import basket from "../../assets/icons/basket.svg";
@@ -19,6 +19,11 @@ const ProductCard = ({ item }) => {
     toast("Add to cart!", { autoClose: 1700 });
     // alert("Added to cart!");
   };
+  const handleAddToWishList = (item) => {
+    dispatch(addToWishList(item));
+    toast("Add to wishList!", { autoClose: 1700 });
+    // alert("Added to cart!");
+  };
 
   // const notify = () => toast("Wow so easy!");
 
@@ -31,7 +36,10 @@ const ProductCard = ({ item }) => {
           className="w-full h-full mix-blend-multiply rounded-[10px] object-fill"
         />
 
-        <div className="absolute top-[21px] right-[14px] w-[23px] h-5">
+        <div
+          onClick={() => handleAddToWishList(item)}
+          className="cursor-pointer absolute top-[21px] right-[14px] w-[23px] h-5"
+        >
           <Image src={love} alt="love" className="w-full h-full" />
         </div>
       </div>

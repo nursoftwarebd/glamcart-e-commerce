@@ -5,6 +5,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   cart: [],
+  wishList: [],
   items: featuredProducts,
   allProductsItem: products,
   flashProducts: flashProducts,
@@ -28,6 +29,21 @@ export const cartSlice = createSlice({
           quantity: 1,
         };
         state.cart.push(newItem);
+      }
+    },
+    addToWishList: (state, action) => {
+      let find = state.wishList.findIndex(
+        (item) => item.id === action.payload.id
+      );
+      if (find >= 0) {
+        state.wishList[find].quantity += 1;
+      } else {
+        // Create a new object with quantity property
+        const newItem = {
+          ...action.payload,
+          quantity: 1,
+        };
+        state.wishList.push(newItem);
       }
     },
     getCartTotal: (state) => {
@@ -107,5 +123,6 @@ export const {
   toggleItemSelection,
   selectAllItems,
   clearSelectedItems,
+  addToWishList,
 } = cartSlice.actions;
 export default cartSlice.reducer;
