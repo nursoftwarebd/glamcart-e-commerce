@@ -78,7 +78,7 @@ const Navbar = () => {
                     className="w-[14.18px] h-[18px] object-fill object-center"
                   />
                 </span>
-                <span className=" leading-[120%] tracking-[0.08px]">Login</span>
+                <span className="leading-[120%] tracking-[0.08px]">Login</span>
               </button>
               {openModal && (
                 <LogInModal openModal={openModal} setOpenModal={setOpenModal} />

@@ -8,16 +8,24 @@ import logCross from "../../assets/icons/login_cross.svg";
 import openeye from "../../assets/icons/open.svg";
 import loginpic from "../../assets/images/login/bro.svg";
 
-const SignUpModal = ({ signModal, setSignModal }) => {
+const SignUpModal = ({ isSingIn, setSignModal }) => {
   const [passwordVisible, setPasswordVisible] = useState(false);
+  const [conPasswordVisible, setConPasswordVisible] = useState(false);
   const [password, setPassword] = useState("");
+  const [conPassword, setConPassword] = useState("");
 
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
   };
+  const toggleConPasswordVisibility = () => {
+    setConPasswordVisible(!conPasswordVisible);
+  };
 
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
+  };
+  const handleConPasswordChange = (e) => {
+    setConPassword(e.target.value);
   };
   return (
     <div
@@ -28,10 +36,10 @@ const SignUpModal = ({ signModal, setSignModal }) => {
         <div className="grid grid-cols-2">
           <div className="bg-blueLogIn rounded-tl-[24px] rounded-bl-[24px] px-[84px] py-[76px] ">
             <h3 className="text-heading28 font-semibold leading-[42px] tracking-[3%] text-white">
-              Login
+              Create Account
             </h3>
             <p className="pt-4 text-lg font-medium leading-[27px] text-white">
-              Get access to your Orders, Wishlist and Recommendations
+              Sign up with your mobile number or email to get started
             </p>
             <div className="pt-[22px]">
               <Image src={loginpic} alt="loginpic" />
@@ -42,16 +50,21 @@ const SignUpModal = ({ signModal, setSignModal }) => {
               <div className="flex justify-end">
                 <button
                   className="pt-[10px] pr-[10px]"
-                  onClick={() => setSignModal(!signModal)}
+                  onClick={() => setSignModal(!isSingIn)}
                 >
                   <Image src={logCross} alt="logCross" />
                 </button>
               </div>
-              <div className="px-[60px] pt-15 pb-[90px] ">
+              <div className="px-[60px] py-7  ">
                 <form className="space-y-5">
                   <h3 className="text-2xl text-indigoText font-medium leading-9">
-                    Welcome to Project Nirvoya! Please login.
+                    Create your Project Nirvoya Account
                   </h3>
+                  <input
+                    placeholder="Full name"
+                    type="text"
+                    className="w-full h-10 bg-white p-2 border border-borderLog/70 outline-none placeholder:text-sm placeholder:leading-5 placeholder:text-grayEdit/70"
+                  />
                   <input
                     placeholder="Enter Email or Mobile number"
                     type="text"
@@ -83,17 +96,46 @@ const SignUpModal = ({ signModal, setSignModal }) => {
                       )}
                     </button>
                   </div>
-                  <div className="flex items-center justify-end">
-                    <Link
-                      href={"#"}
-                      className="text-sm text-grayView leading-[21px]"
-                    >
-                      Forgot password?
-                    </Link>
+                  <div className="flex items-center justify-between w-full h-10 bg-white p-2 border border-borderLog/70">
+                    <input
+                      type={conPasswordVisible ? "text" : "password"}
+                      id="password"
+                      name="password"
+                      value={conPassword}
+                      onChange={handleConPasswordChange}
+                      placeholder="Confirm Password"
+                      className="w-[85%] outline-none placeholder:text-sm placeholder:leading-5 placeholder:text-grayEdit/70"
+                    />
+                    <button type="button" onClick={toggleConPasswordVisibility}>
+                      {conPasswordVisible ? (
+                        <Image
+                          src={openeye}
+                          alt="openeye"
+                          className="w-6 h-6"
+                        />
+                      ) : (
+                        <Image
+                          src={closedeye}
+                          alt="closedeye"
+                          className="w-6 h-6 mix-blend-multiply object-center"
+                        />
+                      )}
+                    </button>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <input type="checkbox" className="w-[18px] h-[18px]" />
+                    <div className="flex items-center  text-sm text-grayView leading-[21px] gap-1">
+                      I agree to Project Nrvoya
+                      <span>
+                        <Link href={"#"} className="text-secondary">
+                          terms & conditions
+                        </Link>
+                      </span>
+                    </div>
                   </div>
                   <button className="w-full h-10 rounded-sm flex items-center justify-center bg-secondary">
                     <span className="font-medium text-white leading-6">
-                      Log in
+                      Create Account
                     </span>
                   </button>
                 </form>
@@ -132,11 +174,10 @@ const SignUpModal = ({ signModal, setSignModal }) => {
                 </div>
                 <div className="pt-10">
                   <p className="text-sm leading-[21px] text-grayView">
-                    Have no account yet?{" "}
+                    Already member?
                     <span>
                       <Link href={"#"} className="text-secondary">
-                        {" "}
-                        Create an account
+                        Login here
                       </Link>
                     </span>
                   </p>
