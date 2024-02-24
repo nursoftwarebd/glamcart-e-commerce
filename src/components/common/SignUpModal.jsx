@@ -30,34 +30,38 @@ const SignUpModal = ({ isSingIn, setSignModal }) => {
   return (
     <div
       className="backdrop flex bg-black bg-opacity-50 justify-center items-center overflow-x-hidden 
-  overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+  overflow-y-auto fixed inset-0 z-[999] outline-none focus:outline-none"
     >
-      <div className="w-[972px] h-auto rounded-[24px]">
-        <div className="grid grid-cols-2">
-          <div className="bg-blueLogIn rounded-tl-[24px] rounded-bl-[24px] px-[84px] py-[76px] ">
-            <h3 className="text-heading28 font-semibold leading-[42px] tracking-[3%] text-white">
+      <div className="sm:w-[580px] md:w-[680px] lg:w-[850px] xl:w-[972px] h-auto rounded-[24px]">
+        <div className="grid md:grid-cols-2">
+          <div className="rounded-tl-[24px] hidden md:block bg-blueLogIn  rounded-bl-[24px] px-11 xl:px-[84px] md:pt-[76px] md:pb-1 xl:pt-[76px] xl:pb-[76px]">
+            <h3 className="text-xl xl:text-heading28 font-semibold xl:leading-[42px] tracking-[3%] text-white">
               Create Account
             </h3>
-            <p className="pt-4 text-lg font-medium leading-[27px] text-white">
+            <p className="pt-4 text-base xl:text-lg font-medium leading-[27px] text-white">
               Sign up with your mobile number or email to get started
             </p>
-            <div className="pt-[22px]">
-              <Image src={loginpic} alt="loginpic" />
+            <div className="pt-0 lg:pt-2 xl:pt-[22px]">
+              <Image
+                src={loginpic}
+                alt="loginpic"
+                className=" w-full md:h-[300px] xl:h-full object-fill"
+              />
             </div>
           </div>
-          <div className="backdrop-blur-md">
-            <div className="bg-gradient-to-r from-[#003387]/[20%] to-white/[20%] w-full rounded-tr-[24px] rounded-br-[24px]">
+          <div className=" w-[320px] sm:w-full backdrop-blur-md bg-white/40 rounded-tl-[24px] md:rounded-tl-[0px] rounded-bl-[24px] md:rounded-bl-[0px] rounded-tr-[24px] rounded-br-[24px]">
+            <div className="bg-gradient-to-r from-[#003387]/[20%] to-white/[20%] rounded-tl-[24px] md:rounded-tl-[0px] rounded-bl-[24px] md:rounded-bl-[0px]  w-full rounded-tr-[24px] rounded-br-[24px] ">
               <div className="flex justify-end">
                 <button
-                  className="pt-[10px] pr-[10px]"
+                  className="pt-1 lg:pt-2 xl:pt-[10px] pr-[10px]"
                   onClick={() => setSignModal(!isSingIn)}
                 >
                   <Image src={logCross} alt="logCross" />
                 </button>
               </div>
-              <div className="px-[60px] py-7  ">
-                <form className="space-y-5">
-                  <h3 className="text-2xl text-indigoText font-medium leading-9">
+              <div className="px-2 sm:px-10 md:px-5 lg:px-10 xl:px-[60px] py-1 sm:py-3 md:py-1 lg:py-1 xl:py-7  ">
+                <form className="space-y-3 xl:space-y-5">
+                  <h3 className="text-base lg:text-lg xl:text-2xl text-indigoText font-medium lg:leading-9">
                     Create your Project Nirvoya Account
                   </h3>
                   <input
@@ -172,7 +176,7 @@ const SignUpModal = ({ isSingIn, setSignModal }) => {
                     </div>
                   </Link>
                 </div>
-                <div className="pt-10">
+                <div className="pt-4 xl:pt-10">
                   <p className="text-sm leading-[21px] text-grayView">
                     Already member?
                     <span>

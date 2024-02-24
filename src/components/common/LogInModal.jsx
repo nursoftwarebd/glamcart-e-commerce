@@ -8,10 +8,8 @@ import google from "../../assets/icons/google.svg";
 import logCross from "../../assets/icons/login_cross.svg";
 import openeye from "../../assets/icons/open.svg";
 import loginpic from "../../assets/images/login/bro.svg";
-// import SignUpModal from "./SignUpModal";
 
 const LogInModal = ({ openModal, setOpenModal }) => {
-  // const [signModal, setSignModal] = useState(false);
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [password, setPassword] = useState("");
 
@@ -27,20 +25,24 @@ const LogInModal = ({ openModal, setOpenModal }) => {
       className="backdrop flex bg-black bg-opacity-50 justify-center items-center overflow-x-hidden 
   overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
     >
-      <div className="w-[972px] h-auto rounded-[24px]">
+      <div className=" lg:w-[880px] xl:w-[972px] h-auto rounded-[24px]">
         <div className="grid grid-cols-2">
-          <div className="bg-blueLogIn rounded-tl-[24px] rounded-bl-[24px] px-[84px] py-[76px] ">
+          <div className="bg-blueLogIn rounded-tl-[24px] rounded-bl-[24px] lg:px-10 xl:px-[84px] lg:pt-[50px] lg:pb-[35px] xl:pt-[80px] xl:pb-[76px] ">
             <h3 className="text-heading28 font-semibold leading-[42px] tracking-[3%] text-white">
               Login
             </h3>
-            <p className="pt-4 text-lg font-medium leading-[27px] text-white">
+            <p className="pt-3 text-lg font-medium leading-[27px] text-white">
               Get access to your Orders, Wishlist and Recommendations
             </p>
-            <div className="pt-[22px]">
-              <Image src={loginpic} alt="loginpic" />
+            <div className="pt-5">
+              <Image
+                src={loginpic}
+                alt="loginpic"
+                className=" w-full md:h-[300px] xl:h-full object-fill"
+              />
             </div>
           </div>
-          <div className="backdrop-blur-md">
+          <div className="backdrop-blur-md bg-white/40 rounded-tr-[24px] rounded-br-[24px]">
             <div className="bg-gradient-to-r from-[#003387]/[20%] to-white/[20%] w-full rounded-tr-[24px] rounded-br-[24px]">
               <div className="flex justify-end">
                 <button
@@ -50,9 +52,9 @@ const LogInModal = ({ openModal, setOpenModal }) => {
                   <Image src={logCross} alt="logCross" />
                 </button>
               </div>
-              <div className="px-[60px] pt-15 pb-[90px] ">
+              <div className="lg:px-8 xl:px-[60px] lg:pt-7 lg:pb-8 xl:pt-15 xl:pb-[98px] ">
                 <form className="space-y-5">
-                  <h3 className="text-2xl text-indigoText font-medium leading-9">
+                  <h3 className="text-lg xl:text-2xl text-indigoText font-medium leading-9">
                     Welcome to Project Nirvoya! Please login.
                   </h3>
                   <input
