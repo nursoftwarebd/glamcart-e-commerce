@@ -7,9 +7,8 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 const OrderCard = () => {
-  const { cart, totalQuantity, totalPrice, selectedItems } = useSelector(
-    (state) => state.allcarts
-  );
+  const { cart, totalQuantity, quantity, totalPrice, selectedItems } =
+    useSelector((state) => state.allcarts);
 
   const dispatch = useDispatch();
 
@@ -28,12 +27,12 @@ const OrderCard = () => {
               {cartItem.title}
             </p>
             <div>
-              <h5 className="flex items-center text-xl  leading-[30px] text-lineThrough gap-3">
-                <span>1X</span>
-                <span className="font-medium text-blackPrimary">
+              <div className="flex items-center text-xl  leading-[30px] text-lineThrough gap-3">
+                <span>{cartItem.quantity}x</span>
+                <span className="font-medium text-blackPrimary w-[85px]  text-right">
                   ৳{cartItem.price}
                 </span>
-              </h5>
+              </div>
             </div>
           </div>
         ))}
@@ -45,7 +44,6 @@ const OrderCard = () => {
           </p>
           <div>
             <h5 className="flex items-center text-xl  leading-[30px] text-lineThrough gap-3">
-              <span>1X</span>
               <span className="font-medium text-blackPrimary">
                 ৳{totalPrice}
               </span>
@@ -58,7 +56,7 @@ const OrderCard = () => {
           </p>
           <div>
             <h5 className="flex items-center text-xl  leading-[30px] text-lineThrough gap-3">
-              <span>1X</span>
+              {/* <span>1x</span> */}
               <span className="font-medium text-blackPrimary">৳0</span>
             </h5>
           </div>

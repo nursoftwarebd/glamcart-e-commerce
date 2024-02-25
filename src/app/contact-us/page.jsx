@@ -88,7 +88,7 @@ const ContactUsPage = () => {
                 </button>
               </form>
             </div>
-            <div className="w-full lg:max-w-[416px] h-fit">
+            <div className="sticky top-0 w-full lg:max-w-[416px] h-fit">
               <h3 className="text-xl sm:text-2xl font-semibold leading-[48px] text-contactLabel">
                 Our Office
               </h3>

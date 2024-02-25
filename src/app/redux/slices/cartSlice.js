@@ -81,6 +81,7 @@ export const cartSlice = createSlice({
         }
         return item;
       });
+      console.log(item);
       localStorage.setItem("cart", JSON.stringify(state.cart));
     },
     decreaseItemQuantity: (state, action) => {

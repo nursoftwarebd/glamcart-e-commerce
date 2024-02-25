@@ -104,7 +104,7 @@ const CardCheckout = () => {
             </div>
           )}
         </div>
-        <div className="w-full sm:w-[439px] h-fit px-7.5 pt-7.5 pb-13 bg-white rounded-[5px]">
+        <div className="sticky top-0 w-full sm:w-[439px] h-fit px-7.5 pt-7.5 pb-13 bg-white rounded-[5px]">
           <h4 className="text-xl font-medium leading-[30px] text-blackPrimary">
             My Orders
           </h4>
