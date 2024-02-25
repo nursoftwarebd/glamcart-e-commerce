@@ -1,14 +1,10 @@
 "use client";
-// import SignUpModal from "@/components/common/SignUpModal";
 import SectionTitle from "@/components/shared/SectionTitle/SectionTitle";
-// import { useState } from "react";
 import { useSelector } from "react-redux";
 import ProductCard from "../ProductCard";
 
 const Featured = () => {
   const items = useSelector((state) => state.allcarts.items);
-
-  // const [isSingIn, setIsSingIn] = useState(false);
 
   return (
     <section className="pt-13 pb-10 bg-backgroundPage">
