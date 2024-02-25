@@ -1,12 +1,13 @@
 "use client";
-import { addToCart, removeWishListItem } from "@/app/redux/slices/cartSlice";
+import { addToCart } from "@/app/redux/slices/cartSlice";
+import { removeWishListItem } from "@/app/redux/slices/wishListSlice";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const WishListProduct = () => {
-  const { wishList } = useSelector((state) => state.allcarts);
+  const { wishList } = useSelector((state) => state.allWishlist);
   console.log(wishList);
 
   const dispatch = useDispatch();

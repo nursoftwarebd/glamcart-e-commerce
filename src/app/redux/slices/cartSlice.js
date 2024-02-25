@@ -5,14 +5,19 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   cart: [],
-  wishList: [],
   items: featuredProducts,
   allProductsItem: products,
   flashProducts: flashProducts,
   totalQuantity: 0,
   totalPrice: 0,
-  selectedItems: [],
 };
+
+// Load cart and wishlist from localStorage if available
+const storedCart = localStorage.getItem("cart");
+
+if (storedCart) {
+  initialState.cart = JSON.parse(storedCart);
+}
 
 export const cartSlice = createSlice({
   name: "cart",
@@ -30,23 +35,8 @@ export const cartSlice = createSlice({
         };
         state.cart.push(newItem);
       }
+      localStorage.setItem("cart", JSON.stringify(state.cart));
     },
-    addToWishList: (state, action) => {
-      let find = state.wishList.findIndex(
-        (item) => item.id === action.payload.id
-      );
-      if (find >= 0) {
-        state.wishList[find].quantity += 1;
-      } else {
-        // Create a new object with quantity property
-        const newItem = {
-          ...action.payload,
-          quantity: 1,
-        };
-        state.wishList.push(newItem);
-      }
-    },
-
     getCartTotal: (state) => {
       let { totalQuantity, totalPrice } = state.cart.reduce(
         (cartTotal, cartItem) => {
@@ -81,11 +71,6 @@ export const cartSlice = createSlice({
     removeItem: (state, action) => {
       state.cart = state.cart.filter((item) => item.id !== action.payload);
     },
-    removeWishListItem: (state, action) => {
-      state.wishList = state.wishList.filter(
-        (item) => item.id !== action.payload
-      );
-    },
     increaseItemQuantity: (state, action) => {
       state.cart = state.cart.map((item) => {
         if (item.id === action.payload) {
@@ -93,6 +78,7 @@ export const cartSlice = createSlice({
         }
         return item;
       });
+      localStorage.setItem("cart", JSON.stringify(state.cart));
     },
     decreaseItemQuantity: (state, action) => {
       state.cart = state.cart.map((item) => {
@@ -101,21 +87,7 @@ export const cartSlice = createSlice({
         }
         return item;
       });
-    },
-    // remove and select all
-    toggleItemSelection: (state, action) => {
-      const index = state.selectedItems.indexOf(action.payload);
-      if (index === -1) {
-        state.selectedItems.push(action.payload);
-      } else {
-        state.selectedItems.splice(index, 1);
-      }
-    },
-    selectAllItems: (state) => {
-      state.selectedItems = state.cart.map((item) => item.id);
-    },
-    clearSelectedItems: (state) => {
-      state.selectedItems = [];
+      localStorage.setItem("cart", JSON.stringify(state.cart));
     },
   },
 });
@@ -124,12 +96,7 @@ export const {
   addToCart,
   getCartTotal,
   removeItem,
-  removeWishListItem,
   increaseItemQuantity,
   decreaseItemQuantity,
-  toggleItemSelection,
-  selectAllItems,
-  clearSelectedItems,
-  addToWishList,
 } = cartSlice.actions;
 export default cartSlice.reducer;

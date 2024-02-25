@@ -1,9 +1,5 @@
 "use client";
-import {
-  addToCart,
-  addToWishList,
-  removeWishListItem,
-} from "@/app/redux/slices/cartSlice";
+import { addToCart } from "@/app/redux/slices/cartSlice";
 import Image from "next/image";
 import { useDispatch } from "react-redux";
 import basket from "../../assets/icons/basket.svg";
@@ -12,6 +8,10 @@ import heart from "../../assets/icons/full_heart.svg";
 import starcolor from "../../assets/icons/star-color.svg";
 import star from "../../assets/icons/star.svg";
 
+import {
+  addToWishList,
+  removeWishListItem,
+} from "@/app/redux/slices/wishListSlice";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
