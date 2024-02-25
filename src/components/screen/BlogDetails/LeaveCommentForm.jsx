@@ -13,7 +13,7 @@ const LeaveCommentForm = () => {
             name=""
             id=""
             rows="5"
-            className="w-full p-4 bg-white bg-opacity-50 border-[1px] border-oldGray/50 outline-none"
+            className="w-full p-4 resize-none bg-white bg-opacity-50 border-[1px] border-oldGray/50 outline-none"
           ></textarea>
         </div>
         <div className="pt-8 w-full flex flex-col lg:flex-row items-center gap-[50px]">
