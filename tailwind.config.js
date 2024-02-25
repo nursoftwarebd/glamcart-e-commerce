@@ -44,6 +44,7 @@ module.exports = {
         bgCart: "#EBF4F9",
         blueLogIn: "#2874F0",
         starRed: "#FF6565",
+        warningColo: "#FDF0D5",
         bgProductDetails: "#FCFCFC",
         blackPrimary: "#333333",
         black: "#424241",
