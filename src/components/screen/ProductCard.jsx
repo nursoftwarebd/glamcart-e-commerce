@@ -12,6 +12,7 @@ import {
   addToWishList,
   removeWishListItem,
 } from "@/app/redux/slices/wishListSlice";
+import Link from "next/link";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -40,11 +41,13 @@ const ProductCard = ({ item }) => {
   return (
     <div className="bg-white border-[1px] w-full h-auto border-grayBorder px-[9px] pt-2 pb-[15px] rounded-[10px]">
       <div className="w-full h-[313px] flex items-end bg-imageBack rounded-[10px] relative">
-        <Image
-          src={image}
-          alt="product-images"
-          className="w-full h-full mix-blend-multiply rounded-[10px] object-fill"
-        />
+        <Link href={"/product-details"}>
+          <Image
+            src={image}
+            alt="product-images"
+            className="w-full h-full mix-blend-multiply rounded-[10px] object-fill"
+          />
+        </Link>
         <div
           onClick={() => handleToggleWishList(item)}
           className="cursor-pointer absolute top-[21px] right-[14px] w-[23px] h-5"
@@ -69,7 +72,10 @@ const ProductCard = ({ item }) => {
           </div>
           <span className=" text-xs text-blackPrimary">(0)</span>
         </div>
-        <h5 className="h5 text-blackSec">{title}</h5>
+        <h5 className="h5 text-blackSec">
+          {" "}
+          <Link href={"/product-details"}>{title}</Link>{" "}
+        </h5>
         <div className="flex items-center justify-between pr-[11px]">
           <h4 className="h4 text-primary">৳{price}</h4>
           {/* ::: cart :::: */}
