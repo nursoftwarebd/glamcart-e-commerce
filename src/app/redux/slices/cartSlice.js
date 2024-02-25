@@ -69,7 +69,10 @@ export const cartSlice = createSlice({
       state.totalQuantity = totalQuantity;
     },
     removeItem: (state, action) => {
-      state.cart = state.cart.filter((item) => item.id !== action.payload);
+      const itemIdToRemove = action.payload;
+      state.cart = state.cart.filter((item) => item.id !== itemIdToRemove);
+      localStorage.setItem("cart", JSON.stringify(state.cart));
+      // state.cart = state.cart.filter((item) => item.id !== action.payload);
     },
     increaseItemQuantity: (state, action) => {
       state.cart = state.cart.map((item) => {

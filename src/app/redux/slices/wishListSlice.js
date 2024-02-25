@@ -39,10 +39,17 @@ export const wishListSlice = createSlice({
       localStorage.setItem("wishlist", JSON.stringify(state.wishList));
     },
 
+    // removeWishListItem: (state, action) => {
+    //   state.wishList = state.wishList.filter(
+    //     (item) => item.id !== action.payload
+    //   );
+    // },
     removeWishListItem: (state, action) => {
+      const itemIdToRemove = action.payload;
       state.wishList = state.wishList.filter(
-        (item) => item.id !== action.payload
+        (item) => item.id !== itemIdToRemove
       );
+      localStorage.setItem("wishlist", JSON.stringify(state.wishList));
     },
   },
 });
