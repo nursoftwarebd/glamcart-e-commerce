@@ -1,4 +1,5 @@
 import AboutHero from "@/components/screen/About/AboutHero";
+import OurCustomer from "@/components/screen/About/OurCustomer";
 import OurFeature from "@/components/screen/About/OurFeature";
 import OurMission from "@/components/screen/About/OurMission";
 
@@ -13,7 +14,7 @@ const page = () => {
       <AboutHero />
       <OurMission />
       <OurFeature />
-      {/* <OurCustomer /> */}
+      <OurCustomer />
     </section>
   );
 };

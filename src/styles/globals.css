@@ -100,3 +100,7 @@ body {
 .small_nav_text {
   @apply font-poppins text-sm leading-[21px] font-medium text-blackPrimary/85 uppercase;
 }
+
+.about_hero {
+  background-image: url("/src/assets/images/aboutUs/aboutHero.png") !important;
+}

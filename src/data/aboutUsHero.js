@@ -1,4 +1,4 @@
-import heroPic from "../assets/images/aboutUs/aboutHero.png";
+import heroPic from "../assets/images/aboutUs/background.jpg";
 
 export const aboutUsHero = [
   {
