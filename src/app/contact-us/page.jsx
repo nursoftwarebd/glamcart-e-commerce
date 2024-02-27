@@ -78,7 +78,7 @@ const ContactUsPage = () => {
                     id=""
                     rows="7"
                     placeholder="Write Your Message"
-                    className="w-full xl:w-[607px] px-4 py-3 bg-white rounded-[5px] border-[1px] border-borderContact/50 outline-none placeholder:text-grayFaq placeholder:text-sm placeholder:leading-4"
+                    className="w-full resize-none xl:w-[607px] px-4 py-3 bg-white rounded-[5px] border-[1px] border-borderContact/50 outline-none placeholder:text-grayFaq placeholder:text-sm placeholder:leading-4"
                   ></textarea>
                 </div>
                 <button className="w-[190px] h-10 rounded-[3px] bg-secondary flex items-center justify-center">

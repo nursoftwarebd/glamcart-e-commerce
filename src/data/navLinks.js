@@ -8,7 +8,7 @@ export const navLinks = [
         subcat: [
           {
             name: "Cotton",
-            href: "/cotton",
+            href: "/products",
           },
           {
             name: "Silk",

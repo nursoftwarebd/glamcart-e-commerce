@@ -1,4 +1,4 @@
-import Dropdown from "@/components/common/Dropdown";
+import AddressBookDropdown from "@/components/common/AddressBookDropdown";
 
 const AddressBookPage = () => {
   const options1 = [
@@ -94,13 +94,19 @@ const AddressBookPage = () => {
                   <label htmlFor="" className="address_form_label">
                     Country <span className="text-red-500">*</span>
                   </label>
-                  <Dropdown options={options1} select="Select Country" />
+                  <AddressBookDropdown
+                    options={options1}
+                    select="Select Country"
+                  />
                 </div>
                 <div className="w-full sm:w-1/2 space-y-3 flex flex-col">
                   <label htmlFor="" className="address_form_label">
                     City/Area <span className="text-red-500">*</span>
                   </label>
-                  <Dropdown options={options2} select="Select City or Area" />
+                  <AddressBookDropdown
+                    options={options2}
+                    select="Select City or Area"
+                  />
                 </div>
               </div>
               <div className="w-full flex flex-col sm:flex-row items-center gap-y-5 gap-x-10">

@@ -25,9 +25,9 @@ const LogInModal = ({ openModal, setOpenModal }) => {
       className="backdrop flex bg-black bg-opacity-50 justify-center items-center overflow-x-hidden 
   overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
     >
-      <div className=" lg:w-[880px] xl:w-[972px] h-auto rounded-[24px]">
+      <div className=" lg:w-[880px]  x1xl:w-[972px] h-auto rounded-[24px]">
         <div className="grid grid-cols-2">
-          <div className="bg-blueLogIn rounded-tl-[24px] rounded-bl-[24px] lg:px-10 xl:px-[84px] lg:pt-[50px] lg:pb-[35px] xl:pt-[80px] xl:pb-[76px] ">
+          <div className="bg-blueLogIn rounded-tl-[24px] rounded-bl-[24px] lg:px-10 xl:px-[84px] lg:pt-[50px] lg:pb-[35px] xl:pt-[15px] xl:pb-[15px] x1xl:pt-[50px] x1xl:pb-[50px]">
             <h3 className="text-heading28 font-semibold leading-[42px] tracking-[3%] text-white">
               Login
             </h3>
@@ -52,7 +52,7 @@ const LogInModal = ({ openModal, setOpenModal }) => {
                   <Image src={logCross} alt="logCross" />
                 </button>
               </div>
-              <div className="lg:px-8 xl:px-[60px] lg:pt-7 lg:pb-8 xl:pt-15 xl:pb-[98px] ">
+              <div className="lg:px-8 xl:px-[60px] lg:pt-7 lg:pb-8 xl:pt-5 xl:pb-5  x1xl:pt-10 x1xl:pb-[70px] ">
                 <form className="space-y-5">
                   <h3 className="text-lg xl:text-2xl text-indigoText font-medium leading-9">
                     Welcome to Project Nirvoya! Please login.
@@ -138,7 +138,9 @@ const LogInModal = ({ openModal, setOpenModal }) => {
                 <div className="pt-10">
                   <p className="text-sm leading-[21px] text-grayView">
                     Have no account yet?{" "}
-                    <span className="text-secondary">Create an account</span>
+                    <Link href={"#"} className="text-secondary">
+                      Create an account
+                    </Link>
                   </p>
                   {/* <p
                     onClick={() => setSignModal(!signModal)}
