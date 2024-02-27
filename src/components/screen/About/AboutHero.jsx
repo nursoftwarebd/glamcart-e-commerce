@@ -1,5 +1,4 @@
 import { aboutUsHero } from "@/data/aboutUsHero";
-import aboutUsHeroPic from "../../../assets/images/aboutUs/background.jpg";
 
 const AboutHero = () => {
   return (
@@ -8,8 +7,8 @@ const AboutHero = () => {
         return (
           <div
             key={aboutUsHero.id}
-            className={`h-[600px] w-full bg-cover bg-center flex items-center justify-center`}
-            style={{ backgroundImage: `url(${aboutUsHeroPic})` }}
+            className={`h-[600px] w-full  bg-no-repeat bg-left bg-cover flex items-center justify-center`}
+            style={{ backgroundImage: `url('/background.jpg')` }}
           >
             <div className="text-center">
               <h2 className="text-2xl md:text-heading30 xl:text-heading44 text-blackPrimary leading-[66px] font-semibold">
