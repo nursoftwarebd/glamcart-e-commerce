@@ -1,5 +1,6 @@
 "use client";
 import { addToCart } from "@/app/redux/slices/cartSlice";
+// import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useDispatch } from "react-redux";
 import basket from "../../assets/icons/basket.svg";
@@ -7,6 +8,10 @@ import blankHeart from "../../assets/icons/blank_heart.svg";
 import heart from "../../assets/icons/full_heart.svg";
 import starcolor from "../../assets/icons/star-color.svg";
 import star from "../../assets/icons/star.svg";
+
+// const addToCart = dynamic(() => import("@/app/redux/slices/cartSlice"), {
+//   ssr: false,
+// });
 
 import {
   addToWishList,

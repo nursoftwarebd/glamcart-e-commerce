@@ -12,10 +12,17 @@ const initialState = {
 
 // Load cart and wishlist from localStorage if available
 
-const storedWishlist = localStorage.getItem("wishlist");
+// const storedWishlist = localStorage.getItem("wishlist");
 
-if (storedWishlist) {
-  initialState.wishList = JSON.parse(storedWishlist);
+// if (storedWishlist) {
+//   initialState.wishList = JSON.parse(storedWishlist);
+// }
+if (typeof window !== "undefined") {
+  const storedWishlist = localStorage.getItem("wishlist");
+
+  if (storedWishlist) {
+    initialState.wishList = JSON.parse(storedWishlist);
+  }
 }
 
 export const wishListSlice = createSlice({
