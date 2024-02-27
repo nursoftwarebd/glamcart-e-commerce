@@ -8,3 +8,14 @@
   top: 3px;
   right: -10px;
 }
+
+.customer_pre_button {
+  position: absolute;
+  bottom: -92px;
+  right: 200px;
+}
+.customer_next_button {
+  position: absolute;
+  bottom: -92px;
+  right: 120px;
+}

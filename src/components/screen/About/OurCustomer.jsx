@@ -5,20 +5,21 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 // import required modules
+import Image from "next/image";
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import leftArrow from "../../../assets/icons/sl-left-arrow.svg";
 import "../../../styles/customswiper.css";
 import SliderCard from "./SliderCard";
-
-import "swiper/css/pagination";
 
 // import required modules
 
 const OurCustomer = () => {
   return (
-    <div className="py-[100px]">
+    <div className="pt-[100px] pb-[140px]">
       {/* title */}
       <div className="flex items-center justify-center">
         <div className="text-center space-y-4">
@@ -31,8 +32,8 @@ const OurCustomer = () => {
           </h4>
         </div>
       </div>
-      <div className="pt-11 pl-3 lg:pl-12">
-        <div className="relative">
+      <div className="pt-11 pl-3 lg:pl-12 relative">
+        <div className="">
           <Swiper
             breakpoints={{
               350: {
@@ -59,8 +60,8 @@ const OurCustomer = () => {
             }}
             navigation={{
               enabled: true,
-              // prevEl: ".prev-slide-button",
-              // nextEl: ".next-slide-button",
+              prevEl: ".customer_pre_button",
+              nextEl: ".customer_next_button",
             }}
             modules={[Navigation]}
             className=""
@@ -84,6 +85,13 @@ const OurCustomer = () => {
               <SliderCard />
             </SwiperSlide>
           </Swiper>
+
+          <button className="customer_pre_button w-[57px] h-[57px] bg-white flex items-center justify-center rounded-full shadow-lg">
+            <Image src={leftArrow} alt="left-arrow" />
+          </button>
+          <button className="customer_next_button w-[57px] h-[57px] bg-white flex items-center justify-center rounded-full shadow-lg">
+            <Image src={leftArrow} alt="left-arrow" />
+          </button>
         </div>
       </div>
     </div>
