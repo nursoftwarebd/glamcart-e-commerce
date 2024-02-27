@@ -12,6 +12,7 @@ import "swiper/css/pagination";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import leftArrow from "../../../assets/icons/sl-left-arrow.svg";
+import rightArrow from "../../../assets/icons/sl-right-arrow.svg";
 import "../../../styles/customswiper.css";
 import SliderCard from "./SliderCard";
 
@@ -50,12 +51,16 @@ const OurCustomer = () => {
                 spaceBetween: 10,
               },
               1024: {
-                slidesPerView: 2,
+                slidesPerView: 1.5,
                 spaceBetween: 10,
               },
               1365: {
                 slidesPerView: 2.5,
-                spaceBetween: 0,
+                spaceBetween: 30,
+              },
+              1400: {
+                slidesPerView: 3.5,
+                spaceBetween: 30,
               },
             }}
             navigation={{
@@ -89,8 +94,8 @@ const OurCustomer = () => {
           <button className="customer_pre_button w-[57px] h-[57px] bg-white flex items-center justify-center rounded-full shadow-lg">
             <Image src={leftArrow} alt="left-arrow" />
           </button>
-          <button className="customer_next_button w-[57px] h-[57px] bg-white flex items-center justify-center rounded-full shadow-lg">
-            <Image src={leftArrow} alt="left-arrow" />
+          <button className="customer_next_button w-[57px] h-[57px]  bg-secondary  flex items-center justify-center rounded-full shadow-lg">
+            <Image src={rightArrow} alt="left-arrow" />
           </button>
         </div>
       </div>
