@@ -12,7 +12,7 @@ const Footer = () => {
       <FooterTop />
       <div className="border-b-[1px] border-[#E5E5E5]">
         <div className="container_fluid">
-          <div className="pb-[62px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-5 sm:gap-8">
+          <div className="pb-[62px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-5 sm:gap-8 xl:gap-3 2xl:gap-8">
             <div className="col-span-1 sm:col-span-2 ">
               <div className="w-[176px] h-[120px] sm:h-[176px]">
                 <Image

@@ -10,7 +10,7 @@ export const metadata = {
 
 const page = () => {
   return (
-    <section className=" bg-backgroundPage">
+    <section className="bg-backgroundPage">
       <AboutHero />
       <OurMission />
       <OurFeature />

@@ -46,7 +46,8 @@ export const customerArea = [
       { label: "my account", href: "/my-account" },
       { label: "orders", href: "/orders" },
       { label: "terms", href: "#" },
-      { label: "shipping information", href: "/shipping-details" },
+      { label: "Privacy Policy ", href: "#" },
+      { label: "shipping Information", href: "/shipping-details" },
     ],
   },
 ];

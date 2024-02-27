@@ -20,7 +20,7 @@ import SliderCard from "./SliderCard";
 
 const OurCustomer = () => {
   return (
-    <div className="pt-[100px] pb-[140px]">
+    <div className="pt-[100px] pb-[150px] xl:pb-[196px] bg-backgroundPage">
       {/* title */}
       <div className="flex items-center justify-center">
         <div className="text-center space-y-4">
@@ -48,11 +48,11 @@ const OurCustomer = () => {
               },
               768: {
                 slidesPerView: 1.5,
-                spaceBetween: 10,
+                spaceBetween: 20,
               },
               1024: {
                 slidesPerView: 1.5,
-                spaceBetween: 10,
+                spaceBetween: 30,
               },
               1365: {
                 slidesPerView: 2.5,

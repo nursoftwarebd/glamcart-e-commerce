@@ -4,7 +4,7 @@ import customer from "../../../assets/images/aboutUs/client.png";
 
 const SliderCard = () => {
   return (
-    <div className="w-full  h-auto rounded-[10px] bg-white shadow-lg py-7 pl-6 space-y-8">
+    <div className="w-full  h-auto rounded-[10px] bg-white py-7 pl-6 space-y-8">
       <div className="flex items-center gap-2">
         <Image src={slider_star} alt="slider_star" />
         <Image src={slider_star} alt="slider_star" />
