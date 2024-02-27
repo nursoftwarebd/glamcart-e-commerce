@@ -1,13 +1,13 @@
 "use client";
 import SectionTitle from "@/components/shared/SectionTitle/SectionTitle";
 import Image from "next/image";
-import { useState } from "react";
+// import { useState } from "react";
 import { useSelector } from "react-redux";
 import whiteDown from "../../../assets/icons/white_down.svg";
 import ProductCard from "../ProductCard";
 
 const Featured = () => {
-  const [isSingIn, setIsSingIn] = useState(false);
+  // const [isSingIn, setIsSingIn] = useState(false);
   const items = useSelector((state) => state.allcarts.items);
 
   return (

@@ -10,7 +10,7 @@ const OurFeature = () => {
           heading="Feature"
           sebHeading="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
         />
-        <div className="mt-9 sm:px-15 lg:px-[100px] py-10 bg-white shadow-md border-[1px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-7 lg:gap-y-0 ">
+        <div className="mt-9 sm:px-15 lg:px-[100px] py-10 bg-white shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px]  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-7 lg:gap-y-0 ">
           {ourFeature.map((ourFeature) => {
             return (
               <div key={ourFeature.id}>

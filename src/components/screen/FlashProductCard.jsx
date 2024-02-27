@@ -22,7 +22,12 @@ const FlashProductCard = ({ item }) => {
 
   const handleAddToCart = (item) => {
     dispatch(addToCart(item));
-    toast("Add to cart!", { autoClose: 1700 });
+    // toast("Add to cart!", { autoClose: 1700 });
+    toast.success(
+      "add to cart",
+      { position: "top-right" },
+      { autoClose: 1700 }
+    );
   };
 
   const handleToggleWishList = (item) => {
@@ -31,7 +36,12 @@ const FlashProductCard = ({ item }) => {
       toast.error("Remove from wishlist!", { autoClose: 1700 });
     } else {
       dispatch(addToWishList(item));
-      toast("Added to wishlist!", { autoClose: 1700 });
+      // toast("Added to wishlist!", { autoClose: 1700 });
+      toast.success(
+        "Added to wishlist!",
+        { position: "top-right" },
+        { autoClose: 1700 }
+      );
     }
     setFlashWishList(!isFlashWishList);
   };
