@@ -10,7 +10,7 @@ const ShippingDetailsPage = () => {
   return (
     <section className="pt-15 pb-13  bg-backgroundPage">
       <div className="container_fluid">
-        <div className="w-full flex flex-col xl:flex-row xl:justify-between gap-7 2xl:gap-10">
+        <div className="flex flex-col xl:flex-row xl:justify-between gap-7 2xl:gap-10">
           <div>
             <ShippingForm />
           </div>

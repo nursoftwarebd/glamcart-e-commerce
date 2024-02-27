@@ -15,7 +15,7 @@ const DragMenu = () => {
         </div>
         <div className="relative">
           <div className="hidden xl:flex x1xl:mx-8">
-            <div className="flex items-center  gap-8 xl:gap-8 x1xl:gap-14 2xl:gap-12">
+            <div className="flex items-center  gap-8 xl:gap-8  2xl:gap-12">
               {navLinks.map((link, index) => (
                 <div key={index} className="menu_list group cursor-pointer">
                   {link.name}

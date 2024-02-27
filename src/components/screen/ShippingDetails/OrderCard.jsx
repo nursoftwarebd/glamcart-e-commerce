@@ -16,13 +16,13 @@ const OrderCard = () => {
     dispatch(getCartTotal());
   }, [cart]);
   return (
-    <div className="w-full xl:w-[439px] 2xl:w-[439px] p-7 bg-white rounded-[5px]">
+    <div className="w-full xl:w-[380px]  p-7 bg-white rounded-[5px]">
       <h5 className="text-xl text-blackPrimary font-medium leading-[30px]">
         My Orders
       </h5>
       <div className="py-7.5 border-b-[1.73px] border-lightGrayBlue space-y-3">
         {cart.map((cartItem) => (
-          <div key={cartItem.id} className="flex items-center justify-between">
+          <div key={cartItem.id} className="flex justify-between">
             <p className="max-w-[203px] text-lg text-lineThrough leading-[26px]">
               {cartItem.title}
             </p>

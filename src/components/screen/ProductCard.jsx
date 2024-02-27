@@ -45,7 +45,7 @@ const ProductCard = ({ item }) => {
           <Image
             src={image}
             alt="product-images"
-            className="w-full h-full mix-blend-multiply rounded-[10px] object-fill"
+            className="w-full h-[313px] mix-blend-multiply rounded-[10px] object-fill"
           />
         </Link>
         <div

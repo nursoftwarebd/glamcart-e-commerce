@@ -16,14 +16,14 @@ const ShippingForm = () => {
     { value: "C", label: "Option C" },
   ];
   return (
-    <div className="w-full  2xl:w-[920px]">
+    <div className="w-full xl:w-[760px] x1xl:w-[840px] 2xl:w-[920px]">
       <div className="bg-white shadow-md">
         <div className="py-4 px-7 sm:px-[38px] border-borderAccount border-b-[.75px] flex items-center justify-between">
           <h3 className="font-rajdhani text-accountBlack text-heading30 leading-6 tracking-[2%] font-semibold">
             Shipping Details
           </h3>
         </div>
-        <div className="px-5 xl:px-[38px] pt-5 pb-13">
+        <div className="px-5 lg:px-10 pt-5 pb-13">
           <form action="#" className="w-full">
             <div className="space-y-5">
               <h5 className="form_title">Contact Information</h5>
@@ -35,7 +35,7 @@ const ShippingForm = () => {
                     </label>
                     <input
                       type="text"
-                      className="w-full h-[45px] lg:w-[400px] px-4 py-3 outline-none bg-backgroundPage rounded-[2px] border-[1px] border-grayBorderForm"
+                      className="w-full h-[45px] lg:w-[400px] xl:w-[320px] x1xl:w-[360px] 2xl:w-[400px] px-4 py-3 outline-none bg-backgroundPage rounded-[2px] border-[1px] border-grayBorderForm"
                     />
                   </div>
                   <div className="w-full sm:w-1/2 space-y-3 flex flex-col">
@@ -44,7 +44,7 @@ const ShippingForm = () => {
                     </label>
                     <input
                       type="text"
-                      className="w-full h-[45px] lg:w-[400px] px-4 py-3 outline-none bg-backgroundPage rounded-[2px] border-[1px] border-grayBorderForm"
+                      className="w-full h-[45px] lg:w-[400px] xl:w-[320px] x1xl:w-[360px] 2xl:w-[400px] px-4 py-3 outline-none bg-backgroundPage rounded-[2px] border-[1px] border-grayBorderForm"
                     />
                   </div>
                 </div>
@@ -55,7 +55,7 @@ const ShippingForm = () => {
                     </label>
                     <input
                       type="email"
-                      className="w-full h-[45px] lg:w-[400px] px-4 py-3 outline-none bg-backgroundPage rounded-[2px] border-[1px] border-grayBorderForm"
+                      className="w-full h-[45px] lg:w-[400px] xl:w-[320px] x1xl:w-[360px] 2xl:w-[400px] px-4 py-3 outline-none bg-backgroundPage rounded-[2px] border-[1px] border-grayBorderForm"
                     />
                   </div>
                   <div className="w-full sm:w-1/2  space-y-3 flex flex-col">
@@ -64,7 +64,7 @@ const ShippingForm = () => {
                     </label>
                     <input
                       type="text"
-                      className="w-full h-[45px] lg:w-[400px] px-4 py-3 outline-none bg-backgroundPage rounded-[2px] border-[1px] border-grayBorderForm"
+                      className="w-full h-[45px] lg:w-[400px] xl:w-[320px] x1xl:w-[360px] 2xl:w-[400px] px-4 py-3 outline-none bg-backgroundPage rounded-[2px] border-[1px] border-grayBorderForm"
                     />
                   </div>
                 </div>
@@ -114,7 +114,7 @@ const ShippingForm = () => {
                     </label>
                     <input
                       type="email"
-                      className="w-full h-[45px] xl:w-[400px] px-4 py-3 outline-none bg-backgroundPage rounded-[2px] border-[1px] border-grayBorderForm"
+                      className="w-full h-[45px] lg:w-[400px] xl:w-[320px] x1xl:w-[360px] 2xl:w-[400px] px-4 py-3 outline-none bg-backgroundPage rounded-[2px] border-[1px] border-grayBorderForm"
                     />
                   </div>
                   <div className="w-full sm:w-1/2 space-y-3 flex flex-col">
@@ -123,7 +123,7 @@ const ShippingForm = () => {
                     </label>
                     <input
                       type="text"
-                      className="w-full h-[45px] xl:w-[400px] px-4 py-3 outline-none bg-backgroundPage rounded-[2px] border-[1px] border-grayBorderForm"
+                      className="w-full h-[45px] lg:w-[400px] xl:w-[320px] x1xl:w-[360px] 2xl:w-[400px] px-4 py-3 outline-none bg-backgroundPage rounded-[2px] border-[1px] border-grayBorderForm"
                     />
                   </div>
                 </div>

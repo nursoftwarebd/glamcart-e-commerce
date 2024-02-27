@@ -20,7 +20,7 @@ const Dropdown = ({ options, select }) => {
       <button
         type="button"
         onClick={toggleDropdown}
-        className="w-full h-[45px] xl:w-[400px] px-4 py-3 outline-none bg-backgroundPage rounded-[2px] border-[1px] border-grayBorderForm text-graRate flex items-center justify-between"
+        className="w-full h-[45px] lg:w-[400px] xl:w-[320px] x1xl:w-[360px] 2xl:w-[400px] px-4 py-3 outline-none bg-backgroundPage rounded-[2px] border-[1px] border-grayBorderForm text-graRate flex items-center justify-between"
       >
         {selectedOption ? selectedOption.label : `${select}`}
         <svg
