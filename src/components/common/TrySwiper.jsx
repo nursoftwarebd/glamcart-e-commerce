@@ -54,7 +54,7 @@ const TrySwiper = () => {
         ))}
       </Swiper>
 
-      <button class="next-slide-button  next_button">
+      <button className="next-slide-button  next_button">
         <Image src={arrowRight} alt="arrow-right-2" />
       </button>
     </div>

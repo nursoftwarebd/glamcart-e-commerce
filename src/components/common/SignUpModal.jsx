@@ -129,7 +129,7 @@ const SignUpModal = ({ isSingIn, setSignModal }) => {
                   <div className="flex items-center gap-2">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
                     <div className="flex items-center  text-sm text-grayView leading-[21px] gap-1">
-                      I agree to Project Nrvoya
+                      I agree to Project Nirvoya
                       <span>
                         <Link href={"#"} className="text-secondary">
                           terms & conditions

@@ -14,18 +14,18 @@ const initialState = {
 
 // Load cart and wishlist from localStorage if available
 
-const storedCart = localStorage.getItem("cart");
-
-if (storedCart) {
-  initialState.cart = JSON.parse(storedCart);
-}
-
-// const storedCart =
-//   typeof window !== "undefined" ? localStorage.getItem("cart") : null;
+// const storedCart = localStorage.getItem("cart");
 
 // if (storedCart) {
 //   initialState.cart = JSON.parse(storedCart);
 // }
+
+const storedCart =
+  typeof window !== "undefined" ? localStorage.getItem("cart") : null;
+
+if (storedCart) {
+  initialState.cart = JSON.parse(storedCart);
+}
 
 export const cartSlice = createSlice({
   name: "cart",

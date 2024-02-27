@@ -119,7 +119,7 @@ const CardCheckout = () => {
             </div>
             <div className="flex items-center justify-between">
               <p className="text-lg leading-[26px] text-lineThrough">
-                {/* Free Shipping */} Total Quantity
+                Total Quantity
               </p>
               <h4 className="text-xl font-medium leading-[30px] text-blackPrimary">
                 {totalQuantity}
