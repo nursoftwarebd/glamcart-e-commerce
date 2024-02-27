@@ -5,14 +5,13 @@ import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-
 import Image from "next/image";
 import "swiper/css";
+import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import herothree from "../../../assets/images/home/herothree.png";
 import herotwo from "../../../assets/images/home/herotwo.png";
+import "../../../styles/customHeroSwiper.css";
 import HeroBanner from "./HeroBanner";
 
 const Hero = () => {
@@ -27,6 +26,11 @@ const Hero = () => {
                 delay: 2500,
                 disableOnInteraction: false,
               }}
+              slidesPerView={1}
+              loop={true}
+              // pagination={{
+              //   dynamicBullets: true,
+              // }}
               modules={[Pagination, Autoplay]}
               className="mySwiper"
             >

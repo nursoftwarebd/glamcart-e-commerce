@@ -1,11 +1,11 @@
 import Image from "next/image";
-import heroone from "../../../assets/images/home/heroone.png";
+import heroOne from "../../../assets/images/home/heroone.png";
 const HeroBanner = () => {
   return (
     <div className="relative w-full h-[200px] sm:h-[480px] xl:h-[563px]">
       <div className="w-full  h-[200px] sm:h-[480px] xl:h-[563px]">
         <Image
-          src={heroone}
+          src={heroOne}
           alt="hero-one"
           className="w-full h-full  rounded-[10px]"
         />
