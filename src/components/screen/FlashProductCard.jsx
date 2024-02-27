@@ -1,8 +1,8 @@
-import { addToCart } from "@/app/redux/slices/cartSlice";
+import { addToCart } from "@/redux/slices/cartSlice";
 import {
   addToWishList,
   removeWishListItem,
-} from "@/app/redux/slices/wishListSlice";
+} from "@/redux/slices/wishListSlice";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";

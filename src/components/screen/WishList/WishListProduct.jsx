@@ -1,6 +1,7 @@
 "use client";
-import { addToCart } from "@/app/redux/slices/cartSlice";
-import { removeWishListItem } from "@/app/redux/slices/wishListSlice";
+
+import { addToCart } from "@/redux/slices/cartSlice";
+import { removeWishListItem } from "@/redux/slices/wishListSlice";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";

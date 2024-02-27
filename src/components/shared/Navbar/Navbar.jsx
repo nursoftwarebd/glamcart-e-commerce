@@ -1,7 +1,7 @@
 "use client";
-import { getCartTotal } from "@/app/redux/slices/cartSlice";
 import LogInModal from "@/components/common/LogInModal";
 import { bottomMenu } from "@/data/bottomMenu";
+import { getCartTotal } from "@/redux/slices/cartSlice";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";

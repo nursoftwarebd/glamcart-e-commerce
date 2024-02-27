@@ -1,5 +1,4 @@
 "use client";
-import { addToCart } from "@/app/redux/slices/cartSlice";
 // import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useDispatch } from "react-redux";
@@ -13,10 +12,11 @@ import star from "../../assets/icons/star.svg";
 //   ssr: false,
 // });
 
+import { addToCart } from "@/redux/slices/cartSlice";
 import {
   addToWishList,
   removeWishListItem,
-} from "@/app/redux/slices/wishListSlice";
+} from "@/redux/slices/wishListSlice";
 import Link from "next/link";
 import { useState } from "react";
 import { toast } from "react-toastify";

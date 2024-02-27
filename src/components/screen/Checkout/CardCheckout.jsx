@@ -1,11 +1,11 @@
 "use client";
+import Checkbox from "@/components/common/Checkbox";
 import {
   decreaseItemQuantity,
   getCartTotal,
   increaseItemQuantity,
   removeItem,
-} from "@/app/redux/slices/cartSlice";
-import Checkbox from "@/components/common/Checkbox";
+} from "@/redux/slices/cartSlice";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";

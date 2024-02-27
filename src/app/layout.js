@@ -1,6 +1,6 @@
-import Providers from "@/app/redux/Provider";
 import Footer from "@/components/shared/Footer/Footer";
 import Navbar from "@/components/shared/Navbar/Navbar";
+import Providers from "@/redux/Provider";
 import { ToastContainer } from "react-toastify";
 import "../styles/globals.css";
 import "../styles/hero-click-slider.css";

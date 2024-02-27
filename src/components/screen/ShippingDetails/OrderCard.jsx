@@ -1,6 +1,6 @@
 "use client";
-import { getCartTotal } from "@/app/redux/slices/cartSlice";
 import { paymentMethodData } from "@/data/paymentMethodData";
+import { getCartTotal } from "@/redux/slices/cartSlice";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
