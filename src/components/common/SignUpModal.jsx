@@ -34,7 +34,7 @@ const SignUpModal = ({ isSingIn, setSignModal }) => {
     >
       <div className="sm:w-[580px] md:w-[680px] lg:w-[850px] xl:w-[972px] h-auto rounded-[24px]">
         <div className="grid md:grid-cols-2">
-          <div className="rounded-tl-[24px] hidden md:block bg-blueLogIn  rounded-bl-[24px] px-11 xl:px-[84px] md:pt-[76px] md:pb-1 xl:pt-[76px] xl:pb-[76px]">
+          <div className="rounded-tl-[24px] hidden md:block bg-blueLogIn  rounded-bl-[24px] px-11 xl:px-[84px] md:pt-[76px] md:pb-1 xl:pt-[50px] xl:pb-[35px] x1xl:pt-[65px] x1xl:pb-[76px] x1440:pb-[65px]">
             <h3 className="text-xl xl:text-heading28 font-semibold xl:leading-[42px] tracking-[3%] text-white">
               Create Account
             </h3>
@@ -45,7 +45,7 @@ const SignUpModal = ({ isSingIn, setSignModal }) => {
               <Image
                 src={loginpic}
                 alt="loginpic"
-                className=" w-full md:h-[300px] xl:h-full object-fill"
+                className=" w-full md:h-[300px] xl:h-[280px] x1xl:h-[300px] 2xl:h-full  object-fill"
               />
             </div>
           </div>
@@ -53,15 +53,15 @@ const SignUpModal = ({ isSingIn, setSignModal }) => {
             <div className="bg-gradient-to-r from-[#003387]/[20%] to-white/[20%] rounded-tl-[24px] md:rounded-tl-[0px] rounded-bl-[24px] md:rounded-bl-[0px]  w-full rounded-tr-[24px] rounded-br-[24px] ">
               <div className="flex justify-end">
                 <button
-                  className="pt-1 lg:pt-2 xl:pt-[10px] pr-[10px]"
+                  className="pt-1 lg:pt-2 xl:pt-[5px] pr-[10px]"
                   onClick={() => setSignModal(!isSingIn)}
                 >
                   <Image src={logCross} alt="logCross" />
                 </button>
               </div>
-              <div className="px-2 sm:px-10 md:px-5 lg:px-10 xl:px-[60px] py-1 sm:py-3 md:py-1 lg:py-1 xl:py-7  ">
-                <form className="space-y-3 xl:space-y-5">
-                  <h3 className="text-base lg:text-lg xl:text-2xl text-indigoText font-medium lg:leading-9">
+              <div className="px-2 sm:px-10 md:px-5 lg:px-10 xl:px-8 x1xl:px-[60px] x1440:px-[40px] py-1 sm:py-3 md:py-1 lg:py-1 xl:pt-0 xl:pb-[5px] x1xl:pt-[10px] x1xl:pb-[25px] x1440:pt-[20px] x1440:pb-[50px]  ">
+                <form className="space-y-3 x1xl:space-y-5 x1440:space-y-3">
+                  <h3 className="text-base lg:text-lg 2xl:text-2xl text-indigoText font-medium lg:leading-9">
                     Create your Project Nirvoya Account
                   </h3>
                   <input
@@ -176,7 +176,7 @@ const SignUpModal = ({ isSingIn, setSignModal }) => {
                     </div>
                   </Link>
                 </div>
-                <div className="pt-4 xl:pt-10">
+                <div className="pt-4 2xl:pt-10">
                   <p className="text-sm leading-[21px] text-grayView">
                     Already member?
                     <span>

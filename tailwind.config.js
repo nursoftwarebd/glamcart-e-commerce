@@ -102,6 +102,7 @@ module.exports = {
         textJnt: "#828282",
         borderLog: "#D2D2D2",
         clientBlack: "#3D3D3D",
+        showMore: "#34ADED",
       },
       margin: {
         6.5: "26px",

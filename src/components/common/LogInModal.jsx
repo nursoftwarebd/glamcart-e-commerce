@@ -27,7 +27,7 @@ const LogInModal = ({ openModal, setOpenModal }) => {
     >
       <div className=" lg:w-[880px]  x1xl:w-[972px] h-auto rounded-[24px]">
         <div className="grid grid-cols-2">
-          <div className="bg-blueLogIn rounded-tl-[24px] rounded-bl-[24px] lg:px-10 xl:px-[84px] lg:pt-[50px] lg:pb-[35px] xl:pt-[15px] xl:pb-[15px] x1xl:pt-[50px] x1xl:pb-[50px]">
+          <div className="bg-blueLogIn rounded-tl-[24px] rounded-bl-[24px] lg:px-10 x1xl:px-[84px] lg:pt-[50px] lg:pb-[35px] xl:pt-[60px] xl:pb-0 x1xl:pt-[80px] x1xl:pb-[50px] x1440:pt-[70px] x1440:pb-[40px]">
             <h3 className="text-heading28 font-semibold leading-[42px] tracking-[3%] text-white">
               Login
             </h3>
@@ -38,7 +38,7 @@ const LogInModal = ({ openModal, setOpenModal }) => {
               <Image
                 src={loginpic}
                 alt="loginpic"
-                className=" w-full md:h-[300px] xl:h-full object-fill"
+                className=" w-full md:h-[300px] xl:h-[280px] x1xl:h-[300px] 2xl:h-full object-fill"
               />
             </div>
           </div>
@@ -52,7 +52,7 @@ const LogInModal = ({ openModal, setOpenModal }) => {
                   <Image src={logCross} alt="logCross" />
                 </button>
               </div>
-              <div className="lg:px-8 xl:px-[60px] lg:pt-7 lg:pb-8 xl:pt-5 xl:pb-5  x1xl:pt-10 x1xl:pb-[70px] ">
+              <div className="lg:px-8 x1xl:px-[60px] lg:pt-7 lg:pb-8 xl:pt-4 xl:pb-4  x1xl:pt-10 x1xl:pb-[70px] x1440:pt-9 x1440:pb-[50px] 2xl:pb-[75px]">
                 <form className="space-y-5">
                   <h3 className="text-lg xl:text-2xl text-indigoText font-medium leading-9">
                     Welcome to Project Nirvoya! Please login.
