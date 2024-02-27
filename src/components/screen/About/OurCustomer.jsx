@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 // import required modules
+import { customerData } from "@/data/customerData";
 import Image from "next/image";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -54,6 +55,10 @@ const OurCustomer = () => {
                 slidesPerView: 1.5,
                 spaceBetween: 30,
               },
+              1280: {
+                slidesPerView: 2.5,
+                spaceBetween: 30,
+              },
               1365: {
                 slidesPerView: 2.5,
                 spaceBetween: 30,
@@ -71,24 +76,11 @@ const OurCustomer = () => {
             modules={[Navigation]}
             className=""
           >
-            <SwiperSlide>
-              <SliderCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <SliderCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <SliderCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <SliderCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <SliderCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <SliderCard />
-            </SwiperSlide>
+            {customerData.map((cData) => (
+              <SwiperSlide key={cData.id}>
+                <SliderCard cData={cData} />
+              </SwiperSlide>
+            ))}
           </Swiper>
 
           <button className="customer_pre_button w-[57px] h-[57px] bg-white flex items-center justify-center rounded-full shadow-lg">
