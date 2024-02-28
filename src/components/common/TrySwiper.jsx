@@ -12,52 +12,53 @@ import "../../styles/customswiper.css";
 const TrySwiper = () => {
   return (
     <div className="relative">
-      <Swiper
-        breakpoints={{
-          320: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          350: {
-            slidesPerView: 2,
-            spaceBetween: 10,
-          },
-          425: {
-            slidesPerView: 2,
-            spaceBetween: 10,
-          },
-          640: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 0,
-          },
-          1024: {
-            slidesPerView: 4,
-            spaceBetween: 0,
-          },
-        }}
-        spaceBetween={10}
-        slidesPerView={7}
-        navigation={{
-          enabled: true,
-          prevEl: ".prev-slide-button",
-          nextEl: ".next-slide-button",
-        }}
-        modules={[Navigation]}
-        className="mySwiper small_nav_text"
-      >
-        {navLinks.map((navLinks, index) => (
-          <SwiperSlide key={index}>
-            <Link href={navLinks.href} className="">
-              {navLinks.name}
-            </Link>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-
+      <div className="pr-3">
+        <Swiper
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            350: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            425: {
+              slidesPerView: 2,
+              spaceBetween: 10,
+            },
+            640: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 0,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 0,
+            },
+          }}
+          spaceBetween={10}
+          slidesPerView={7}
+          navigation={{
+            enabled: true,
+            prevEl: ".prev-slide-button",
+            nextEl: ".next-slide-button",
+          }}
+          modules={[Navigation]}
+          className="mySwiper small_nav_text"
+        >
+          {navLinks.map((navLinks, index) => (
+            <SwiperSlide key={index}>
+              <Link href={navLinks.href} className="">
+                {navLinks.name}
+              </Link>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
       <button className="next-slide-button  next_button">
         <Image src={arrowRight} alt="arrow-right-2" />
       </button>

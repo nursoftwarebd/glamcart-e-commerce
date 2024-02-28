@@ -4,25 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* font-family: 'Montserrat', sans-serif;
-font-family: 'Poppins', sans-serif; 
-font-family: 'Lato', sans-serif;
-font-family: 'Rajdhani', sans-serif
-font-family: 'DM Sans', sans-serif;
-font-family: 'Open Sans', sans-serif;
-*/
-/* Price Range */
-input[type="range"]::-webkit-slider-thumb {
-  pointer-events: auto;
-  width: 24px;
-  height: 24px;
-  border-width: 1px !important;
-  border-color: solid green !important;
-  border-radius: 50%;
-  -webkit-appearance: none;
-  @apply shadow-xl bg-white;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -58,6 +39,25 @@ body {
 /* container style */
 .container_fluid {
   @apply max-w-full 2xl:max-w-[1440px] px-3 lg:px-12 2xl:mx-auto;
+}
+
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif; 
+font-family: 'Lato', sans-serif;
+font-family: 'Rajdhani', sans-serif
+font-family: 'DM Sans', sans-serif;
+font-family: 'Open Sans', sans-serif;
+*/
+/* Price Range */
+input[type="range"]::-webkit-slider-thumb {
+  pointer-events: auto;
+  width: 24px;
+  height: 24px;
+  border-width: 1px !important;
+  border-color: solid green !important;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  @apply shadow-xl bg-white;
 }
 
 .hero-banner {
