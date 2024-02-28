@@ -4,6 +4,7 @@ import Category from "@/components/screen/Home/Category";
 import Featured from "@/components/screen/Home/Featured";
 import FlashDeals from "@/components/screen/Home/FlashDeals";
 import Hero from "@/components/screen/Home/Hero";
+import ScrollBottom from "@/components/shared/ScrollBottom";
 import ScrollCart from "@/components/shared/ScrollCart";
 
 export const metadata = {
@@ -18,6 +19,7 @@ export default function Home() {
       <Category />
       <FlashDeals />
       <Featured />
+      <ScrollBottom />
       <ScrollCart />
     </>
   );
