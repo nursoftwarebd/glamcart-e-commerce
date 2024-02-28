@@ -47,7 +47,7 @@ const AddReview = () => {
             name=""
             id=""
             rows="6"
-            className="w-full bg-backgroundPage rounded-[5px] border-[1px] border-oldGray outline-none p-2 lg:p-5"
+            className="w-full resize-none bg-backgroundPage rounded-[5px] border-[1px] border-oldGray outline-none p-2 lg:p-5"
           ></textarea>
         </div>
         <div className="flex items-center gap-4">
@@ -63,6 +63,7 @@ const AddReview = () => {
               iconsCount={5}
               transition
               transitionSpeed={300}
+              SVGstyle={{ display: "inline" }}
               starStyle={{
                 marginRight: "2px",
               }}

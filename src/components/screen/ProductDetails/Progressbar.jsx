@@ -6,7 +6,7 @@ const Progressbar = () => {
       <div className="flex items-center gap-3">
         <p className="progress_text">5 Stars</p>
         <Line
-          className="w-[200px]"
+          className="w-[140px] sm:w-[200px]"
           trailWidth={3}
           trailColor="#DBDEDF"
           percent={90}
@@ -18,7 +18,7 @@ const Progressbar = () => {
       <div className="flex items-center gap-3">
         <p className="progress_text">4 Stars</p>
         <Line
-          className="w-[200px]"
+          className="w-[140px] sm:w-[200px]"
           trailWidth={3}
           trailColor="#DBDEDF"
           percent={75}
@@ -30,7 +30,7 @@ const Progressbar = () => {
       <div className="flex items-center gap-3">
         <p className="progress_text">3 Stars</p>
         <Line
-          className="w-[200px]"
+          className="w-[140px] sm:w-[200px]"
           trailWidth={3}
           trailColor="#DBDEDF"
           percent={70}
@@ -42,7 +42,7 @@ const Progressbar = () => {
       <div className="flex items-center gap-3">
         <p className="progress_text">2 Stars</p>
         <Line
-          className="w-[200px]"
+          className="w-[140px] sm:w-[200px]"
           trailWidth={3}
           trailColor="#DBDEDF"
           percent={60}
@@ -54,7 +54,7 @@ const Progressbar = () => {
       <div className="flex items-center gap-3">
         <p className="progress_text">2 Stars</p>
         <Line
-          className="w-[200px]"
+          className="w-[140px] sm:w-[200px]"
           trailWidth={3}
           trailColor="#DBDEDF"
           percent={30}
