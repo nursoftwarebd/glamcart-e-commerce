@@ -59,7 +59,7 @@ const AddReview = () => {
             <Rating
               onClick={handleRating}
               initialValue={ratingValue}
-              size={20}
+              size={32}
               iconsCount={5}
               transition
               transitionSpeed={300}

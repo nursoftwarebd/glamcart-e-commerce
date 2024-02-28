@@ -1,18 +1,11 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import bottom from "../../../assets/icons/chevron-down.svg";
 import PriceRange from "./PriceRange";
-import Checkbox from "./checkbox/Checkbox";
+import RatingCheckbox from "./RatingCheckbox";
 
 const ProductSidebar = () => {
-  const [isChecked, setIsChecked] = useState(false);
-
-  const handleCheckboxChange = () => {
-    setIsChecked(!isChecked);
-  };
-
   return (
     <>
       <div className="bg-white py-7 w-[300px]">
@@ -82,11 +75,8 @@ const ProductSidebar = () => {
             </select>
             <Image src={bottom} alt="bottom" className="w-6 h-6" />
           </div>
-          <Checkbox
-            label="1"
-            checked={isChecked}
-            onChange={handleCheckboxChange}
-          />
+
+          <RatingCheckbox />
         </div>
       </div>
     </>

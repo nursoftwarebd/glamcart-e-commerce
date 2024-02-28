@@ -100,7 +100,7 @@ const OrderCard = () => {
                         id={`checkbox-${paymentMethod.id}`}
                         checked={selectedPayment === paymentMethod.id}
                         onChange={() => handleCheckboxChange(paymentMethod.id)}
-                        className="before:content[''] peer relative h-4 w-4 cursor-pointer appearance-none rounded-full border-[2px] border-[#CBD5E0] checked:border-secondary  checked:bg-secondary hover:before:opacity-10"
+                        className="before:content[''] peer relative h-4 w-4 cursor-pointer appearance-none rounded-full border-[2px] border-[#133f6e] checked:border-secondary  checked:bg-secondary hover:before:opacity-10"
                       />
                       <span className="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
                         <svg
