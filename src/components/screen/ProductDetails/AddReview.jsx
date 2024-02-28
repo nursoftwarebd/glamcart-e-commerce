@@ -1,4 +1,14 @@
+"use client";
+import { useState } from "react";
+import { Rating } from "react-simple-star-rating";
+
 const AddReview = () => {
+  const [ratingValue, setRatingValue] = useState(0);
+
+  const handleRating = (rate) => {
+    setRatingValue(rate);
+  };
+
   return (
     <div className="pr-5 xl:pr-14 lg:pr-0 pl-5  xl:pl-14 pt-13 sm:pt-18 pb-10 sm:pb-15 max-w-[745px] space-y-8">
       <div className="space-y-6">
@@ -41,10 +51,23 @@ const AddReview = () => {
           ></textarea>
         </div>
         <div className="flex items-center gap-4">
-          <p className="text-lg text-blackSec font-medium leading-[27px]">
+          <h5 className="text-lg text-blackSec font-medium leading-[27px]">
             Rating
-          </p>
-          <div className="flex"></div>
+          </h5>
+
+          <div>
+            <Rating
+              onClick={handleRating}
+              initialValue={ratingValue}
+              size={20}
+              iconsCount={5}
+              transition
+              transitionSpeed={300}
+              starStyle={{
+                marginRight: "2px",
+              }}
+            />
+          </div>
         </div>
         <button className="w-[180px] h-[60px] bg-secondary p-4 rounded-lg">
           <span className="text-lg text-backgroundPage font-medium leading-[27px]">
