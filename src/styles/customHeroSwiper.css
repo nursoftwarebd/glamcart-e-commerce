@@ -1,9 +1,8 @@
 .swiper-pagination-bullet {
-  height: 12px !important;
+  width: 12px !important;
   height: 12px !important;
   background: white !important;
   color: #ffff;
-  /* border-radius: 50px !important; */
   opacity: 100;
 }
 .swiper-pagination-bullet-active {
