@@ -16,7 +16,7 @@ const WishListProduct = () => {
 
   const handleAddToCart = (item) => {
     dispatch(addToCart(item));
-    toast("Add to cart!", { autoClose: 1700 });
+    toast.success("Added to cart", { position: "top-right", autoClose: 1700 });
   };
 
   return (

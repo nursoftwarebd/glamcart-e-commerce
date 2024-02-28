@@ -31,9 +31,9 @@ const CardCheckout = () => {
       <div className="flex flex-col xl:flex-row xl:justify-between gap-7">
         <div className="w-full 2xl:max-w-[937px]">
           {cart.length === 0 ? (
-            <div className="h-[300px] bg-white shadow-md">
+            <div className="  ">
               <div className="pt-8">
-                <div className="p-8 bg-warningColo h-10 w-full flex items-center gap-3">
+                <div className="p-8 h-10 bg-warningColo w-full flex items-center gap-3">
                   <Image src={warning} alt="warning" />
                   <p>You have no items in your Cart</p>
                 </div>
