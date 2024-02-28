@@ -1,14 +1,10 @@
 "use client";
-
-import "swiper/css/pagination";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
+import { homeHeroSlider } from "@/data/homeHeroSlider";
 import Image from "next/image";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import herothree from "../../../assets/images/home/herothree.png";
 import herotwo from "../../../assets/images/home/herotwo.png";
 import "../../../styles/customHeroSwiper.css";
@@ -28,24 +24,14 @@ const Hero = () => {
               }}
               slidesPerView={1}
               loop={true}
-              // pagination={{
-              //   dynamicBullets: true,
-              // }}
               modules={[Pagination, Autoplay]}
               className="mySwiper"
             >
-              <SwiperSlide>
-                <HeroBanner />
-              </SwiperSlide>
-              <SwiperSlide>
-                <HeroBanner />
-              </SwiperSlide>
-              <SwiperSlide>
-                <HeroBanner />
-              </SwiperSlide>
-              <SwiperSlide>
-                <HeroBanner />
-              </SwiperSlide>
+              {homeHeroSlider.map((heroITem) => (
+                <SwiperSlide key={heroITem.id}>
+                  <HeroBanner heroITem={heroITem} />
+                </SwiperSlide>
+              ))}
             </Swiper>
           </div>
           {/* for large screen */}

@@ -1,17 +1,7 @@
 import AddressBookDropdown from "@/components/common/AddressBookDropdown";
+import { options1, options2 } from "@/data/addressBookOptions";
 
 const AddressBookPage = () => {
-  const options1 = [
-    { value: "1", label: "Option 1" },
-    { value: "2", label: "Option 2" },
-    { value: "3", label: "Option 3" },
-  ];
-
-  const options2 = [
-    { value: "A", label: "Option 5" },
-    { value: "B", label: "Option B" },
-    { value: "C", label: "Option C" },
-  ];
   return (
     <div className="bg-white shadow-md">
       <div className="py-3 px-5 border-borderAccount border-b-[.75px] flex items-center justify-between">
