@@ -1,10 +1,4 @@
 "use client";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-
-// import required modules
 import { customerData } from "@/data/customerData";
 import Image from "next/image";
 import "swiper/css";
@@ -16,8 +10,6 @@ import leftArrow from "../../../assets/icons/sl-left-arrow.svg";
 import rightArrow from "../../../assets/icons/sl-right-arrow.svg";
 import "../../../styles/customswiper.css";
 import SliderCard from "./SliderCard";
-
-// import required modules
 
 const OurCustomer = () => {
   return (

@@ -14,6 +14,10 @@ const TrySwiper = () => {
     <div className="relative">
       <Swiper
         breakpoints={{
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
           350: {
             slidesPerView: 2,
             spaceBetween: 10,

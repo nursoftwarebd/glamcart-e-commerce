@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 
 const ScrollCart = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const { totalQuantity } = useSelector((state) => state.allcarts);
+  const { cart, totalQuantity } = useSelector((state) => state.allcarts);
 
   const toggleVisibility = () => {
     if (window.scrollY > 300) {
@@ -51,7 +51,7 @@ const ScrollCart = () => {
               </svg>
             </span>
             <span className="w-5 h-5 text-sm inline-block rounded-[50%] bg-secondary-600 text-white text-center font-semibold absolute top-2  right-1">
-              {totalQuantity}
+              {cart.length}
             </span>
           </div>
         </button>

@@ -118,7 +118,7 @@ const Navbar = () => {
             </div>
             <div className="ml-2 w-5 h-5 rounded-full flex items-center justify-center bg-fadeRed">
               <span className="text-white font-medium text-xs">
-                {totalQuantity}
+                {cart.length}
               </span>
             </div>
           </div>
@@ -174,7 +174,7 @@ const Navbar = () => {
                 </p>
                 <div className="absolute top-[-8px] right-[-5px] w-5 h-5 rounded-full flex items-center justify-center bg-fadeRed">
                   <span className="text-white font-medium text-xs">
-                    {totalQuantity}
+                    {cart.length}
                   </span>
                 </div>
               </Link>
