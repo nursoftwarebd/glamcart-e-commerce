@@ -1,6 +1,6 @@
 const Checkbox = () => {
   return (
-    <div className="flex items-center">
+    <div className="hidden md:flex items-center">
       <div className="inline-flex items-center">
         <label
           className="relative flex items-center cursor-pointer"

@@ -46,7 +46,7 @@ const CardCheckout = () => {
                 >
                   <Checkbox />
                   <div className="w-full flex flex-col sm:flex-row items-start justify-between">
-                    <div className="flex flex-col sm:flex-row gap-2 sm:gap-6">
+                    <div className="flex flex-row gap-2 sm:gap-6">
                       <Image
                         src={data.image}
                         alt={`checkout ${data.title}`}
