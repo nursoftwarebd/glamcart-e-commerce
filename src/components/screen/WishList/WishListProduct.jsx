@@ -22,11 +22,11 @@ const WishListProduct = () => {
   };
 
   return (
-    <div>
+    <>
       {wishList.length === 0 ? (
         <div className="">
           <div className="pt-8">
-            <div className="p-8 bg-warningColo h-10 w-full flex items-center gap-3">
+            <div className="p-8 bg-warningColo h-10 w-full flex items-center gap-3 ">
               <Image src={warning} alt="warning" />
               <p>You have no items in your wish list.</p>
             </div>
@@ -37,15 +37,18 @@ const WishListProduct = () => {
           {wishList.map((item) => (
             <div
               key={item.id}
-              className="w-full py-7 pl-7 pr-12 bg-white flex  flex-col lg:flex-row lg:items-center justify-between"
+              className="w-full p-4 lg:py-7 lg:pl-7 lg:pr-12 bg-white flex  flex-col md:flex-row lg:items-center justify-between"
             >
-              <div className="flex flex-col sm:flex-row gap-2 sm:gap-6">
-                <Image
-                  src={item.image}
-                  alt={`checkout ${item.title}`}
-                  className="w-[100px] h-[100px] sm:h-[130px] sm:w-[130px] rounded-[5px]"
-                />
-                <div className="space-y-2 md:space-y-5">
+              <div className="flex md:flex-row gap-4 md:gap-6">
+                <div className="w-[100px] h-[100px] sm:h-[130px] sm:w-[130px] rounded-[5px] border border-gray-300">
+                  <Image
+                    src={item.image}
+                    alt={`checkout ${item.title}`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                <div className="flex flex-col justify-center">
                   <h4 className="text-sm sm:text-lg text-blackPrimary font-medium leading-5 sm:leading-[27px]">
                     {item.title}
                   </h4>
@@ -61,14 +64,14 @@ const WishListProduct = () => {
               <div className="mt-4 lg:mt-0 flex items-center gap-5">
                 <button
                   onClick={() => handleAddToCart(item)}
-                  className="cursor-pointer  font-bold text-secondary text-xl"
+                  className="cursor-pointer  font-bold text-secondary text-sm md-text-lg lg:text-xl"
                 >
                   Add to cart
                 </button>
-                <div className="font-bold text-blackPrimary text-xl">||</div>
+                <div className="font-bold text-blackPrimary text-sm md-text-lg lg:text-xl">||</div>
                 <button
                   onClick={() => dispatch(removeWishListItem(item.id))}
-                  className="cursor-pointer  font-bold text-fadeRed text-xl "
+                  className="cursor-pointer  font-bold text-fadeRed text-sm md-text-lg lg:text-xl"
                 >
                   Remove
                 </button>
@@ -77,7 +80,7 @@ const WishListProduct = () => {
           ))}
         </div>
       )}
-    </div>
+    </>
   );
 };
 
