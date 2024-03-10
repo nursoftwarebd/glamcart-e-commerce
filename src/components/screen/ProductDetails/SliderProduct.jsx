@@ -73,7 +73,7 @@ const SliderProduct = () => {
             <Image
               src={isImage}
               alt="big-image"
-              className="w-[550px] h-[350px] sm:h-[500px] 2xl:h-[550px]"
+              className="w-full h-auto lg:h-[350px] 2xl:h-[550px]"
             />
           </div>
 

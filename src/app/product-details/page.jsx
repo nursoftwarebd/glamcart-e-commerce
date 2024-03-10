@@ -16,7 +16,7 @@ const breadcrumb = [
 
 const page = () => {
   return (
-    <section className="pt-14 pb-13  bg-backgroundPage">
+    <section className="pt-5 lg:pt-14 pb-13  bg-backgroundPage">
       <div className="container_fluid">
         <Breadcrumb
           pageName="Men's Stand Collar Leather Jacket"

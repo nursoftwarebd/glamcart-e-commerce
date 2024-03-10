@@ -4,7 +4,7 @@ import right from "../../../assets/icons/right.svg";
 
 const Breadcrumb = ({ pageName, breadcrumb }) => {
   return (
-    <section className="pb-6">
+    <section className="lg:mb-8 pb-6">
       <div className="flex flex-wrap">
         {breadcrumb.slice(0, 1).map((item, index) => (
           <div key={index} className="flex items-center">

@@ -36,14 +36,14 @@ const CustomerReview = () => {
                   <Image
                     src={items.image}
                     alt={items.name}
-                    className="w-full h-full rounded"
+                    className="w-full h-full rounded object-cover"
                   />
                 </div>
                 <div className="flex flex-col justify-between">
                   <p className="text-lg leading-[27px] font-medium text-blackSec">
                     {items.name}
                   </p>
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-2 md:gap-4 flex-wrap">
                     <span className="text-graRate font-medium text-lg leading-[27px]">
                       {items.rate}
                     </span>

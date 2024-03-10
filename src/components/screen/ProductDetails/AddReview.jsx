@@ -70,7 +70,7 @@ const AddReview = () => {
             />
           </div>
         </div>
-        <button className="w-[180px] h-[60px] bg-secondary p-4 rounded-lg">
+        <button className="bg-secondary py-3 px-8 rounded-lg">
           <span className="text-lg text-backgroundPage font-medium leading-[27px]">
             Submit
           </span>
