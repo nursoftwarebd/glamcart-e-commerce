@@ -36,12 +36,12 @@ const Hero = () => {
           </div>
           {/* for large screen */}
           <div className="hidden lg:grid lg:col-span-1 gap-y-7">
-            <div className="relative">
-              <div className="w-full h-[226px] xl:h-[267.5px]">
+            <div className="relative overflow-hidden rounded-[10px]">
+              <div className="w-full h-[226px] xl:h-[267.5px] group">
                 <Image
                   src={herotwo}
                   alt="hero-two"
-                  className="w-full h-full object-fill rounded-[10px]"
+                  className="w-full h-full object-fill  group-hover:scale-110 duration-300"
                 />
               </div>
               <div className="absolute left-[50px] xl:left-[50px] x1xl:left-[65px] x1440:left-[80px] 2xl:left-[75px]   bottom-[20px] rounded-[5px]  h-[56px] px-4 xl:px-8 py-4  bg-backgroundPage/80 ">
@@ -50,12 +50,12 @@ const Hero = () => {
                 </h4>
               </div>
             </div>
-            <div className="relative">
-              <div className="w-full h-[226px] xl:h-[267.5px]">
+            <div className="relative overflow-hidden rounded-[10px]">
+              <div className="w-full h-[226px] xl:h-[267.5px] group">
                 <Image
                   src={herothree}
                   alt="hero-three"
-                  className="w-full h-full object-fill rounded-[10px]"
+                  className="w-full h-full object-fill rounded-[10px] group-hover:scale-110 duration-300"
                 />
               </div>
               <div className="absolute bottom-[20px] left-[28px] lg:left-[22px] xl:left-[20px] x1xl:left-[30px] x1440:left-[45px] 2xl:left-[45px] rounded-[5px]  h-[56px] px-4 xl:px-8 py-4  bg-backgroundPage/80">
