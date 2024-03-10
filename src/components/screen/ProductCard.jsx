@@ -60,11 +60,11 @@ const ProductCard = ({ item }) => {
   return (
     <div className="bg-white border-[1px] w-full h-auto border-grayBorder px-[9px] pt-2 pb-[15px] rounded-[10px]">
       <Link href={"/product-details"}>
-        <div className="w-full h-[313px] flex items-end bg-imageBack rounded-[10px] relative">
+        <div className="w-full h-[313px] flex items-end bg-imageBack rounded-[10px] relative group overflow-hidden">
           <Image
             src={image}
             alt="product-images"
-            className="w-full h-full mix-blend-multiply rounded-[10px] object-cover"
+            className="w-full h-full mix-blend-multiply rounded-[10px] object-cover group-hover:scale-110 duration-300"
           />
           <div
             onClick={() => handleToggleWishList(item)}
