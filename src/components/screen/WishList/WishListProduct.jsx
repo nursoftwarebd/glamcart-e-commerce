@@ -1,21 +1,23 @@
 "use client";
-
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "@/redux/slices/cartSlice";
 import { removeWishListItem } from "@/redux/slices/wishListSlice";
 import Image from "next/image";
-import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import warning from "../../../assets/icons/warning.svg";
+import { selectLoading, setLoading } from "../../../redux/slices/LoadingSlice";
 
 const WishListProduct = () => {
+  const isLoading = useSelector(selectLoading);
   const { wishList } = useSelector((state) => state.allWishlist);
-  console.log(wishList);
-
   const dispatch = useDispatch();
 
+  // Product add on cart page
   const handleAddToCart = (item) => {
     dispatch(addToCart(item));
+    dispatch(removeWishListItem(item.id));
     toast.success("Added to cart", { position: "top-right", autoClose: 1700 });
   };
 

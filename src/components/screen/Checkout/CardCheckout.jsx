@@ -17,14 +17,12 @@ import CheckOrder from "./CheckOrder";
 
 const CardCheckout = () => {
   const { cart, totalQuantity, totalPrice, selectedItems } = useSelector(
-    (state) => state.allcarts
+    (state) => state.allCarts
   );
 
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(getCartTotal());
-  }, [cart]);
+  dispatch(getCartTotal());
 
   return (
     <section>

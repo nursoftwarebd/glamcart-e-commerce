@@ -5,28 +5,28 @@ import dress2 from "../assets/images/home/flashtwo.png";
 
 export const flashProducts = [
   {
-    id: 1,
+    id: 423,
     title: "Headrest Executive Mesh Office Chair set",
     image: dress,
     price: 1540,
     sale: 20,
   },
   {
-    id: 2,
+    id: 2423,
     title: "Women black dress and red hat collections",
     image: dress2,
     price: 6240,
     sale: 25,
   },
   {
-    id: 3,
+    id: 3423,
     title: "Women black dress",
     image: dress3,
     price: 4100,
     sale: 20,
   },
   {
-    id: 4,
+    id: 4423,
     title: "Headrest Executive Mesh Office Chair set",
     image: dress4,
     price: 360,

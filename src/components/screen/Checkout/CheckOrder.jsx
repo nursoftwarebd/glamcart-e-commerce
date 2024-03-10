@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 const CheckOrder = () => {
   const { cart, totalQuantity, totalPrice, selectedItems } = useSelector(
-    (state) => state.allcarts
+    (state) => state.allCarts
   );
 
   const dispatch = useDispatch();

@@ -17,9 +17,10 @@ import DragMenu from "./DragMenu";
 const Navbar = () => {
   const pathname = usePathname();
   const [openModal, setOpenModal] = useState(false);
-  const { cart, totalQuantity } = useSelector((state) => state.allcarts);
+  const { cart, totalQuantity } = useSelector((state) => state.allCarts);
+  const { wishList } = useSelector((state) => state.allWishlist);
   const [isVisible, setIsVisible] = useState(false);
-
+  console.log("wishlist data", wishList.length);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getCartTotal());
@@ -88,12 +89,17 @@ const Navbar = () => {
                 className="flex items-center gap-[6px] text-lightText
               "
               >
-                <span className="w-6 h-6 px-[4.81px] py-[2.81px]">
+                <span className="w-8 h-8 flex items-center justify-center relative">
                   <Image
                     src={heart}
                     alt="user"
                     className="w-[19px] h-[18px] object-fill object-center"
                   />
+                  {wishList.length > 0 && (
+                    <div className="w-5 h-5 absolute -top-1 -right-1 bg-red-400 rounded-full flex justify-center items-center text-sm text-white">
+                      {wishList.length}
+                    </div>
+                  )}
                 </span>
                 <span className=" leading-[120%] tracking-[0.08px]">
                   Wishlist

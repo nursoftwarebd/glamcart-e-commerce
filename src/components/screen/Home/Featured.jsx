@@ -8,7 +8,7 @@ import ProductCard from "../ProductCard";
 
 const Featured = () => {
   // const [isSingIn, setIsSingIn] = useState(false);
-  const items = useSelector((state) => state.allcarts.items);
+  const items = useSelector((state) => state.allCarts.items);
 
   return (
     <section className="pt-13 pb-10 bg-backgroundPage">

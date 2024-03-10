@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 
 const ScrollCart = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const { cart, totalQuantity } = useSelector((state) => state.allcarts);
+  const { cart, totalQuantity } = useSelector((state) => state.allCarts);
 
   const toggleVisibility = () => {
     if (window.scrollY > 300) {

@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import ProductCard from "../ProductCard";
 
 const AllProducts = () => {
-  const items = useSelector((state) => state.allcarts.allProductsItem);
+  const items = useSelector((state) => state.allCarts.allProductsItem);
 
   return (
     <div className="mt-5 grid lg:grid-cols-2 xl:grid-cols-3 gap-6">

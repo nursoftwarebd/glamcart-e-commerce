@@ -5,7 +5,7 @@ import {
 } from "@/redux/slices/wishListSlice";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -20,11 +20,23 @@ const FlashProductCard = ({ item }) => {
   const [isFlashWishList, setFlashWishList] = useState(false);
   const dispatch = useDispatch();
 
+  // get data from local storage for check if this product is already is in wishlist or not
+  useEffect(() => {
+    const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+    const isFlashWishList = wishlist.some(
+      (wishlistItem) => wishlistItem.id === item.id
+    );
+    setFlashWishList(isFlashWishList);
+  }, [item.id]);
+
+
+  // Add product on card page 
   const handleAddToCart = (item) => {
     dispatch(addToCart(item));
     toast.success("Added to cart", { position: "top-right", autoClose: 1700 });
   };
 
+  // Add or remove product on wishlist page
   const handleToggleWishList = (item) => {
     if (isFlashWishList) {
       dispatch(removeWishListItem(item.id));

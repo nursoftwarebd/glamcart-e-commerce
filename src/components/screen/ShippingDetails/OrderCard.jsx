@@ -7,7 +7,7 @@ import PaymentMethod from "./PaymentMethod";
 
 const OrderCard = () => {
   const { cart, totalQuantity, quantity, totalPrice, selectedItems } =
-    useSelector((state) => state.allcarts);
+    useSelector((state) => state.allCarts);
   const dispatch = useDispatch();
 
   useEffect(() => {

@@ -18,7 +18,7 @@ import {
   removeWishListItem,
 } from "@/redux/slices/wishListSlice";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -26,6 +26,15 @@ const ProductCard = ({ item }) => {
   const [isWishList, setWishList] = useState(false);
   const { title, image, price } = item;
   const dispatch = useDispatch();
+
+  // get data from local storage for check if this product is already is in wishlist or not
+  useEffect(() => {
+    const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+    const isInWishlist = wishlist.some(
+      (wishlistItem) => wishlistItem.id === item.id
+    );
+    setWishList(isInWishlist);
+  }, [item.id]);
 
   const handleAddToCart = (item) => {
     dispatch(addToCart(item));
@@ -46,30 +55,31 @@ const ProductCard = ({ item }) => {
     }
     setWishList(!isWishList);
   };
+  console.log(isWishList);
 
   return (
     <div className="bg-white border-[1px] w-full h-auto border-grayBorder px-[9px] pt-2 pb-[15px] rounded-[10px]">
-      <div className="w-full h-[313px] flex items-end bg-imageBack rounded-[10px] relative">
-        <Link href={"/product-details"}>
+      <Link href={"/product-details"}>
+        <div className="w-full h-[313px] flex items-end bg-imageBack rounded-[10px] relative">
           <Image
             src={image}
             alt="product-images"
-            className="w-full h-[313px] mix-blend-multiply rounded-[10px] object-fill"
+            className="w-full h-full mix-blend-multiply rounded-[10px] object-cover"
           />
-        </Link>
-        <div
-          onClick={() => handleToggleWishList(item)}
-          className="cursor-pointer absolute top-[21px] right-[14px] w-[23px] h-5"
-        >
-          <Image
-            src={isWishList ? heart : blankHeart}
-            alt="love"
-            className="w-full h-full"
-          />
+          <div
+            onClick={() => handleToggleWishList(item)}
+            className="cursor-pointer absolute top-[21px] right-[14px] w-[23px] h-5"
+          >
+            <Image
+              src={isWishList ? heart : blankHeart}
+              alt="love"
+              className="w-full h-full"
+            />
+          </div>
         </div>
-      </div>
+      </Link>
       {/* card details */}
-      <div className="pt-[15px] pl-[5px] space-y-[10px]">
+      <div className="pt-[15px] pl-[5px] space-y-[10px] flex flex-col justify-between">
         {/* star */}
         <div className="flex items-center gap-[7px]">
           <div className="flex items-center">
@@ -81,11 +91,10 @@ const ProductCard = ({ item }) => {
           </div>
           <span className=" text-xs text-blackPrimary">(0)</span>
         </div>
-        <h5 className="h5 text-blackSec">
-          {" "}
-          <Link href={"/product-details"}>{title}</Link>{" "}
-        </h5>
-        <div className="flex items-center justify-between pr-[11px]">
+        <p className="h5 text-blackSec">
+          <Link href={"/product-details"}>{title}</Link>
+        </p>
+        <div className="flex items-center justify-between pr-[11px] mt-auto">
           <h4 className="h4 text-primary">৳{price}</h4>
           {/* ::: cart :::: */}
           <button
