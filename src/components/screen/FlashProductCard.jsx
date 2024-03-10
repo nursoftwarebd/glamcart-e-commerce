@@ -54,11 +54,11 @@ const FlashProductCard = ({ item }) => {
   return (
     <div className="bg-white border-[1px] w-full h-auto border-grayBorder px-[9px] pt-2 pb-[15px] rounded-[10px] flex flex-col">
       <Link href={"/product-details"}>
-        <div className="w-full md:h-[313px] flex items-end bg-imageBack rounded-[10px] relative">
+        <div className="w-full md:h-[313px] flex items-end bg-imageBack rounded-[10px] relative group overflow-hidden">
           <Image
             src={image}
             alt="flash-one"
-            className=" object-fill w-full h-full"
+            className=" object-fill w-full h-full group-hover:scale-110 duration-300"
           />
           <div className="absolute top-0 left-0 w-[91px] h-[30px] rounded-tl-[9px] rounded-tr-[2px] rounded-bl-[2px] rounded-br-[2px] bg-gradient-to-r from-[#FF7A00]  to-[#FFB800] px-[5px] flex items-center justify-center">
             <p className="text-sm text-white font-semibold">-{sale}% OFF</p>
