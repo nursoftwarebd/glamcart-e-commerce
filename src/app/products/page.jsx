@@ -40,9 +40,7 @@ const page = () => {
             </div>
 
             <AllProducts />
-            <div className="flex items-center justify-end pt-10 pb-13">
-              <Pagination />
-            </div>
+            
           </div>
         </div>
       </div>
