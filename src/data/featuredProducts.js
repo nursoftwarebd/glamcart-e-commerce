@@ -58,7 +58,6 @@ export const featuredProducts = [
     title: "Women black dress and red hat collections",
     image: light,
     price: 840,
-
     sku: "12314124124",
   },
   {

@@ -59,7 +59,7 @@ const ProductCard = ({ item }) => {
 
   return (
     <div className="bg-white border-[1px] w-full h-auto border-grayBorder px-[9px] pt-2 pb-[15px] rounded-[10px]">
-      <Link href={"/product-details rounded-[10px] overflow-hidden"}>
+      <Link href={"/product-details"} className=" rounded-[10px] overflow-hidden">
         <div className="w-full h-[313px] flex items-end bg-imageBack rounded-[10px] relative group overflow-hidden">
           <Image
             src={image}

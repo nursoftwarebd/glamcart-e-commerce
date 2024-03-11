@@ -7,7 +7,7 @@ export const metadata = {
 
 const ContactUsPage = () => {
   return (
-    <section className="py-13  bg-backgroundPage">
+    <section className="py-13 bg-backgroundPage">
       <div className="container_fluid">
         <div className="w-full xl:max-w-[1144px]">
           <div>
