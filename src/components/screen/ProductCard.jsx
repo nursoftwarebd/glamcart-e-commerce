@@ -24,7 +24,19 @@ import "react-toastify/dist/ReactToastify.css";
 
 const ProductCard = ({ item }) => {
   const [isWishList, setWishList] = useState(false);
-  const { title, image, price } = item;
+  const {
+    productName: title,
+    productImage: image,
+    price,
+    rating,
+    discount,
+    stock,
+    size,
+    quantity,
+    category,
+    categoryImage,
+    description,
+  } = item;
   const dispatch = useDispatch();
 
   // get data from local storage for check if this product is already is in wishlist or not
@@ -55,29 +67,35 @@ const ProductCard = ({ item }) => {
     }
     setWishList(!isWishList);
   };
-  console.log(isWishList);
 
   return (
     <div className="bg-white border-[1px] w-full h-auto border-grayBorder px-[9px] pt-2 pb-[15px] rounded-[10px]">
-      <Link href={"/product-details rounded-[10px] overflow-hidden"}>
-        <div className="w-full h-[313px] flex items-end bg-imageBack rounded-[10px] relative group overflow-hidden">
-          <Image
-            src={image}
-            alt="product-images"
-            className="w-full h-full rounded-[10px] object-cover group-hover:scale-110 duration-300"
-          />
-          <div
-            onClick={() => handleToggleWishList(item)}
-            className="cursor-pointer absolute top-[21px] right-[14px] w-[23px] h-5"
-          >
+      <div className="w-full flex items-end bg-imageBack rounded-[10px] relative group overflow-hidden">
+        <Link
+          href={`/product-details/${item.id}`}
+          className="rounded-[10px] overflow-hidden w-full"
+        >
+          <div className="w-full h-[313px]">
             <Image
-              src={isWishList ? heart : blankHeart}
-              alt="love"
-              className="w-full h-full"
+              src={image[0]}
+              alt="product-images"
+              width={300}
+              height={500}
+              className="w-full h-full rounded-[10px] object-cover group-hover:scale-110 duration-300"
             />
           </div>
+        </Link>
+        <div
+          onClick={() => handleToggleWishList(item)}
+          className="cursor-pointer absolute top-[21px] right-[14px] w-[23px] h-5"
+        >
+          <Image
+            src={isWishList ? heart : blankHeart}
+            alt="love"
+            className="w-full h-full"
+          />
         </div>
-      </Link>
+      </div>
       {/* card details */}
       <div className="pt-[15px] pl-[5px] space-y-[10px] flex flex-col justify-between">
         {/* star */}

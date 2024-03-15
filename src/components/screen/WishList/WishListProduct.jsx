@@ -21,6 +21,7 @@ const WishListProduct = () => {
     toast.success("Added to cart", { position: "top-right", autoClose: 1700 });
   };
 
+    console.log(wishList);
   return (
     <>
       {wishList.length === 0 ? (
@@ -42,18 +43,20 @@ const WishListProduct = () => {
               <div className="flex md:flex-row gap-4 md:gap-6">
                 <div className="w-[100px] h-[100px] sm:h-[130px] sm:w-[130px] rounded-[5px] border border-gray-300">
                   <Image
-                    src={item.image}
-                    alt={`checkout ${item.title}`}
+                    src={item.productImage[0]}
+                    alt="checkout"
+                    width={200}
+                    height={200}
                     className="w-full h-full object-cover"
                   />
                 </div>
 
                 <div className="flex flex-col justify-center">
                   <h4 className="text-sm sm:text-lg text-blackPrimary font-medium leading-5 sm:leading-[27px]">
-                    {item.title}
+                    {item.productName}
                   </h4>
                   <h5 className="text-base sm:text-lg leading-[27px] text-blackGray">
-                    Sku {item.sku}
+                    Sku {item.SKU}
                   </h5>
                   <h3 className="text-base sm:text-xl font-semibold leading-5 sm:leading-[30px] text-secondary">
                     ৳{item.price}

@@ -14,7 +14,16 @@ const breadcrumb = [
   { name: "Men’s fashion", url: "/men-fashion" },
 ];
 
-const page = () => {
+const getProductDetails = async (id) => {
+  const response = await fetch(
+    `https://project-nirvoya-server.vercel.app/product/${id}`
+  );
+  return await response.json();
+};
+
+const page = async ({ params }) => {
+  const { id } = params;
+  const product = await getProductDetails(id);
   return (
     <section className="pt-5 lg:pt-14 pb-13  bg-backgroundPage">
       <div className="container_fluid">
@@ -24,15 +33,15 @@ const page = () => {
         />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           <div className="h-fit">
-            <SliderProduct />
+            <SliderProduct {...product}/>
           </div>
           <div>
-            <AboutProduct />
+            <AboutProduct product={product}/>
           </div>
         </div>
         <div>
           <ProductDetails />
-          <CustomerReview />
+          <CustomerReview productReviews={product.reviews}/>
         </div>
       </div>
     </section>

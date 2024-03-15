@@ -52,7 +52,7 @@ export const wishListSlice = createSlice({
     //   );
     // },
     removeWishListItem: (state, action) => {
-      const itemIdToRemove = action.payload;
+      const itemIdToRemove = action.payload.id;
       state.wishList = state.wishList.filter(
         (item) => item.id !== itemIdToRemove
       );

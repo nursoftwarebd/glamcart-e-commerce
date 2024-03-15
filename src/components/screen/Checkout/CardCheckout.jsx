@@ -44,17 +44,19 @@ const CardCheckout = () => {
                   key={data.id}
                   className="w-full py-7 pl-7 pr-12 bg-white flex items-center gap-10"
                 >
-                  <Checkbox />
+                  <Checkbox id={data.id}/>
                   <div className="w-full flex flex-col sm:flex-row items-start justify-between">
                     <div className="flex flex-row gap-2 sm:gap-6">
                       <Image
-                        src={data.image}
-                        alt={`checkout ${data.title}`}
+                        src={data.productImage[0]}
+                        alt={`cart image`}
+                        width={200}
+                        height={200}
                         className="w-[100px] h-[100px] sm:h-[130px] sm:w-[130px] rounded-[5px]"
                       />
                       <div className="space-y-2 sm:space-y-5">
                         <h4 className="text-sm sm:text-lg text-blackPrimary font-medium leading-5 sm:leading-[27px]">
-                          {data.title}
+                          {data.productName}
                         </h4>
                         <h3 className="text-base sm:text-xl font-semibold leading-5 sm:leading-[30px] text-secondary">
                           ৳{data.price}
@@ -63,7 +65,7 @@ const CardCheckout = () => {
                     </div>
                     <div className="space-y-5 sm:space-y-11">
                       <h5 className="text-base sm:text-lg text-start sm:text-end leading-[27px] text-blackGray">
-                        Sku {data.sku}
+                        Sku {data.SKU}
                       </h5>
                       <div className="flex items-center justify-end gap-[22px]">
                         <div className="w-[90px] sm:w-[120px] h-12 sm:h-[56px] flex items-center justify-center rounded-[5px] border-[1px] border-borderFaq gap-3 sm:gap-5">

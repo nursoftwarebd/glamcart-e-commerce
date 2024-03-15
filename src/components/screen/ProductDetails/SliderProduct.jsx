@@ -11,48 +11,16 @@ import pic4 from "../../../assets/images/home/ydress.png";
 import DownArrow from "./DownArrow";
 import UpArrow from "./UpArrow";
 
-const SliderProduct = () => {
-  const [isImage, setImage] = useState(pic1);
-  const imagePack = [
-    {
-      id: 1,
-      img: pic1,
-    },
-    {
-      id: 2,
-      img: pic2,
-    },
-    {
-      id: 3,
-      img: pic3,
-    },
-    {
-      id: 4,
-      img: pic4,
-    },
-    {
-      id: 5,
-      img: pic5,
-    },
-    {
-      id: 6,
-      img: pic2,
-    },
-    {
-      id: 7,
-      img: pic4,
-    },
-    {
-      id: 8,
-      img: pic3,
-    },
-  ];
+const SliderProduct = ({productImage}) => {
+  const [isImage, setImage] = useState(productImage[0]);
+ 
 
   const settings = {
     dots: false,
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
+    // centerMode: true,
     nextArrow: <UpArrow />,
     prevArrow: <DownArrow />,
     vertical: true,
@@ -72,22 +40,26 @@ const SliderProduct = () => {
           <div className="w-[85%] sm:w-[75%]">
             <Image
               src={isImage}
+              width={400}
+              height={400}
               alt="big-image"
-              className="w-full h-auto lg:h-[350px] 2xl:h-[550px]"
+              className="w-full h-auto lg:h-[350px] 2xl:h-[550px] object-cover"
             />
           </div>
 
           <div className="w-[15%] sm:w-[25%] relative space-y-[7px] flex flex-col items-center justify-center">
             <Slider {...settings} className="w-full sm:w-[104px]">
-              {imagePack.map((imgItem, index) => {
+              {productImage.map((imgItem, index) => {
                 return (
                   <div
                     key={index}
-                    onClick={() => setImage(imgItem.img)}
+                    onClick={() => setImage(imgItem)}
                     className="w-12 h-12 sm:w-full sm:h-[92px] 2xl:h-[104px] outline-none cursor-pointer"
                   >
                     <Image
-                      src={imgItem.img}
+                      src={imgItem}
+                      width={200}
+                      height={200}
                       alt="small_images"
                       className="object-fill w-12 h-12 sm:w-full sm:h-[92px] 2xl:h-[104px]"
                     />

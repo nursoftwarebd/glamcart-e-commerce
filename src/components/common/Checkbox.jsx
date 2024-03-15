@@ -1,10 +1,10 @@
-const Checkbox = () => {
+const Checkbox = ({id}) => {
   return (
     <div className="hidden md:flex items-center">
       <div className="inline-flex items-center">
         <label
           className="relative flex items-center cursor-pointer"
-          htmlFor="checkbox"
+          htmlFor={id.toString()}
         >
           <input
             type="checkbox"
@@ -13,7 +13,7 @@ const Checkbox = () => {
             border-[3px] border-[#C4C4C4]            
             checked:border-secondary checked:bg-secondary
             before:content[''] peer relative  cursor-pointer appearance-none rounded-md   hover:before:opacity-10"
-            id="checkbox"
+            id={id.toString()}
           />
           <span className="absolute text-white transition-opacity opacity-0 pointerEvents-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
             <svg

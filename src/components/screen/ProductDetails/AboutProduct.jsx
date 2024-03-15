@@ -1,13 +1,16 @@
 "use client";
-import PrimaryButton from "@/components/shared/Button/PrimaryButton";
-import SecondaryButton from "@/components/shared/Button/SecondaryButton";
 import { useState } from "react";
 import ProductFeatures from "./ProductFeatures";
 import SizeButton from "./SizeButton";
 import TitleAndPrice from "./TitleAndPrice";
+import { useDispatch } from "react-redux";
+import { toast } from "react-toastify";
+import { addToCart } from "@/redux/slices/cartSlice";
+import SecondaryButton from "@/components/shared/Button/SecondaryButton";
 
-const AboutProduct = () => {
+const AboutProduct = ({ product }) => {
   const [count, setCount] = useState(0);
+  const dispatch = useDispatch();
 
   const increment = () => {
     setCount(count + 1);
@@ -18,12 +21,21 @@ const AboutProduct = () => {
       setCount(count - 1);
     }
   };
+
+  // product add on cart page
+  const handleAddToCart = (item) => {
+    dispatch(addToCart(item));
+    console.log(item);
+
+    toast.success("Added to cart", { position: "top-right", autoClose: 1700 });
+  };
+
   return (
     <>
       <div className="">
-        <TitleAndPrice />
-        <ProductFeatures />
-        <SizeButton />
+        <TitleAndPrice product={product} />
+        <ProductFeatures product={product} />
+        <SizeButton product={product}/>
 
         <div className="flex  items-center gap-9">
           <div className="flex flex-wrap items-center gap-5">
@@ -48,7 +60,12 @@ const AboutProduct = () => {
               </div>
             </div>
             <div className="flex gap-4">
-              <PrimaryButton title="Add cart" href="/card" />
+              <div onClick={() => handleAddToCart(product)}>
+                {/* <PrimaryButton title="Add cart" href="/card" /> */}
+                <button className="focus:outline-none w-[120px] md:w-[165px] h-[45px] rounded-[3px] bg-secondary text-white duration-300 transition ease-in-out text-lg md:text-xl leading-6 font-medium flex items-center justify-center">
+                  Add to cart
+                </button>
+              </div>
               <SecondaryButton title="Buy Now" href="/buy" />
             </div>
           </div>
