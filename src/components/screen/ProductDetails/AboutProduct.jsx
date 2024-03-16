@@ -10,6 +10,7 @@ import SecondaryButton from "@/components/shared/Button/SecondaryButton";
 
 const AboutProduct = ({ product }) => {
   const [count, setCount] = useState(0);
+  const [sizeValue, setSizeValue] = useState("");
   const dispatch = useDispatch();
 
   const increment = () => {
@@ -29,13 +30,13 @@ const AboutProduct = ({ product }) => {
 
     toast.success("Added to cart", { position: "top-right", autoClose: 1700 });
   };
-
+console.log(sizeValue);
   return (
     <>
       <div className="">
         <TitleAndPrice product={product} />
         <ProductFeatures product={product} />
-        <SizeButton product={product}/>
+        <SizeButton product={product} setSizeValue={setSizeValue}/>
 
         <div className="flex  items-center gap-9">
           <div className="flex flex-wrap items-center gap-5">

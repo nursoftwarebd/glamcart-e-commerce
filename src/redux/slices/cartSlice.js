@@ -49,9 +49,7 @@ export const cartSlice = createSlice({
       let { totalQuantity, totalPrice } = state.cart.reduce(
         (cartTotal, cartItem) => {
           const { price, quantity } = cartItem;
-          console.log("Price:", price, "Quantity:", quantity); // Log price and quantity
           const itemTotal = price * quantity;
-          console.log("Item total:", itemTotal); // Log item total
           if (!isNaN(itemTotal)) {
             // Check if itemTotal is not NaN
             cartTotal.totalPrice += itemTotal;
@@ -66,14 +64,12 @@ export const cartSlice = createSlice({
           totalQuantity: 0,
         }
       );
-      console.log("Total price before:", totalPrice); // Log total price before
       if (!isNaN(totalPrice)) {
         // Check if totalPrice is not NaN
         state.totalPrice = parseInt(totalPrice.toFixed(2));
       } else {
         console.error("Total price is NaN"); // Log if totalPrice is NaN
       }
-      console.log("Total price after:", state.totalPrice); // Log total price after
       state.totalQuantity = totalQuantity;
     },
     removeItem: (state, action) => {

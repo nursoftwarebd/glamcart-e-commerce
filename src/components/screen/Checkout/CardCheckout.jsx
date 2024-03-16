@@ -44,7 +44,7 @@ const CardCheckout = () => {
                   key={data.id}
                   className="w-full py-7 pl-7 pr-12 bg-white flex items-center gap-10"
                 >
-                  <Checkbox id={data.id}/>
+                  <Checkbox id={data.id} />
                   <div className="w-full flex flex-col sm:flex-row items-start justify-between">
                     <div className="flex flex-row gap-2 sm:gap-6">
                       <Image
@@ -52,7 +52,7 @@ const CardCheckout = () => {
                         alt={`cart image`}
                         width={200}
                         height={200}
-                        className="w-[100px] h-[100px] sm:h-[130px] sm:w-[130px] rounded-[5px]"
+                        className="w-[100px] h-[100px] sm:h-[130px] sm:w-[130px] rounded-[5px] object-cover"
                       />
                       <div className="space-y-2 sm:space-y-5">
                         <h4 className="text-sm sm:text-lg text-blackPrimary font-medium leading-5 sm:leading-[27px]">

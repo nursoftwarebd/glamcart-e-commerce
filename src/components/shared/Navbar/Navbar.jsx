@@ -20,7 +20,6 @@ const Navbar = () => {
   const { cart, totalQuantity } = useSelector((state) => state.allCarts);
   const { wishList } = useSelector((state) => state.allWishlist);
   const [isVisible, setIsVisible] = useState(false);
-  console.log("wishlist data", wishList.length);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getCartTotal());

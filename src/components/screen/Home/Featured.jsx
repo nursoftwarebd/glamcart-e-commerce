@@ -23,9 +23,8 @@ const Featured = () => {
   };
 
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(allProduct());
-  }, []);
+  dispatch(allProduct());
+ 
 
   // console.log(featuredProducts);
   return (
