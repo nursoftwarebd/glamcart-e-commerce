@@ -19,10 +19,10 @@ const CardCheckout = () => {
   const { cart, totalQuantity, totalPrice, selectedItems } = useSelector(
     (state) => state.allCarts
   );
-
   const dispatch = useDispatch();
-
+  
   dispatch(getCartTotal());
+  // console.log(cart);
 
   return (
     <section>
@@ -48,7 +48,7 @@ const CardCheckout = () => {
                   <div className="w-full flex flex-col sm:flex-row items-start justify-between">
                     <div className="flex flex-row gap-2 sm:gap-6">
                       <Image
-                        src={data.productImage[0]}
+                        src={data.productImage}
                         alt={`cart image`}
                         width={200}
                         height={200}
@@ -61,6 +61,7 @@ const CardCheckout = () => {
                         <h3 className="text-base sm:text-xl font-semibold leading-5 sm:leading-[30px] text-secondary">
                           ৳{data.price}
                         </h3>
+                        <p>{data.sizeValue}</p>
                       </div>
                     </div>
                     <div className="space-y-5 sm:space-y-11">

@@ -25,18 +25,21 @@ const AboutProduct = ({ product }) => {
 
   // product add on cart page
   const handleAddToCart = (item) => {
-    dispatch(addToCart(item));
-    console.log(item);
+    dispatch(addToCart({ ...item, sizeValue }));
 
     toast.success("Added to cart", { position: "top-right", autoClose: 1700 });
   };
-console.log(sizeValue);
+  // console.log(sizeValue);
   return (
     <>
       <div className="">
         <TitleAndPrice product={product} />
         <ProductFeatures product={product} />
-        <SizeButton product={product} setSizeValue={setSizeValue}/>
+        <SizeButton
+          product={product}
+          setSizeValue={setSizeValue}
+          sizeValue={sizeValue}
+        />
 
         <div className="flex  items-center gap-9">
           <div className="flex flex-wrap items-center gap-5">

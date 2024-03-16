@@ -33,12 +33,14 @@ export const cartSlice = createSlice({
   reducers: {
     addToCart: (state, action) => {
       let find = state.cart.findIndex((item) => item.id === action.payload.id);
+      // console.log(action.payload);
       if (find >= 0) {
         state.cart[find].quantity += 1;
       } else {
         // Create a new object with quantity property
+        const { productName, SKU, price, sizeValue, id, productImage } = action.payload;
         const newItem = {
-          ...action.payload,
+          productName, SKU, price, sizeValue, id, productImage: productImage[0],
           quantity: 1,
         };
         state.cart.push(newItem);
