@@ -6,8 +6,8 @@ import Pagination from "./paging/Pagination"; // Assuming you have the Paginatio
 
 const ITEMS_PER_PAGE = 6; // Number of items to display per page
 
-const AllProducts = () => {
-  const allProducts = useSelector((state) => state.allCarts.allProductsItem);
+const AllProducts = ({allProducts}) => {
+  // const allProducts = useSelector((state) => state.allCarts.allProductsItem);
   const [currentPage, setCurrentPage] = useState(1);
 
   // Calculate the index range for the current page

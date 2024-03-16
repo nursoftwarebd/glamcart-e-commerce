@@ -18,6 +18,7 @@ const initialState = {
 
 // if (storedCart) {
 //   initialState.cart = JSON.parse(storedCart);
+
 // }
 
 const storedCart =

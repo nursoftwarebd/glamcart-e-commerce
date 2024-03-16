@@ -55,17 +55,21 @@ const ProductCard = ({ item }) => {
     }
     setWishList(!isWishList);
   };
-  console.log(isWishList);
-
+  console.log(item);
   return (
     <div className="bg-white border-[1px] w-full h-auto border-grayBorder px-[9px] pt-2 pb-[15px] rounded-[10px]">
-      <Link href={"/product-details"} className=" rounded-[10px] overflow-hidden">
+      <Link
+        href={`/product-details/${item.id}`}
+        className=" rounded-[10px] overflow-hidden"
+      >
         <div className="w-full h-[313px] flex items-end bg-imageBack rounded-[10px] relative group overflow-hidden">
-          <Image
+          {/* <Image
             src={image}
+            width={500}
+            height={500}
             alt="product-images"
             className="w-full h-full rounded-[10px] object-cover group-hover:scale-110 duration-300"
-          />
+          /> */}
           <div
             onClick={() => handleToggleWishList(item)}
             className="cursor-pointer absolute top-[21px] right-[14px] w-[23px] h-5"
@@ -92,7 +96,7 @@ const ProductCard = ({ item }) => {
           <span className=" text-xs text-blackPrimary">(0)</span>
         </div>
         <p className="h5 text-blackSec">
-          <Link href={"/product-details"}>{title}</Link>
+          <Link href={`/product-details/${item.id}`}>{title}</Link>
         </p>
         <div className="flex items-center justify-between pr-[11px] mt-auto">
           <h4 className="h4 text-primary">৳{price}</h4>

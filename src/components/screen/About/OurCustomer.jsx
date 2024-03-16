@@ -26,7 +26,7 @@ const OurCustomer = () => {
           </h4>
         </div>
       </div>
-      <div className="pt-11 pl-3 lg:pl-12 relative">
+      <div className="pt-11 pl-3 lg:pl-12 relative max-w-[1680px] ml-auto">
         <div className="">
           <Swiper
             breakpoints={{
