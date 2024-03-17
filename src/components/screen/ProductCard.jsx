@@ -36,6 +36,7 @@ const ProductCard = ({ item }) => {
     category,
     categoryImage,
     description,
+    id
   } = item;
   const dispatch = useDispatch();
 
@@ -110,7 +111,7 @@ const ProductCard = ({ item }) => {
           <span className=" text-xs text-blackPrimary">(0)</span>
         </div>
         <p className="h5 text-blackSec">
-          <Link href={"/product-details"}>{title}</Link>
+          <Link href={`/product-details/${id}`}>{title}</Link>
         </p>
         <div className="flex items-center justify-between pr-[11px] mt-auto">
           <h4 className="h4 text-primary">৳{price}</h4>

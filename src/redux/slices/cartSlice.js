@@ -38,10 +38,27 @@ export const cartSlice = createSlice({
         state.cart[find].quantity += 1;
       } else {
         // Create a new object with quantity property
-        const { productName, SKU, price, sizeValue, id, productImage } = action.payload;
+        const {
+          productName,
+          SKU,
+          price,
+          sizeValue,
+          id,
+          productImage,
+          location,
+          count,
+          stock
+        } = action.payload;
         const newItem = {
-          productName, SKU, price, sizeValue, id, productImage: productImage[0],
-          quantity: 1,
+          productName,
+          SKU,
+          price,
+          sizeValue,
+          id,
+          productImage: productImage[0],
+          stock,
+
+          quantity: location === "product-details" ? count : 1,
         };
         state.cart.push(newItem);
       }
@@ -83,7 +100,7 @@ export const cartSlice = createSlice({
     increaseItemQuantity: (state, action) => {
       state.cart = state.cart.map((item) => {
         if (item.id === action.payload) {
-          return { ...item, quantity: item.quantity + 1 };
+          return { ...item, quantity: item.stock > item.quantity? item.quantity + 1 : item.quantity };
         }
         return item;
       });

@@ -17,11 +17,11 @@ const WishListProduct = () => {
   // Product add on cart page
   const handleAddToCart = (item) => {
     dispatch(addToCart(item));
-    dispatch(removeWishListItem(item.id));
+    dispatch(removeWishListItem(item));
     toast.success("Added to cart", { position: "top-right", autoClose: 1700 });
   };
 
-    console.log(wishList);
+    // console.log(wishList);
   return (
     <>
       {wishList.length === 0 ? (
@@ -73,7 +73,7 @@ const WishListProduct = () => {
                 </button>
                 <div className="font-bold text-blackPrimary text-sm md-text-lg lg:text-xl">||</div>
                 <button
-                  onClick={() => dispatch(removeWishListItem(item.id))}
+                  onClick={() => dispatch(removeWishListItem(item))}
                   className="cursor-pointer  font-bold text-fadeRed text-sm md-text-lg lg:text-xl"
                 >
                   Remove
