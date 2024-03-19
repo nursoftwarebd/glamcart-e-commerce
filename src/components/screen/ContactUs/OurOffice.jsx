@@ -31,9 +31,9 @@ const OurOffice = () => {
                   <h5 className="font-medium text-contactLabel leading-6">
                     Our Email
                   </h5>
-                  <p className="pt-2 font-dmSans  text-sm text-textBody leading-4">
+                  <a href={`mailto:${contactData.email}`} className="pt-2 font-dmSans  text-sm text-textBody leading-4">
                     {contactData.email}
-                  </p>
+                  </a>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -42,9 +42,9 @@ const OurOffice = () => {
                   <h5 className="font-medium text-contactLabel leading-6">
                     Call Center
                   </h5>
-                  <p className="pt-2 font-dmSans  text-sm text-textBody leading-4">
+                  <a href={`tel:${contactData.callCenter}`} className="pt-2 font-dmSans  text-sm text-textBody leading-4">
                     {contactData.callCenter}
-                  </p>
+                  </a>
                 </div>
               </div>
             </div>
