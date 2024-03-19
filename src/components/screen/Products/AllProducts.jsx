@@ -1,7 +1,7 @@
 "use client";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { allProduct } from "../../../../lib/ProductsData";
+import { allProduct } from "../../../lib/ProductsData";
 import Pagination from "./paging/Pagination";
 import FlashProductCard from "../FlashProductCard";
 

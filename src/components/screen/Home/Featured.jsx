@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import whiteDown from "../../../assets/icons/white_down.svg";
 import ProductCard from "../ProductCard";
-import { allProduct } from "../../../../lib/ProductsData";
+import { allProduct } from "../../../lib/ProductsData";
 import { useEffect, useState } from "react";
 import { setShowMore, setShowLess } from "@/redux/slices/ProductsSlice";
 const Featured = () => {
@@ -24,7 +24,6 @@ const Featured = () => {
 
   const dispatch = useDispatch();
   dispatch(allProduct());
- 
 
   // console.log(featuredProducts);
   return (

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import checkfill from "../../../assets/icons/checkfill.svg";
 import StarAndWishlist from "./StarAndWishlist";
-import DiscountPrice from "../../../../lib/DiscountPrice";
+import DiscountPrice from "../../../lib/DiscountPrice";
 
 const TitleAndPrice = ({ product }) => {
   return (
@@ -12,7 +12,7 @@ const TitleAndPrice = ({ product }) => {
       <StarAndWishlist product={product} />
       <div className="pt-8 flex items-center gap-6">
         <h2 className="text-2xl sm:text-4xl leading-[54px] font-semibold text-secondary">
-        ৳{product.price}
+          ৳{product.price}
         </h2>
         {product.discount !== undefined && (
           <div className="flex items-center gap-4">
@@ -37,8 +37,14 @@ const TitleAndPrice = ({ product }) => {
         </p>
         <div className="flex items-center gap-1">
           {/* <Image src={checkfill} alt="checkfill" className="w-4 h-4" /> */}
-          <span className={`w-4 h-4 ${product.quantity >= 1 ? "bg-green-600":"bg-red-500"} rounded-full`}></span>
-          <p className="text-grayView leading-6">{product.quantity >= 1 ? "In Stock ":"Stock out"}</p>
+          <span
+            className={`w-4 h-4 ${
+              product.quantity >= 1 ? "bg-green-600" : "bg-red-500"
+            } rounded-full`}
+          ></span>
+          <p className="text-grayView leading-6">
+            {product.quantity >= 1 ? "In Stock " : "Stock out"}
+          </p>
         </div>
       </div>
     </div>
