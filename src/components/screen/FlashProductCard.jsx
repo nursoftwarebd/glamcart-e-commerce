@@ -16,7 +16,7 @@ import starColor from "../../assets/icons/star-color.svg";
 import star from "../../assets/icons/star.svg";
 
 const FlashProductCard = ({ item }) => {
-  const { title, image, price, sale } = item;
+  const { productName, productImage, price, discount, id } = item;
   const [isFlashWishList, setFlashWishList] = useState(false);
   const dispatch = useDispatch();
 
@@ -38,7 +38,7 @@ const FlashProductCard = ({ item }) => {
   // Add or remove product on wishlist page
   const handleToggleWishList = (item) => {
     if (isFlashWishList) {
-      dispatch(removeWishListItem(item.id));
+      dispatch(removeWishListItem(item));
       toast.error("Remove from wishlist!", { autoClose: 1700 });
     } else {
       dispatch(addToWishList(item));
@@ -53,31 +53,37 @@ const FlashProductCard = ({ item }) => {
 
   return (
     <div className="bg-white border-[1px] w-full h-auto border-grayBorder px-[9px] pt-2 pb-[15px] rounded-[10px] flex flex-col">
-      <Link href={"/product-details"}>
-        <div className="w-full md:h-[313px] flex items-end bg-imageBack rounded-[10px] relative group overflow-hidden">
-          <Image
-            src={image}
-            alt="flash-one"
-            className=" object-fill w-full h-full group-hover:scale-110 duration-300"
-          />
-          <div className="absolute top-0 left-0 w-[91px] h-[30px] rounded-tl-[9px] rounded-tr-[2px] rounded-bl-[2px] rounded-br-[2px] bg-gradient-to-r from-[#FF7A00]  to-[#FFB800] px-[5px] flex items-center justify-center">
-            <p className="text-sm text-white font-semibold">-{sale}% OFF</p>
-          </div>
-
-          <div
-            onClick={() => handleToggleWishList(item)}
-            className="cursor-pointer absolute top-[21px] right-[14px] w-[23px] h-5"
-          >
+      <div className="w-full flex items-end bg-imageBack rounded-[10px] relative group overflow-hidden">
+        <Link href={`/product-details/${id}`} className="w-full">
+          <div className="w-full md:h-[313px]">
             <Image
-              src={isFlashWishList ? heart : blankHeart}
-              alt="love"
-              className="w-full h-full"
+              src={productImage[0]}
+              width={300}
+              height={500}
+              alt="flash-one"
+              className=" object-cover w-full h-full group-hover:scale-110 duration-300"
             />
           </div>
+        </Link>
+        {item.discount && (
+          <div className="absolute top-0 left-0 w-[91px] h-[30px] rounded-tl-[9px] rounded-tr-[2px] rounded-bl-[2px] rounded-br-[2px] bg-gradient-to-r from-[#FF7A00]  to-[#FFB800] px-[5px] flex items-center justify-center">
+            <p className="text-sm text-white font-semibold">-{discount}% OFF</p>
+          </div>
+        )}
+
+        <div
+          onClick={() => handleToggleWishList(item)}
+          className="cursor-pointer absolute top-[21px] right-[14px] w-[23px] h-5"
+        >
+          <Image
+            src={isFlashWishList ? heart : blankHeart}
+            alt="love"
+            className="w-full h-full"
+          />
         </div>
-      </Link>
+      </div>
       {/* card details */}
-      <div className="pt-[15px] pl-[5px] space-y-[10px] flex flex-col justify-start h-full">
+      <div className="pt-[15px] pl-[5px] space-y-[10px] flex flex-col justify-start">
         {/* star */}
         <div className="flex items-center gap-[7px]">
           <div className="flex items-center">
@@ -90,7 +96,7 @@ const FlashProductCard = ({ item }) => {
           <span className=" text-xs text-blackPrimary">(0)</span>
         </div>
         <p className="h5 text-blackSec pt-1 pb-2">
-          <Link href={"/product-details"}>{title}</Link>
+          <Link href={`/product-details/${id}`}>{productName}</Link>
         </p>
         <div
           className="flex items-center justify-between pr-[11px]"

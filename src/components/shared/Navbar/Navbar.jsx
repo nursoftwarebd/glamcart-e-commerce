@@ -20,7 +20,6 @@ const Navbar = () => {
   const { cart, totalQuantity } = useSelector((state) => state.allCarts);
   const { wishList } = useSelector((state) => state.allWishlist);
   const [isVisible, setIsVisible] = useState(false);
-  console.log("wishlist data", wishList.length);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getCartTotal());
@@ -154,7 +153,7 @@ const Navbar = () => {
                     : "text-black3D"
                 }`}
               >
-                <Image src={bottomMenu.img} alt="home_menu" className="" />
+                <Image src={bottomMenu.img} alt="home_menu" />
                 <p className="text-paragraph10 font-medium leading-5 tracking-[0.2px]">
                   {bottomMenu.name}
                 </p>
@@ -174,7 +173,7 @@ const Navbar = () => {
                     : "text-black3D"
                 }`}
               >
-                <Image src={bottomMenu.img} alt="home_menu" className="" />
+                <Image src={bottomMenu.img} alt="home_menu" />
                 <p className="text-paragraph10 font-medium leading-5 tracking-[0.2px]">
                   {bottomMenu.name}
                 </p>
@@ -199,7 +198,7 @@ const Navbar = () => {
                     : "text-black3D"
                 }`}
               >
-                <Image src={bottomMenu.img} alt="home_menu" className="" />
+                <Image src={bottomMenu.img} alt="home_menu" />
                 <p className="text-paragraph10 font-medium leading-5 tracking-[0.2px]">
                   {bottomMenu.name}
                 </p>

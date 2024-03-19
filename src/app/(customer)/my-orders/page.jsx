@@ -21,7 +21,7 @@ const page = () => {
                 <th className="order_th">Actions</th>
               </tr>
             </thead>
-            <tbody className="">
+            <tbody>
               {customerOrder.map((item, index) => (
                 <tr key={index}>
                   <td className="order_td">{item.order}</td>

@@ -8,7 +8,7 @@ const UpArrow = ({ onClick }) => {
       className="absolute top-[-30px] left-[30%] sm:left-[40%] z-20 "
       onClick={onClick}
     >
-      <div className="w-4 h-4">
+      <div className="w-8 h-8 cursor-pointer">
         <Image
           src={uparrow}
           alt="downarrow"

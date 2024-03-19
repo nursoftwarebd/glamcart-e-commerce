@@ -34,13 +34,32 @@ export const cartSlice = createSlice({
   reducers: {
     addToCart: (state, action) => {
       let find = state.cart.findIndex((item) => item.id === action.payload.id);
+      // console.log(action.payload);
       if (find >= 0) {
         state.cart[find].quantity += 1;
       } else {
         // Create a new object with quantity property
+        const {
+          productName,
+          SKU,
+          price,
+          sizeValue,
+          id,
+          productImage,
+          location,
+          count,
+          stock
+        } = action.payload;
         const newItem = {
-          ...action.payload,
-          quantity: 1,
+          productName,
+          SKU,
+          price,
+          sizeValue,
+          id,
+          productImage: productImage[0],
+          stock,
+
+          quantity: location === "product-details" ? count : 1,
         };
         state.cart.push(newItem);
       }
@@ -50,9 +69,7 @@ export const cartSlice = createSlice({
       let { totalQuantity, totalPrice } = state.cart.reduce(
         (cartTotal, cartItem) => {
           const { price, quantity } = cartItem;
-          console.log("Price:", price, "Quantity:", quantity); // Log price and quantity
           const itemTotal = price * quantity;
-          console.log("Item total:", itemTotal); // Log item total
           if (!isNaN(itemTotal)) {
             // Check if itemTotal is not NaN
             cartTotal.totalPrice += itemTotal;
@@ -67,14 +84,12 @@ export const cartSlice = createSlice({
           totalQuantity: 0,
         }
       );
-      console.log("Total price before:", totalPrice); // Log total price before
       if (!isNaN(totalPrice)) {
         // Check if totalPrice is not NaN
         state.totalPrice = parseInt(totalPrice.toFixed(2));
       } else {
         console.error("Total price is NaN"); // Log if totalPrice is NaN
       }
-      console.log("Total price after:", state.totalPrice); // Log total price after
       state.totalQuantity = totalQuantity;
     },
     removeItem: (state, action) => {
@@ -86,7 +101,7 @@ export const cartSlice = createSlice({
     increaseItemQuantity: (state, action) => {
       state.cart = state.cart.map((item) => {
         if (item.id === action.payload) {
-          return { ...item, quantity: item.quantity + 1 };
+          return { ...item, quantity: item.stock > item.quantity? item.quantity + 1 : item.quantity };
         }
         return item;
       });

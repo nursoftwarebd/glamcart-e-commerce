@@ -2,23 +2,30 @@
 import SectionTitle from "@/components/shared/SectionTitle/SectionTitle";
 import Image from "next/image";
 // import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import whiteDown from "../../../assets/icons/white_down.svg";
 import ProductCard from "../ProductCard";
-import { useState } from "react";
-
+import { allProduct } from "../../../lib/ProductsData";
+import { useEffect, useState } from "react";
+import { setShowMore, setShowLess } from "@/redux/slices/ProductsSlice";
 const Featured = () => {
-  // const [isSingIn, setIsSingIn] = useState(false);
-  const items = useSelector((state) => state.allCarts.items);
+  const { featuredProducts } = useSelector((state) => state.products);
 
-  const productsCopy = [...items];
-  const [visible, setVisible] = useState(12);
+  const [visible, setVisible] = useState(8);
+
   const handleVisibleAdd = () => {
-    setVisible(visible + 8);
+    setVisible(featuredProducts.length);
+    // console.log(visible);
   };
   const handleVisibleLow = () => {
-    setVisible(12);
+    setVisible(8);
+    // console.log(visible);
   };
+
+  const dispatch = useDispatch();
+  dispatch(allProduct());
+
+  // console.log(featuredProducts);
   return (
     <section className="pt-13 pb-10 bg-backgroundPage">
       <div className="container_fluid">
@@ -27,19 +34,13 @@ const Featured = () => {
 
         {/* featured products */}
         <div className="mt-5  grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
-          {productsCopy.slice(0, visible).map((item, index) => (
-            <ProductCard key={index} item={item} />
+          {featuredProducts.slice(0, visible).map((item) => (
+            <ProductCard key={item.id} item={item} />
           ))}
         </div>
       </div>
-      {/* <div className="m-10">
-        <button onClick={() => setIsSingIn(!isSingIn)}>Modal</button>
-        {isSingIn && (
-          <SignUpModal isSingIn={isSingIn} setSignModal={setIsSingIn} />
-        )}
-      </div> */}
       <div className="pt-10 flex items-center justify-center">
-        {(visible < productsCopy.length && (
+        {(visible < featuredProducts.length && (
           <button
             onClick={handleVisibleAdd}
             className="w-[175px] h-[45px] rounded-[81px] bg-showMore text-white flex items-center justify-center gap-[5px]"

@@ -1,5 +1,4 @@
 "use client";
-
 import { getCartTotal } from "@/redux/slices/cartSlice";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -9,11 +8,9 @@ const OrderCard = () => {
   const { cart, totalQuantity, quantity, totalPrice, selectedItems } =
     useSelector((state) => state.allCarts);
   const dispatch = useDispatch();
+  dispatch(getCartTotal());
 
-  useEffect(() => {
-    dispatch(getCartTotal());
-  }, [cart]);
-
+  console.log(cart);
   return (
     <div className="w-full xl:w-[380px]  p-7 bg-white rounded-[5px]">
       <h5 className="text-xl text-blackPrimary font-medium leading-[30px]">
@@ -23,7 +20,7 @@ const OrderCard = () => {
         {cart.map((cartItem) => (
           <div key={cartItem.id} className="flex justify-between">
             <p className="max-w-[203px] text-lg text-lineThrough leading-[26px]">
-              {cartItem.title}
+              {cartItem.productName}
             </p>
             <div>
               <div className="flex items-center text-xl  leading-[30px] text-lineThrough gap-3">

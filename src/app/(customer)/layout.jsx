@@ -8,7 +8,7 @@ import { useState } from "react";
 
 const CustomerLayout = ({ children }) => {
   const pathname = usePathname();
-  console.log(pathname);
+  // console.log(pathname);
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -62,11 +62,11 @@ const CustomerLayout = ({ children }) => {
                     : "border-l-[3px] border-transparent"
                 }`}
               >
-                <div className="border-dashed border-b-[1px]  pl-[10px] py-[14px] text-start account_list">
-                  <Link href={tab.link} className="">
+                <Link href={tab.link}>
+                  <div className="border-dashed border-b-[1px]  pl-[10px] py-[14px] text-start account_list">
                     {tab.title}
-                  </Link>
-                </div>
+                  </div>
+                </Link>
               </div>
             ))}
           </div>

@@ -15,27 +15,24 @@ const AddressBookPage = () => {
             <h5 className="form_title">Contact Information</h5>
             <div className="space-y-5">
               <div className="w-full flex flex-col sm:flex-row items-center gap-y-5 gap-x-10">
-                <div className="w-full sm:w-1/2 space-y-3 flex flex-col">
+                <div className="inputGroup">
                   <label htmlFor="" className="address_form_label">
                     First name
                   </label>
-                  <input
-                    type="text"
-                    className="w-full h-[45px] xl:w-[400px] px-4 py-3 outline-none bg-backgroundPage rounded-[2px] border-[1px] border-grayBorderForm"
-                  />
+                  <input type="text" className="inputGroup_input" />
                 </div>
-                <div className="w-full sm:w-1/2 space-y-3 flex flex-col">
+                <div className="inputGroup">
                   <label htmlFor="" className="address_form_label">
                     Last name
                   </label>
                   <input
                     type="text"
-                    className="w-full h-[45px] xl:w-[400px] px-4 py-3 outline-none bg-backgroundPage rounded-[2px] border-[1px] border-grayBorderForm"
+                    className="inputGroup_input"
                   />
                 </div>
               </div>
               <div className="w-full flex flex-col sm:flex-row items-center gap-y-5 gap-x-10">
-                <div className="w-full sm:w-1/2 space-y-3 flex flex-col">
+                <div className="inputGroup">
                   <label htmlFor="" className="address_form_label">
                     EMAIL ADDRESS
                   </label>
@@ -44,7 +41,7 @@ const AddressBookPage = () => {
                     className="w-full h-[45px] xl:w-[400px] px-4 py-3 outline-none bg-backgroundPage rounded-[2px] border-[1px] border-grayBorderForm"
                   />
                 </div>
-                <div className="w-full sm:w-1/2 space-y-3 flex flex-col">
+                <div className="inputGroup">
                   <label htmlFor="" className="address_form_label">
                     MOBILE NUMBER <span className="text-red-500">*</span>
                   </label>
@@ -89,7 +86,7 @@ const AddressBookPage = () => {
                     select="Select Country"
                   />
                 </div>
-                <div className="w-full sm:w-1/2 space-y-3 flex flex-col">
+                <div className="inputGroup">
                   <label htmlFor="" className="address_form_label">
                     City/Area <span className="text-red-500">*</span>
                   </label>
@@ -100,22 +97,22 @@ const AddressBookPage = () => {
                 </div>
               </div>
               <div className="w-full flex flex-col sm:flex-row items-center gap-y-5 gap-x-10">
-                <div className="w-full sm:w-1/2 space-y-3 flex flex-col">
+                <div className="inputGroup">
                   <label htmlFor="" className="address_form_label">
                     Select at district, state of province
                   </label>
                   <input
                     type="email"
-                    className="w-full h-[45px] xl:w-[400px] px-4 py-3 outline-none bg-backgroundPage rounded-[2px] border-[1px] border-grayBorderForm"
+                    className="inputGroup_input"
                   />
                 </div>
-                <div className="w-full sm:w-1/2 space-y-3 flex flex-col">
+                <div className="inputGroup">
                   <label htmlFor="" className="address_form_label">
                     Postal Code <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="text"
-                    className="w-full h-[45px] xl:w-[400px] px-4 py-3 outline-none bg-backgroundPage rounded-[2px] border-[1px] border-grayBorderForm"
+                    className="inputGroup_input"
                   />
                 </div>
               </div>

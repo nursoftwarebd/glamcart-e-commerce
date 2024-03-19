@@ -66,7 +66,6 @@ const OurCustomer = () => {
               nextEl: ".customer_next_button",
             }}
             modules={[Navigation]}
-            className=""
           >
             {customerData.map((cData) => (
               <SwiperSlide key={cData.id}>
