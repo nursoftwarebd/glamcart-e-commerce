@@ -55,7 +55,7 @@ const LogInModal = ({ openModal, setOpenModal }) => {
               <div className="lg:px-8 x1xl:px-[60px] lg:pt-7 lg:pb-8 xl:pt-4 xl:pb-4  x1xl:pt-10 x1xl:pb-[70px] x1440:pt-9 x1440:pb-[50px] 2xl:pb-[75px]">
                 <form className="space-y-5">
                   <h3 className="text-lg xl:text-2xl text-indigoText font-medium leading-9">
-                    Welcome to Project Nirvoya! Please login.
+                    Welcome to Project Glamcart! Please login.
                   </h3>
                   <input
                     placeholder="Enter Email or Mobile number"

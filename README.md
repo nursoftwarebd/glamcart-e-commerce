@@ -1,6 +1,5 @@
-
 <div align="center">
-  <img src="https://nirvoya-e-commerce.vercel.app/_next/static/media/logo.18b14e5c.svg" alt="GlamCart Logo" width="200" height="200">
+  <img src="https://Glamcart-e-commerce.vercel.app/_next/static/media/logo.18b14e5c.svg" alt="GlamCart Logo" width="200" height="200">
 </div>
 
 # GlamCart E-commerce Website
@@ -11,17 +10,17 @@ GlamCart is an e-commerce platform built with Next.js and Redux Toolkit, offerin
 
 ## Getting Started
 
-1. **Clone the Repository**: 
+1. **Clone the Repository**:
 
 2. **Install Dependencies**:
 
 3. **Set Up Environment Variables**:
-Create a `.env.local` file in the root directory and add necessary environment variables such as API keys, database URLs, etc.
+   Create a `.env.local` file in the root directory and add necessary environment variables such as API keys, database URLs, etc.
 
 4. **Run the Application**:
 
 5. **Open Your Browser**:
-Navigate to `http://localhost:3000` to view the GlamCart application.
+   Navigate to `http://localhost:3000` to view the GlamCart application.
 
 ## Features
 
@@ -53,6 +52,4 @@ Stay updated on the latest news, promotions, and product releases by following u
 
 - Website: [NurIT Official](https://nurit.io/)
 
-
 Thank you for choosing GlamCart for your online shopping needs. Happy shopping!
-

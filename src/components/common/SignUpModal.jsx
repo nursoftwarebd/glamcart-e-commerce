@@ -62,7 +62,7 @@ const SignUpModal = ({ isSingIn, setSignModal }) => {
               <div className="px-2 sm:px-10 md:px-5 lg:px-10 xl:px-8 x1xl:px-[60px] x1440:px-[40px] py-1 sm:py-3 md:py-1 lg:py-1 xl:pt-0 xl:pb-[5px] x1xl:pt-[10px] x1xl:pb-[25px] x1440:pt-[20px] x1440:pb-[50px]  ">
                 <form className="space-y-3 x1xl:space-y-5 x1440:space-y-3">
                   <h3 className="text-base lg:text-lg 2xl:text-2xl text-indigoText font-medium lg:leading-9">
-                    Create your Project Nirvoya Account
+                    Create your Project Glamcart Account
                   </h3>
                   <input
                     placeholder="Full name"
@@ -129,7 +129,7 @@ const SignUpModal = ({ isSingIn, setSignModal }) => {
                   <div className="flex items-center gap-2">
                     <input type="checkbox" className="w-[18px] h-[18px]" />
                     <div className="flex items-center  text-sm text-grayView leading-[21px] gap-1">
-                      I agree to Project Nirvoya
+                      I agree to Project Glamcart
                       <span>
                         <Link href={"#"} className="text-secondary">
                           terms & conditions
