@@ -62,11 +62,11 @@ const CustomerLayout = ({ children }) => {
                     : "border-l-[3px] border-transparent"
                 }`}
               >
-                  <Link href={tab.link} className="">
-                <div className="border-dashed border-b-[1px]  pl-[10px] py-[14px] text-start account_list">
+                <Link href={tab.link}>
+                  <div className="border-dashed border-b-[1px]  pl-[10px] py-[14px] text-start account_list">
                     {tab.title}
-                </div>
-                  </Link>
+                  </div>
+                </Link>
               </div>
             ))}
           </div>

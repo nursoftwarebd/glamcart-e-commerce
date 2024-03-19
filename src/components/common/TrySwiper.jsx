@@ -52,9 +52,7 @@ const TrySwiper = () => {
         >
           {navLinks.map((navLinks, index) => (
             <SwiperSlide key={index}>
-              <Link href={navLinks.href} className="">
-                {navLinks.name}
-              </Link>
+              <Link href={navLinks.href}>{navLinks.name}</Link>
             </SwiperSlide>
           ))}
         </Swiper>

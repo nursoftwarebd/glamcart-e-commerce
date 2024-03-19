@@ -11,7 +11,7 @@ const Comments = () => {
       <div className="pt-7.5 space-y-[30px]">
         {commentsData.map((commentsData) => {
           return (
-            <div key={commentsData.id} className="">
+            <div key={commentsData.id}>
               <div className="flex gap-[18px]">
                 <Image src={customer} alt="customer" />
                 <div className="flex flex-col justify-between">

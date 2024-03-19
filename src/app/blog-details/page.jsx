@@ -25,7 +25,7 @@ const BlogDetailsPage = () => {
 
         {blogDetails.map((blogDetails) => {
           return (
-            <div key={blogDetails.id} className="">
+            <div key={blogDetails.id}>
               <h1 className="max-w-[1283px] pb-[26px] text-2xl md:text-heading30 xl:text-heading56  contactLabel font-medium leading-7 md:leading-[45px] xl:leading-[88px]">
                 {blogDetails.title}
               </h1>

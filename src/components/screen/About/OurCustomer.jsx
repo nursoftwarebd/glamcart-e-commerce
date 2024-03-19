@@ -27,7 +27,7 @@ const OurCustomer = () => {
         </div>
       </div>
       <div className="pt-11 pl-3 lg:pl-12 relative">
-        <div className="">
+        <div>
           <Swiper
             breakpoints={{
               350: {
@@ -66,7 +66,6 @@ const OurCustomer = () => {
               nextEl: ".customer_next_button",
             }}
             modules={[Navigation]}
-            className=""
           >
             {customerData.map((cData) => (
               <SwiperSlide key={cData.id}>

@@ -16,8 +16,8 @@ import { usePathname } from "next/navigation";
 const AboutProduct = ({ product }) => {
   const { cart } = useSelector((state) => state.allCarts);
   const productExist = cart?.findIndex((item) => item.id === product.id);
-  const stock = product.stock
-  const navigation = usePathname()
+  const stock = product.stock;
+  const navigation = usePathname();
   const [count, setCount] = useState(
     productExist >= 0 ? cart[productExist].quantity : 1
   );
@@ -25,7 +25,7 @@ const AboutProduct = ({ product }) => {
   const dispatch = useDispatch();
 
   const increment = () => {
-    if(stock > count){
+    if (stock > count) {
       setCount(count + 1);
       dispatch(increaseItemQuantity(product.id));
     }
@@ -40,14 +40,21 @@ const AboutProduct = ({ product }) => {
 
   // product add on cart page
   const handleAddToCart = (item) => {
-    dispatch(addToCart({ ...item, sizeValue, location:navigation.split("/")[1], count}));
+    dispatch(
+      addToCart({
+        ...item,
+        sizeValue,
+        location: navigation.split("/")[1],
+        count,
+      })
+    );
 
     toast.success("Added to cart", { position: "top-right", autoClose: 1700 });
   };
   console.log();
   return (
     <>
-      <div className="">
+      <div>
         <TitleAndPrice product={product} />
         <ProductFeatures product={product} />
         <SizeButton

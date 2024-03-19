@@ -21,11 +21,11 @@ const WishListProduct = () => {
     toast.success("Added to cart", { position: "top-right", autoClose: 1700 });
   };
 
-    // console.log(wishList);
+  // console.log(wishList);
   return (
     <>
       {wishList.length === 0 ? (
-        <div className="">
+        <div>
           <div className="pt-8">
             <div className="p-8 bg-warningColo h-10 w-full flex items-center gap-3 ">
               <Image src={warning} alt="warning" />
@@ -71,7 +71,9 @@ const WishListProduct = () => {
                 >
                   Add to cart
                 </button>
-                <div className="font-bold text-blackPrimary text-sm md-text-lg lg:text-xl">||</div>
+                <div className="font-bold text-blackPrimary text-sm md-text-lg lg:text-xl">
+                  ||
+                </div>
                 <button
                   onClick={() => dispatch(removeWishListItem(item))}
                   className="cursor-pointer  font-bold text-fadeRed text-sm md-text-lg lg:text-xl"

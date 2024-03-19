@@ -39,7 +39,7 @@ const Footer = () => {
                   <h4 className="text-xl leading-8 font-medium text-blackPrimary uppercase">
                     {quickLink.title}
                   </h4>
-                  <ul className="">
+                  <ul>
                     {quickLink.links.map((link, index) => (
                       <li key={index}>
                         <Link
@@ -60,7 +60,7 @@ const Footer = () => {
                   <h4 className="text-xl leading-8 font-medium text-blackPrimary uppercase">
                     {customerArea.title}
                   </h4>
-                  <ul className="">
+                  <ul>
                     {customerArea.links.map((link, index) => (
                       <li key={index}>
                         <Link

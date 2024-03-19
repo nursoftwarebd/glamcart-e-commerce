@@ -25,7 +25,7 @@ const CustomerReview = ({ productReviews }) => {
           Write a Review
         </button>
       </div>
-      <div className="">
+      <div>
         <h4 className="pl-5 xl:pl-14 pb-5 border-b-[2px] border-border/70 text-2xl leading-7 font-medium text-blackPrimary">
           Reviews ({productReviews.length})
         </h4>
