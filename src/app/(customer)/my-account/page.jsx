@@ -23,9 +23,9 @@ const page = () => {
             >
               <div className="space-y-6">
                 <div>
-                  <span className="text-grayEdit leading-6 uppercase">
+                  <label className="text-grayEdit leading-6 uppercase">
                     First Name
-                  </span>
+                  </label>
                   <h5 className="text-blackPrimary leading-6 capitalize">
                     {info.firstName}
                   </h5>
@@ -37,17 +37,17 @@ const page = () => {
               </div>
               <div className="space-y-6">
                 <div>
-                  <span className="text-grayEdit leading-6 capitalize">
+                  <label className="text-grayEdit leading-6 capitalize">
                     Last Name
-                  </span>
+                  </label>
                   <h5 className="text-blackPrimary leading-6 capitalize">
                     {info.lastName}
                   </h5>
                 </div>
                 <div>
-                  <span className="text-grayEdit leading-6 capitalize">
+                  <label className="text-grayEdit leading-6 capitalize">
                     Mobile Number
-                  </span>
+                  </label>
                   <h5 className="text-blackPrimary leading-6">{info.mobile}</h5>
                 </div>
               </div>
@@ -69,9 +69,9 @@ const page = () => {
           {userInfo.map((info) => (
             <div key={info.id} className="flex items-center lg:gap-[200px]">
               <div>
-                <span className="text-grayEdit leading-6">
+                <label className="text-grayEdit leading-6">
                   Default Billing Address
-                </span>
+                </label>
                 <h5 className="text-blackPrimary leading-6">{info.address}</h5>
               </div>
             </div>
