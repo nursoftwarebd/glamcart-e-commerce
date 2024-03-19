@@ -107,3 +107,9 @@ input[type="range"]::-webkit-slider-thumb {
 .about_hero {
   background-image: url("/src/assets/images/aboutUs/aboutHero.png") !important;
 }
+.inputGroup {
+  @apply w-full sm:w-1/2 space-y-3 flex flex-col;
+}
+.inputGroup_input {
+  @apply w-full h-[45px] xl:w-[400px] px-4 py-3 outline-none bg-backgroundPage rounded-[2px] border-[1px] border-grayBorderForm;
+}
