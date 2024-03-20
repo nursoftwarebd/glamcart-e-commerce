@@ -2,6 +2,7 @@ import AllProducts from "@/components/screen/Products/AllProducts";
 import ProductSidebar from "@/components/screen/Products/ProductSidebar";
 import Pagination from "@/components/screen/Products/paging/Pagination";
 import getAllProducts from "../../../lib/ProductsData";
+import SelectDropDown from "@/components/screen/Products/SelectDropDown";
 
 export const metadata = {
   title: "Glamcart - Products Page",
@@ -27,19 +28,7 @@ const page = async() => {
               </p>
               <div className="flex items-center gap-3">
                 <p className="text-lg text-black/50 leading-7">Sort by:</p>
-                <div className="border-[1.2px] border-grayBorder rounded-[3px] px-4 py-[7px]">
-                  <select
-                    name=""
-                    id=""
-                    className="bg-transparent outline-none text-black text-lg "
-                  >
-                    <option value="" selected>
-                      Newest Items
-                    </option>
-                    <option value="">Newest Items1</option>
-                    <option value="">Newest Items</option>
-                  </select>
-                </div>
+                <SelectDropDown/>
               </div>
             </div>
 
