@@ -1,58 +1,51 @@
 import Image from "next/image";
 import Link from "next/link";
 import facebook from "../../assets/icons/social/facebook.svg";
-import linkEnd from "../../assets/icons/social/linkend.svg";
+import linkedin from "../../assets/icons/social/linkend.svg";
 import shared from "../../assets/icons/social/share.svg";
 import twitter from "../../assets/icons/social/twiter.svg";
 import whats from "../../assets/icons/social/whatsapp.svg";
 const SocialShare = () => {
+  const socialLinks = [
+    {
+      id: 1,
+      link: "https://www.facebook.com/",
+      icon: facebook,
+    },
+    {
+      id: 2,
+      link: "https://www.twitter.com/",
+      icon: twitter,
+    },
+    {
+      id: 3,
+      link: "https://www.linkedin.com/",
+      icon: linkedin,
+    },
+    {
+      id: 4,
+      link: "https://www.whatsapp.com/",
+      icon: whats,
+    },
+  ];
+
   return (
     <div className="flex items-center gap-3">
       <h5 className="text-lg text-blackPrimary font-semibold  leading-[27px]">
         Share
       </h5>
-      <Link
-        href={"#"}
-        className="w-11 h-11 rounded-full flex items-center justify-center bg-linkEndBg/15"
-      >
-        <Image
-          src={linkEnd}
-          alt="linkEnd"
-          className="w-ful h-full object-fill"
-        />
-      </Link>
-      <Link
-        href={"#"}
-        className="w-11 h-11 rounded-full flex items-center justify-center bg-twitterBg/15"
-      >
-        <Image
-          src={twitter}
-          alt="twitter"
-          className="w-ful h-full object-fill"
-        />
-      </Link>
-      <Link
-        href={"#"}
-        className="w-11 h-11 rounded-full flex items-center justify-center bg-facebookBg/15"
-      >
-        <Image
-          src={facebook}
-          alt="facebook"
-          className="w-ful h-full object-fill"
-        />
-      </Link>
-      <Link
-        href={"#"}
-        className="w-11 h-11 rounded-full flex items-center justify-center bg-whatsBg/15"
-      >
-        <Image src={whats} alt="whatApp" className="w-ful h-full object-fill" />
-      </Link>
-      <Link
-        href={"#"}
-        className="w-11 h-11 rounded-full flex items-center justify-center bg-shareBg/15"
-      >
-        <Image src={shared} alt="shared" className="w-ful h-full object-fill" />
-      </Link>
+      {socialLinks.map((item) => (
+        <Link
+          href={item.link}
+          className="w-11 h-11 rounded-full flex items-center justify-center bg-linkEndBg/15"
+        >
+          <Image
+            src={item.icon}
+            alt={`${item.link} image`}
+            className="w-ful h-full object-fill"
+          />
+        </Link>
+      ))}
     </div>
   );
 };
