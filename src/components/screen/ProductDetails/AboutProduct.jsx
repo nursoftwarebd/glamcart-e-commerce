@@ -92,7 +92,7 @@ const AboutProduct = ({ product }) => {
                   Add to cart
                 </button>
               </div>
-              <SecondaryButton title="Buy Now" href="/buy" />
+              <SecondaryButton handleAddToCart={handleAddToCart} product={product} title="Buy Now" href="/shipping-details" />
             </div>
           </div>
         </div>
