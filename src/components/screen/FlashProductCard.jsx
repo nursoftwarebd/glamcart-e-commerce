@@ -6,7 +6,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import basket from "../../assets/icons/basket.svg";
@@ -50,6 +50,7 @@ const FlashProductCard = ({ item }) => {
     }
     setFlashWishList(!isFlashWishList);
   };
+
 
   return (
     <div className="bg-white border-[1px] w-full h-auto border-grayBorder px-[9px] pt-2 pb-[15px] rounded-[10px] flex flex-col">

@@ -25,6 +25,8 @@ const Featured = () => {
   dispatch(allProduct());
 
   // console.log(featuredProducts);
+
+  
   return (
     <section className="pt-13 pb-10 bg-backgroundPage">
       <div className="container_fluid">

@@ -3,15 +3,15 @@ import Image from "next/image";
 import { useState } from "react";
 
 const RatingCheckbox = () => {
-  const [selectedPayment, setSelectedPayment] = useState(null);
+  // const [selectedPayment, setSelectedPayment] = useState(null);
 
-  const handleCheckboxChange = (paymentId) => {
-    setSelectedPayment(paymentId);
-  };
-  const handleTitleClick = (event, paymentId) => {
-    event.stopPropagation();
-    setSelectedPayment(paymentId);
-  };
+  // const handleCheckboxChange = (paymentId) => {
+  //   setSelectedPayment(paymentId);
+  // };
+  // const handleTitleClick = (event, paymentId) => {
+  //   event.stopPropagation();
+  //   setSelectedPayment(paymentId);
+  // };
   return (
     <div className="mt-8">
       <div className="space-y-4">
@@ -30,8 +30,8 @@ const RatingCheckbox = () => {
                     <input
                       type="checkbox"
                       id={`checkbox-${paymentMethod.id}`}
-                      checked={selectedPayment === paymentMethod.id}
-                      onChange={() => handleCheckboxChange(paymentMethod.id)}
+                      // checked={selectedPayment === paymentMethod.id}
+                      // onChange={() => handleCheckboxChange(paymentMethod.id)}
                       className="before:content[''] peer relative h-6 w-6 cursor-pointer appearance-none rounded-sm  border-[3px] border-[#D0D0D2] checked:border-secondary  checked:bg-secondary hover:before:opacity-10"
                     />
                     <span className="absolute text-white transition-opacity opacity-0 pointer-events-none top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
@@ -54,7 +54,7 @@ const RatingCheckbox = () => {
                 </div>
               </div>
               <div
-                onClick={(e) => handleTitleClick(e, paymentMethod.id)}
+                // onClick={(e) => handleTitleClick(e, paymentMethod.id)}
                 className="cursor-pointer leading-6 text-grayView tracking-[2%]"
               >
                 <Image src={paymentMethod.logo} alt="d" />
