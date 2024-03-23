@@ -36,6 +36,7 @@ const SocialShare = () => {
       </h5>
       {socialLinks.map((item) => (
         <Link
+        key={item.id}
           href={item.link}
           className="w-11 h-11 rounded-full flex items-center justify-center bg-linkEndBg/15"
         >
