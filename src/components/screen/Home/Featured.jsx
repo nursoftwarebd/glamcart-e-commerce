@@ -1,13 +1,12 @@
 "use client";
 import SectionTitle from "@/components/shared/SectionTitle/SectionTitle";
 import Image from "next/image";
-// import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import whiteDown from "../../../assets/icons/white_down.svg";
 import ProductCard from "../ProductCard";
-import { allProduct } from "../../../lib/ProductsData";
 import { useEffect, useState } from "react";
 import { setShowMore, setShowLess } from "@/redux/slices/ProductsSlice";
+import { allProduct } from "@/lib/ProductsData";
 const Featured = () => {
   const { featuredProducts } = useSelector((state) => state.products);
 

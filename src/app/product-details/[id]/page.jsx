@@ -3,7 +3,6 @@ import CustomerReview from "@/components/screen/ProductDetails/CustomerReview";
 import ProductDetails from "@/components/screen/ProductDetails/ProductDetails";
 import SliderProduct from "@/components/screen/ProductDetails/SliderProduct";
 import Breadcrumb from "@/components/shared/Breadcrum/Breadcrumb";
-import getAllProducts from "../../../../lib/ProductsData";
 
 export const metadata = {
   title: "Glamcart - Products Details Page",

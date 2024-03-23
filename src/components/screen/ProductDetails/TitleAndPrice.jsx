@@ -1,7 +1,5 @@
-import Image from "next/image";
-import checkfill from "../../../assets/icons/checkfill.svg";
 import StarAndWishlist from "./StarAndWishlist";
-import DiscountPrice from "../../../lib/DiscountPrice";
+import DiscountPrice from "@/lib/DiscountPrice";
 
 const TitleAndPrice = ({ product }) => {
   return (

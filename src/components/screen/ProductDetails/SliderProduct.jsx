@@ -3,11 +3,6 @@ import SocialShare from "@/components/common/SocialShare";
 import Image from "next/image";
 import { useState } from "react";
 import Slider from "react-slick";
-import pic1 from "../../../assets/images/home/bag.png";
-import pic2 from "../../../assets/images/home/chair-to.png";
-import pic5 from "../../../assets/images/home/dressblack.png";
-import pic3 from "../../../assets/images/home/flash3.png";
-import pic4 from "../../../assets/images/home/ydress.png";
 import DownArrow from "./DownArrow";
 import UpArrow from "./UpArrow";
 
@@ -20,17 +15,17 @@ const SliderProduct = ({productImage}) => {
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    // centerMode: true,
+    centerMode: true,
     nextArrow: <UpArrow />,
     prevArrow: <DownArrow />,
     vertical: true,
     verticalSwiping: true,
     swipeToSlide: true,
     beforeChange: function (currentSlide, nextSlide) {
-      console.log("before change", currentSlide, nextSlide);
+      // console.log("before change", currentSlide, nextSlide);
     },
     afterChange: function (currentSlide) {
-      console.log("after change", currentSlide);
+      // console.log("after change", currentSlide);
     },
   };
   return (

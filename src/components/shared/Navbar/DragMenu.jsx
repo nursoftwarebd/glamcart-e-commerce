@@ -15,7 +15,7 @@ const DragMenu = () => {
     setShowMegaMenu(!showMegaMenu);
   };
   const handleClickOutside = (event) => {
-    if (Menu.current && !megaMenu.current.contains(event.target)) {
+    if (Menu.current && !megaMenu?.current?.contains(event.target)) {
       setShowMegaMenu(false); // Set showMegaMenu state to false
     }
   };

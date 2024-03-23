@@ -1,7 +1,5 @@
 import AllProducts from "@/components/screen/Products/AllProducts";
 import ProductSidebar from "@/components/screen/Products/ProductSidebar";
-import Pagination from "@/components/screen/Products/paging/Pagination";
-import getAllProducts from "../../../lib/ProductsData";
 import SelectDropDown from "@/components/screen/Products/SelectDropDown";
 
 export const metadata = {
@@ -10,9 +8,6 @@ export const metadata = {
 };
 
 const page = async() => {
-  const allProducts = await getAllProducts()
-  console.log(allProducts)
-
   return (
     <section className="pt-10  bg-backgroundPage">
       <div className="container_fluid">

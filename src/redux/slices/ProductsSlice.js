@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { allProduct } from "../../lib/ProductsData";
+import { allProduct } from "@/lib/ProductsData";
 const initialState = {
   featuredProducts: [],
   AllProducts: [],
@@ -20,7 +20,7 @@ const productSlice = createSlice({
     builder.addCase(allProduct.fulfilled, (state, action) => {
       // console.log(action.payload);
       state.AllProducts = action.payload;
-      state.featuredProducts = action.payload.filter((item) => item.featured);
+      state.featuredProducts = action.payload?.filter((item) => item.featured);
       state.loading = false;
       state.error = null;
       // state.currentProducts = action.payload.slice(0,12);
