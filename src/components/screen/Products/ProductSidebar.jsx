@@ -4,6 +4,7 @@ import Link from "next/link";
 import bottom from "../../../assets/icons/chevron-down.svg";
 import PriceRange from "./PriceRange";
 import RatingCheckbox from "./RatingCheckbox";
+import MultiRange from "./MultiRang/MultiRange";
 
 const ProductSidebar = () => {
   return (
@@ -48,15 +49,10 @@ const ProductSidebar = () => {
             </select>
             <Image src={bottom} alt="bottom" className="w-6 h-6" />
           </div>
+
           {/* price range */}
-          <PriceRange
-            initialMin={2500}
-            initialMax={7500}
-            min={0}
-            max={10000}
-            step={100}
-            priceCap={1000}
-          />
+          <MultiRange />
+          
         </div>
         <div className="px-5 py-6">
           <div className="flex items-center justify-between w-full">
