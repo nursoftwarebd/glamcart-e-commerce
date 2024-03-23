@@ -110,7 +110,7 @@ const Footer = () => {
       <div className="container_fluid">
         <div className="flex flex-col xl:flex-row items-center justify-between py-4">
           <p className="leading-6 text-sm sm:text-base">
-            ProjectGlamcart - © 2021 All Rights Reserved
+            Glamcart - © 2021 All Rights Reserved
           </p>
           <div className="hidden sm:flex items-center">
             <p className="leading-7 text-lg font-medium text-secondary/80">

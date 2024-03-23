@@ -61,7 +61,7 @@ const DragMenu = () => {
                                   <li>
                                     <Link
                                       href={menu.href}
-                                      className="text-sm text-grayView leading-[21px] capitalize"
+                                      className="text-sm text-grayView leading-[21px] capitalize hover:text-primary hover:pl-2 duration-200"
                                     >
                                       {menu.name}
                                     </Link>
@@ -82,7 +82,7 @@ const DragMenu = () => {
                                   <li>
                                     <Link
                                       href={menu.href}
-                                      className="text-sm text-grayView leading-[21px] capitalize"
+                                      className="text-sm text-grayView leading-[21px] capitalize hover:text-primary hover:pl-2 duration-200"
                                     >
                                       {menu.name}
                                     </Link>
@@ -103,7 +103,7 @@ const DragMenu = () => {
                                   <li>
                                     <Link
                                       href={menu.href}
-                                      className="text-sm text-grayView leading-[21px] capitalize"
+                                      className="text-sm text-grayView leading-[21px] capitalize hover:text-primary hover:pl-2 duration-200"
                                     >
                                       {menu.name}
                                     </Link>
@@ -116,7 +116,7 @@ const DragMenu = () => {
                         <div>
                           {link.submenu?.slice(3, 4).map((items, index) => (
                             <div key={index}>
-                              <p className="font-medium text-black3D leading-6 capitalize">
+                              <p className="font-medium text-black3D leading-6 capitalize ">
                                 {items.title}
                               </p>
                               {items.subcat?.map((menu, index) => (
@@ -124,7 +124,7 @@ const DragMenu = () => {
                                   <li>
                                     <Link
                                       href={menu.href}
-                                      className="text-sm text-grayView leading-[21px] capitalize"
+                                      className="text-sm text-grayView leading-[21px] capitalize hover:text-primary hover:pl-2 duration-200"
                                     >
                                       {menu.name}
                                     </Link>
@@ -146,7 +146,7 @@ const DragMenu = () => {
                                     <li>
                                       <Link
                                         href={menu.href}
-                                        className="text-sm text-grayView leading-[21px] capitalize"
+                                        className="text-sm text-grayView leading-[21px] capitalize hover:text-primary hover:pl-2 duration-200"
                                       >
                                         {menu.name}
                                       </Link>
@@ -167,7 +167,7 @@ const DragMenu = () => {
                                     <li>
                                       <Link
                                         href={menu.href}
-                                        className="text-sm text-grayView leading-[21px] capitalize"
+                                        className="text-sm text-grayView leading-[21px] capitalize hover:text-primary hover:pl-2 duration-200"
                                       >
                                         {menu.name}
                                       </Link>

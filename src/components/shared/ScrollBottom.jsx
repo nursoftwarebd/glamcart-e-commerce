@@ -28,7 +28,7 @@ const ScrollBottom = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-5 right-5 hidden lg:block">
+    <div className="fixed bottom-[4rem] right-5 hidden lg:block">
       <button
         type="button"
         onClick={scrollToTop}

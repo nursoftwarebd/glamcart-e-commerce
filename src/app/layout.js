@@ -4,6 +4,8 @@ import Providers from "@/redux/Provider";
 import { ToastContainer } from "react-toastify";
 import "../styles/globals.css";
 import "../styles/hero-click-slider.css";
+import ScrollBottom from "@/components/shared/ScrollBottom";
+import ScrollCart from "@/components/shared/ScrollCart";
 
 export const metadata = {
   title: "Glamcart",
@@ -31,6 +33,8 @@ export default function RootLayout({ children }) {
           </header>
           <main>{children}</main>
           <ToastContainer />
+          <ScrollBottom/>
+          <ScrollCart/>
           <footer>
             <Footer />
           </footer>

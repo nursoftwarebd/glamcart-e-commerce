@@ -25,7 +25,7 @@ const ScrollCart = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-5 left-5 hidden lg:block">
+    <div className="fixed bottom-[4rem] left-5 hidden lg:block">
       <Link href={"/check-out"}>
         <button
           type="button"

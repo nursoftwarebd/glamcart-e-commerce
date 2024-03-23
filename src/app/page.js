@@ -19,8 +19,8 @@ export default function Home() {
       <Category />
       <FlashDeals />
       <Featured />
-      <ScrollBottom />
-      <ScrollCart />
+      {/* <ScrollBottom />
+      <ScrollCart /> */}
     </>
   );
 }
